@@ -1,0 +1,1138 @@
+{
+  "sindrome_metabolico": {
+    "instruccionClinica": "Corrige la minuta para lograr control calórico moderado, sodio < 2000 mg/día, azúcares simples bajos (< 30 g) y buena fibra (≥ 20 g).",
+    "erroresSembradosDescripcion": [
+      "Exceso de azúcares simples por bebida gaseosa azucarada y galletas rellenas",
+      "Exceso de sodio por embutidos (jamón/vienesa) y pan marraqueta en exceso",
+      "Bajo aporte de fibra dietaria"
+    ],
+    "itemsBase": [
+      { "alimentoId": "pan_marraqueta", "porciones": 3 },
+      { "alimentoId": "jamon_vienesas", "porciones": 2 },
+      { "alimentoId": "bebida_gaseosa_azucarada", "porciones": 2 },
+      { "alimentoId": "galletas_dulces_rellenas", "porciones": 1 },
+      { "alimentoId": "arroz_blanco_cocido", "porciones": 2 },
+      { "alimentoId": "pechuga_pollo_plancha", "porciones": 2 },
+      { "alimentoId": "lechuga_pepino", "porciones": 1 },
+      { "alimentoId": "aceite_oliva_canola", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "sodio",
+        "label": "Sodio",
+        "unidad": "mg",
+        "min": 300,
+        "max": 2000,
+        "esCritico": true,
+        "razonClinica": "En HTA y Síndrome Metabólico el sodio debe mantenerse < 2000 mg/día."
+      },
+      {
+        "nutriente": "azucaresSimples",
+        "label": "Azúcares simples",
+        "unidad": "g",
+        "min": 0,
+        "max": 30,
+        "esCritico": true,
+        "razonClinica": "Los azúcares simples agravan la hipertrigliceridemia y resistencia a la insulina."
+      },
+      {
+        "nutriente": "fibra",
+        "label": "Fibra dietaria",
+        "unidad": "g",
+        "min": 18,
+        "max": 45,
+        "esCritico": true,
+        "razonClinica": "La fibra soluble e insoluble (legumbres, avena, verduras, fruta entera) mejora la sensibilidad insulínica."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía total",
+        "unidad": "kcal",
+        "min": 1350,
+        "max": 2050,
+        "esCritico": false,
+        "razonClinica": "Pauta hipocalórica moderada para reducción gradual de peso."
+      }
+    ]
+  },
+  "epoc": {
+    "instruccionClinica": "Corrige la minuta: asegura proteína suficiente (1,2–1,6 g/kg) para musculatura respiratoria y evita exceso de carbohidratos simples que eleven el CO₂.",
+    "erroresSembradosDescripcion": [
+      "Aporte proteico insuficiente para preservar masa diafragmática",
+      "Exceso de carbohidratos y azúcares simples (pastel y bebida azucarada) que aumentan la carga ventilatoria de CO₂"
+    ],
+    "itemsBase": [
+      { "alimentoId": "pan_marraqueta", "porciones": 2 },
+      { "alimentoId": "pastel_torta_crema", "porciones": 2 },
+      { "alimentoId": "bebida_gaseosa_azucarada", "porciones": 2 },
+      { "alimentoId": "fideos_cocidos", "porciones": 2 },
+      { "alimentoId": "zapallo_italiano_cocido", "porciones": 1 },
+      { "alimentoId": "aceite_oliva_canola", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas (1,2–1,7 g/kg)",
+        "unidad": "g",
+        "minPerKg": 1.2,
+        "maxPerKg": 1.8,
+        "esCritico": true,
+        "razonClinica": "En EPOC se requiere 1,2–1,5 g/kg/día de proteínas para evitar atrofia de músculos respiratorios."
+      },
+      {
+        "nutriente": "azucaresSimples",
+        "label": "Azúcares simples",
+        "unidad": "g",
+        "min": 0,
+        "max": 35,
+        "esCritico": true,
+        "razonClinica": "El exceso de carbohidratos simples eleva el cociente respiratorio (producción de CO₂) y empeora la disnea."
+      },
+      {
+        "nutriente": "carbohidratos",
+        "label": "Carbohidratos totales",
+        "unidad": "g",
+        "min": 90,
+        "max": 210,
+        "esCritico": true,
+        "razonClinica": "Controlar la carga total de carbohidratos previene hipercapnia postprandial."
+      }
+    ]
+  },
+  "hipotiroidismo": {
+    "instruccionClinica": "Ajusta la minuta para aportar buena fibra dietaria (≥ 20 g para el estreñimiento), controlar grasas/azúcares por dislipidemia secundaria y mantener calorías moderadas.",
+    "erroresSembradosDescripcion": [
+      "Bajo aporte de fibra dietaria en paciente con tránsito intestinal lento",
+      "Exceso de grasas saturadas y azúcares simples (queso amarillo y pastel)"
+    ],
+    "itemsBase": [
+      { "alimentoId": "pan_marraqueta", "porciones": 2 },
+      { "alimentoId": "queso_gauda", "porciones": 3 },
+      { "alimentoId": "pastel_torta_crema", "porciones": 1 },
+      { "alimentoId": "arroz_blanco_cocido", "porciones": 2 },
+      { "alimentoId": "pechuga_pollo_plancha", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "fibra",
+        "label": "Fibra dietaria",
+        "unidad": "g",
+        "min": 20,
+        "max": 45,
+        "esCritico": true,
+        "razonClinica": "El hipotiroidismo enlentece el peristaltismo; requiere ≥ 20 g de fibra (separada de la toma de Levotiroxina)."
+      },
+      {
+        "nutriente": "grasas",
+        "label": "Lípidos totales",
+        "unidad": "g",
+        "min": 25,
+        "max": 55,
+        "esCritico": true,
+        "razonClinica": "El déficit de T4 reduce receptores hepáticos de LDL; debe evitarse el exceso de grasa saturada."
+      },
+      {
+        "nutriente": "azucaresSimples",
+        "label": "Azúcares simples",
+        "unidad": "g",
+        "min": 0,
+        "max": 32,
+        "esCritico": true,
+        "razonClinica": "Control de azúcares simples para manejo ponderal y metabólico."
+      }
+    ]
+  },
+  "insuficiencia_cardiaca": {
+    "instruccionClinica": "Restringe estrictamente el sodio a < 2000 mg/día eliminando procesados y cubitos concentrados, manteniendo proteínas adecuadas.",
+    "erroresSembradosDescripcion": [
+      "Sodio extremadamente elevado por sopa en sobre/caldo en cubito, embutidos y queso amarillo",
+      "Uso de sustituto de sal con potasio sin supervisión"
+    ],
+    "itemsBase": [
+      { "alimentoId": "caldo_cubito_sopa", "porciones": 2 },
+      { "alimentoId": "jamon_vienesas", "porciones": 2 },
+      { "alimentoId": "queso_gauda", "porciones": 1 },
+      { "alimentoId": "pan_marraqueta", "porciones": 2 },
+      { "alimentoId": "arroz_blanco_cocido", "porciones": 2 },
+      { "alimentoId": "pechuga_pollo_plancha", "porciones": 2 },
+      { "alimentoId": "zapallo_italiano_cocido", "porciones": 2 },
+      { "alimentoId": "manzana_pera", "porciones": 2 },
+      { "alimentoId": "aceite_oliva_canola", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "sodio",
+        "label": "Sodio estricto (< 2000 mg)",
+        "unidad": "mg",
+        "min": 200,
+        "max": 2000,
+        "esCritico": true,
+        "razonClinica": "En Insuficiencia Cardíaca el sodio > 2000 mg promueve retención hídrica, edema y antagoniza la Furosemida."
+      },
+      {
+        "nutriente": "potasio",
+        "label": "Potasio",
+        "unidad": "mg",
+        "min": 1400,
+        "max": 3200,
+        "esCritico": true,
+        "razonClinica": "Mantener potasio en rango seguro por uso combinado de IECA y diurético de asa."
+      },
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas",
+        "unidad": "g",
+        "min": 65,
+        "max": 120,
+        "esCritico": false,
+        "razonClinica": "Evitar caquexia cardíaca asegurando aporte proteico suficiente."
+      }
+    ]
+  },
+  "desnutricion_infantil_aguda": {
+    "instruccionClinica": "Fase de estabilización OMS: retira los alimentos hiperosmolares/salados que causan Síndrome de Realimentación y ajusta las tomas de Fórmula F-75.",
+    "erroresSembradosDescripcion": [
+      "Sobrecarga de sodio y fósforo por alimentos procesados adultos (sopa en sobre y bebida)",
+      "Falta completar las tomas fraccionadas de fórmula terapéutica F-75"
+    ],
+    "itemsBase": [
+      { "alimentoId": "formula_f75_estabilizacion", "porciones": 3 },
+      { "alimentoId": "caldo_cubito_sopa", "porciones": 1 },
+      { "alimentoId": "bebida_gaseosa_azucarada", "porciones": 1 },
+      { "alimentoId": "queso_gauda", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "sodio",
+        "label": "Sodio restringido (Fase 1)",
+        "unidad": "mg",
+        "min": 60,
+        "max": 400,
+        "esCritico": true,
+        "razonClinica": "En desnutrición aguda severa la bomba Na⁺/K⁺ está deprimida; el exceso de sodio precipita insuficiencia cardíaca congestiva."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía de estabilización",
+        "unidad": "kcal",
+        "min": 450,
+        "max": 850,
+        "esCritico": true,
+        "razonClinica": "Aporte calórico prudente con F-75 (5 a 7 tomas) para prevenir Síndrome de Realimentación."
+      },
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas cautelosas",
+        "unidad": "g",
+        "min": 5,
+        "max": 22,
+        "esCritico": true,
+        "razonClinica": "En fase de estabilización no debe sobrecargarse de proteínas al hígado y riñón."
+      }
+    ]
+  },
+  "desnutricion_cronica_infantil": {
+    "instruccionClinica": "Reemplaza los caldos diluidos y golosinas por alimentos de alta densidad energética y proteica de alto valor biológico (huevo, carnes magras, lácteos, cereales).",
+    "erroresSembradosDescripcion": [
+      "Baja proteína de alto valor biológico para síntesis de IGF-1",
+      "Caldo en sobre salado y bebida azucarada sin valor nutricional real"
+    ],
+    "itemsBase": [
+      { "alimentoId": "caldo_cubito_sopa", "porciones": 2 },
+      { "alimentoId": "bebida_gaseosa_azucarada", "porciones": 2 },
+      { "alimentoId": "arroz_blanco_cocido", "porciones": 2 },
+      { "alimentoId": "manzana_pera", "porciones": 1 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas para crecimiento",
+        "unidad": "g",
+        "min": 42,
+        "max": 90,
+        "esCritico": true,
+        "razonClinica": "Se requiere proteína de alto valor biológico y zinc (carnes, huevo, lácteos) para recuperar el eje IGF-1."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Densidad energética",
+        "unidad": "kcal",
+        "min": 1150,
+        "max": 1850,
+        "esCritico": true,
+        "razonClinica": "Asegurar energía suficiente para crecimiento compensatorio (catch-up growth)."
+      },
+      {
+        "nutriente": "sodio",
+        "label": "Sodio infantil",
+        "unidad": "mg",
+        "min": 100,
+        "max": 1400,
+        "esCritico": true,
+        "razonClinica": "Eliminar caldos industriales con exceso de sodio."
+      }
+    ]
+  },
+  "obesidad_infantil": {
+    "instruccionClinica": "Armoniza una alimentación normocalórica saludable para crecimiento (NO dieta extrema), eliminando ultraprocesados azucarados y asegurando fibra y proteínas.",
+    "erroresSembradosDescripcion": [
+      "Exceso crítico de azúcares simples y grasas por bebidas, galletas rellenas y papas fritas en bolsa",
+      "Déficit de fibra de frutas, verduras o legumbres"
+    ],
+    "itemsBase": [
+      { "alimentoId": "bebida_gaseosa_azucarada", "porciones": 2 },
+      { "alimentoId": "galletas_dulces_rellenas", "porciones": 2 },
+      { "alimentoId": "papas_fritas_bolsa", "porciones": 2 },
+      { "alimentoId": "pan_marraqueta", "porciones": 2 },
+      { "alimentoId": "pechuga_pollo_plancha", "porciones": 1 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "azucaresSimples",
+        "label": "Azúcares simples",
+        "unidad": "g",
+        "min": 0,
+        "max": 30,
+        "esCritico": true,
+        "razonClinica": "Reducir azúcares líquidos y golosinas revierte la hiperinsulinemia sin restringir el crecimiento."
+      },
+      {
+        "nutriente": "fibra",
+        "label": "Fibra dietaria",
+        "unidad": "g",
+        "min": 16,
+        "max": 40,
+        "esCritico": true,
+        "razonClinica": "Aumentar saciedad fisiológica con verduras, frutas enteras y cereales integrales."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía equilibrada (no extrema)",
+        "unidad": "kcal",
+        "min": 1400,
+        "max": 2000,
+        "esCritico": true,
+        "razonClinica": "Evitar tanto el exceso calórico como las dietas hipocalóricas extremas (< 1200 kcal) contraindicadas en menores."
+      }
+    ]
+  },
+  "diabetes_mellitus_t1": {
+    "instruccionClinica": "Estabiliza el aporte de carbohidratos complejos para conteo de insulina, eliminando azúcares simples de absorción rápida y asegurando fibra.",
+    "erroresSembradosDescripcion": [
+      "Pico glucémico por bebida gaseosa azucarada y pastel con manjar",
+      "Baja fibra para modular la curva glucémica postprandial"
+    ],
+    "itemsBase": [
+      { "alimentoId": "bebida_gaseosa_azucarada", "porciones": 2 },
+      { "alimentoId": "pastel_torta_crema", "porciones": 1 },
+      { "alimentoId": "arroz_blanco_cocido", "porciones": 2 },
+      { "alimentoId": "pechuga_pollo_plancha", "porciones": 2 },
+      { "alimentoId": "huevo_entero", "porciones": 1 },
+      { "alimentoId": "aceite_oliva_canola", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "azucaresSimples",
+        "label": "Azúcares simples",
+        "unidad": "g",
+        "min": 0,
+        "max": 28,
+        "esCritico": true,
+        "razonClinica": "Evitar hiperglucemia postprandial severa eliminando bebidas y pastelería azucarada."
+      },
+      {
+        "nutriente": "carbohidratos",
+        "label": "Carbohidratos para conteo",
+        "unidad": "g",
+        "min": 130,
+        "max": 230,
+        "esCritico": true,
+        "razonClinica": "Mantener un aporte predecible de carbohidratos complejos (ni cetogénico ni excesivo) para dosificar insulina."
+      },
+      {
+        "nutriente": "fibra",
+        "label": "Fibra dietaria",
+        "unidad": "g",
+        "min": 18,
+        "max": 45,
+        "esCritico": true,
+        "razonClinica": "La fibra retarda el vaciamiento gástrico y aplana la excursión glucémica."
+      }
+    ]
+  },
+  "sarcopenia_disfagia": {
+    "instruccionClinica": "Aumenta el aporte proteico a 1,2–1,6 g/kg priorizando preparaciones suaves/modificadas (puré fortificado, yogur proteico, cremas, suplemento/módulo proteico) y calorías suficientes.",
+    "erroresSembradosDescripcion": [
+      "Déficit severo de proteínas y energía en adulto mayor con sarcopenia y disfagia",
+      "Exceso de sodio en caldo en sobre sin aporte proteico real"
+    ],
+    "itemsBase": [
+      { "alimentoId": "caldo_cubito_sopa", "porciones": 2 },
+      { "alimentoId": "compota_manzana", "porciones": 2 },
+      { "alimentoId": "pure_papa_deshidratado", "porciones": 1 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas (1,2–1,7 g/kg)",
+        "unidad": "g",
+        "minPerKg": 1.2,
+        "maxPerKg": 1.8,
+        "esCritico": true,
+        "razonClinica": "En sarcopenia con disfagia es crítico alcanzar ≥ 1,2 g proteína/kg/día usando texturas seguras y suplementación."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía total",
+        "unidad": "kcal",
+        "min": 1400,
+        "max": 2200,
+        "esCritico": true,
+        "razonClinica": "Evitar balance energético negativo que acelera la proteólisis muscular."
+      },
+      {
+        "nutriente": "sodio",
+        "label": "Sodio",
+        "unidad": "mg",
+        "min": 200,
+        "max": 2000,
+        "esCritico": true,
+        "razonClinica": "Reemplazar caldos industriales salados por cremas naturales y módulos proteicos."
+      }
+    ]
+  },
+  "lesion_por_presion_sacra": {
+    "instruccionClinica": "Sube las proteínas a 1,25–1,7 g/kg para síntesis de colágeno en la úlcera sacra y controla los azúcares simples para mantener glicemia en meta.",
+    "erroresSembradosDescripcion": [
+      "Ingesta muy hipoproteica e hipocalórica que impide la granulación y epitelización",
+      "Bebida azucarada que descompensa la glicemia en paciente diabético con úlcera"
+    ],
+    "itemsBase": [
+      { "alimentoId": "bebida_gaseosa_azucarada", "porciones": 2 },
+      { "alimentoId": "arroz_blanco_cocido", "porciones": 2 },
+      { "alimentoId": "lechuga_pepino", "porciones": 1 },
+      { "alimentoId": "huevo_entero", "porciones": 1 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas cicatrización (1,25–1,75 g/kg)",
+        "unidad": "g",
+        "minPerKg": 1.25,
+        "maxPerKg": 1.8,
+        "esCritico": true,
+        "razonClinica": "La reparación de una lesión por presión Estadio II exige alto aporte proteico para síntesis de colágeno I y III."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía de soporte",
+        "unidad": "kcal",
+        "min": 1450,
+        "max": 2250,
+        "esCritico": true,
+        "razonClinica": "Proveer energía suficiente para que los aminoácidos no se desvíen a gluconeogénesis."
+      },
+      {
+        "nutriente": "azucaresSimples",
+        "label": "Azúcares simples",
+        "unidad": "g",
+        "min": 0,
+        "max": 30,
+        "esCritico": true,
+        "razonClinica": "Evitar hiperglicemia que deteriora la función leucocitaria y la cicatrización."
+      }
+    ]
+  },
+  "neumonia_bacteriana_aguda": {
+    "instruccionClinica": "Cubre el estado hipermetabólico febril con energía suficiente (≥ 1500 kcal) y proteínas (1,2–1,6 g/kg), retirando ultraprocesados salados.",
+    "erroresSembradosDescripcion": [
+      "Dieta semilíquida hipocalórica e hipoproteica que favorece catabolismo muscular respiratorio durante la fiebre",
+      "Exceso de sodio en caldos de cubito"
+    ],
+    "itemsBase": [
+      { "alimentoId": "caldo_cubito_sopa", "porciones": 2 },
+      { "alimentoId": "arroz_blanco_cocido", "porciones": 1 },
+      { "alimentoId": "manzana_pera", "porciones": 1 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas (1,2–1,7 g/kg)",
+        "unidad": "g",
+        "minPerKg": 1.2,
+        "maxPerKg": 1.8,
+        "esCritico": true,
+        "razonClinica": "La respuesta inflamatoria aguda y síntesis de proteínas de fase aguda demandan ≥ 1,2 g/kg/día."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía (estado febril)",
+        "unidad": "kcal",
+        "min": 1500,
+        "max": 2300,
+        "esCritico": true,
+        "razonClinica": "La fiebre incrementa el gasto energético basal un 20–30%."
+      },
+      {
+        "nutriente": "sodio",
+        "label": "Sodio",
+        "unidad": "mg",
+        "min": 200,
+        "max": 2000,
+        "esCritico": true,
+        "razonClinica": "Evitar sobrecarga osmótica de caldos concentrados en paciente febril."
+      }
+    ]
+  },
+  "dehiscencia_herida_quirurgica": {
+    "instruccionClinica": "Prescribe dieta hiperproteica (1,4–2,0 g/kg) para cierre por segunda intención y elimina azúcares simples que causan hiperglicemia (> 180 mg/dL).",
+    "erroresSembradosDescripcion": [
+      "Aporte proteico muy bajo para una dehiscencia quirúrgica infectada",
+      "Exceso de azúcares simples (bebida azucarada y galletas) que perpetúa la infección y frena a los fibroblastos"
+    ],
+    "itemsBase": [
+      { "alimentoId": "bebida_gaseosa_azucarada", "porciones": 2 },
+      { "alimentoId": "galletas_dulces_rellenas", "porciones": 2 },
+      { "alimentoId": "caldo_cubito_sopa", "porciones": 1 },
+      { "alimentoId": "arroz_blanco_cocido", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas quirúrgicas (1,4–2,0 g/kg)",
+        "unidad": "g",
+        "minPerKg": 1.4,
+        "maxPerKg": 2.0,
+        "esCritico": true,
+        "razonClinica": "El tejido de granulación en cicatrización por segunda intención requiere 1,4–2,0 g proteína/kg/día."
+      },
+      {
+        "nutriente": "azucaresSimples",
+        "label": "Azúcares simples",
+        "unidad": "g",
+        "min": 0,
+        "max": 25,
+        "esCritico": true,
+        "razonClinica": "La hiperglicemia glucosila el colágeno e inhibe la fagocitosis bacteriana en la herida."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía reparadora",
+        "unidad": "kcal",
+        "min": 1500,
+        "max": 2350,
+        "esCritico": true,
+        "razonClinica": "Sostener el anabolismo tisular posoperatorio."
+      }
+    ]
+  },
+  "deshidratacion_homeostenosis": {
+    "instruccionClinica": "Cuida la función renal prerrenal: controla el potasio (< 2400 mg), el fósforo (< 1000 mg) y el sodio (< 2000 mg), aportando energía y proteína moderada.",
+    "erroresSembradosDescripcion": [
+      "Exceso peligroso de potasio y fósforo por biosal de potasio, plátano, papa con piel y queso amarillo en riñón comprometido",
+      "Exceso de sodio industrial"
+    ],
+    "itemsBase": [
+      { "alimentoId": "biosal_potasio", "porciones": 1 },
+      { "alimentoId": "papa_cocida", "porciones": 2 },
+      { "alimentoId": "platano", "porciones": 2 },
+      { "alimentoId": "queso_gauda", "porciones": 2 },
+      { "alimentoId": "jamon_vienesas", "porciones": 1 },
+      { "alimentoId": "pechuga_pollo_plancha", "porciones": 1 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "potasio",
+        "label": "Potasio controlado (< 2400 mg)",
+        "unidad": "mg",
+        "min": 800,
+        "max": 2400,
+        "esCritico": true,
+        "razonClinica": "Ante compromiso renal prerrenal, debe evitarse la sobrecarga de potasio (biosal, plátano, papa sin despotasificar)."
+      },
+      {
+        "nutriente": "fosforo",
+        "label": "Fósforo controlado (< 1000 mg)",
+        "unidad": "mg",
+        "min": 300,
+        "max": 1000,
+        "esCritico": true,
+        "razonClinica": "Evitar sobrecarga de fósforo inorgánico (quesos amarillos, embutidos) en reserva renal reducida."
+      },
+      {
+        "nutriente": "sodio",
+        "label": "Sodio moderado",
+        "unidad": "mg",
+        "min": 400,
+        "max": 2000,
+        "esCritico": true,
+        "razonClinica": "Reposición electrolítica controlada sin embutidos hiperosmolares."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía blanda",
+        "unidad": "kcal",
+        "min": 1300,
+        "max": 2000,
+        "esCritico": false,
+        "razonClinica": "Cubrir requerimientos con alimentos de buena digestibilidad (arroz blanco, pollo, manzana/compota, aceite)."
+      }
+    ]
+  },
+  "sarcopenia_fragilidad_inflammaging": {
+    "instruccionClinica": "Supera la resistencia anabólica del adulto mayor alcanzando 1,2–1,6 g proteína/kg/día y energía suficiente, reemplazando el 'té con pan pelado' por proteínas de alto valor biológico.",
+    "erroresSembradosDescripcion": [
+      "Dieta basada en pan marraqueta y galletas con déficit severo de proteínas de alto valor biológico",
+      "Bajo aporte de fibra y micronutrientes antiinflamatorios"
+    ],
+    "itemsBase": [
+      { "alimentoId": "pan_marraqueta", "porciones": 4 },
+      { "alimentoId": "galletas_dulces_rellenas", "porciones": 1 },
+      { "alimentoId": "mantequilla_con_sal", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas (1,2–1,7 g/kg)",
+        "unidad": "g",
+        "minPerKg": 1.2,
+        "maxPerKg": 1.8,
+        "esCritico": true,
+        "razonClinica": "Distribuir 1,2–1,5 g/kg/día de proteínas (lácteos proteicos, pescado/salmón, pollo, huevo) frena la sarcopenia."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía total",
+        "unidad": "kcal",
+        "min": 1400,
+        "max": 2150,
+        "esCritico": true,
+        "razonClinica": "Evitar déficit energético que amplifique el catabolismo por inflammaging."
+      },
+      {
+        "nutriente": "fibra",
+        "label": "Fibra y antioxidantes",
+        "unidad": "g",
+        "min": 14,
+        "max": 40,
+        "esCritico": true,
+        "razonClinica": "Incluir verduras, frutas o avena para modular la inflamación crónica de bajo grado."
+      }
+    ]
+  },
+  "sindrome_geriatrico_complejo": {
+    "instruccionClinica": "Revierte la baja ponderal aguda con una minuta hiperproteica (1,2–1,7 g/kg) y energética de textura amigable (suplemento oral HP/HC, puré, yogur proteico, pescado suave), sin exceso de sodio.",
+    "erroresSembradosDescripcion": [
+      "Ingesta crítica hipocalórica e hipoproteica que causó pérdida de 4 kg en 3 semanas",
+      "Sopa de sobre alta en sodio y sin densidad nutricional"
+    ],
+    "itemsBase": [
+      { "alimentoId": "caldo_cubito_sopa", "porciones": 2 },
+      { "alimentoId": "pan_marraqueta", "porciones": 1 },
+      { "alimentoId": "compota_manzana", "porciones": 1 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas (1,2–1,75 g/kg)",
+        "unidad": "g",
+        "minPerKg": 1.2,
+        "maxPerKg": 1.8,
+        "esCritico": true,
+        "razonClinica": "Recuperar masa magra con suplementos orales HP/HC y proteínas blandas de fácil masticación."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía de recuperación",
+        "unidad": "kcal",
+        "min": 1450,
+        "max": 2250,
+        "esCritico": true,
+        "razonClinica": "Detener la pérdida ponderal involuntaria aguda."
+      },
+      {
+        "nutriente": "sodio",
+        "label": "Sodio controlado",
+        "unidad": "mg",
+        "min": 200,
+        "max": 2000,
+        "esCritico": true,
+        "razonClinica": "Retirar sopas en sobre hiperosmolares."
+      }
+    ]
+  },
+  "anemia_ferropenica": {
+    "instruccionClinica": "Corrige la minuta: asegura buen aporte de proteínas ricas en hierro (carnes magras/legumbres), frutas con vitamina C (naranja/kiwi) y fibra, retirando el exceso de lácteos/quesos y ultraprocesados.",
+    "erroresSembradosDescripcion": [
+      "Bajo aporte proteico/férrico y falta de cítricos ricos en vitamina C",
+      "Exceso de queso amarillo y galletas rellenas en lugar de carnes magras, legumbres y frutas cítricas"
+    ],
+    "itemsBase": [
+      { "alimentoId": "pan_marraqueta", "porciones": 2 },
+      { "alimentoId": "queso_gauda", "porciones": 3 },
+      { "alimentoId": "galletas_dulces_rellenas", "porciones": 2 },
+      { "alimentoId": "fideos_cocidos", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas y fuentes de hierro",
+        "unidad": "g",
+        "min": 65,
+        "max": 120,
+        "esCritico": true,
+        "razonClinica": "Incluir carnes magras (posta/pescado/pollo) y legumbres para aportar hierro hemo y no hemo para la síntesis de hemoglobina."
+      },
+      {
+        "nutriente": "fibra",
+        "label": "Fibra y frutas con Vitamina C",
+        "unidad": "g",
+        "min": 16,
+        "max": 45,
+        "esCritico": true,
+        "razonClinica": "Incluir frutas cítricas (naranja/kiwi) y verduras que favorecen la absorción del hierro y previenen el estreñimiento por sulfato ferroso."
+      },
+      {
+        "nutriente": "azucaresSimples",
+        "label": "Azúcares simples",
+        "unidad": "g",
+        "min": 0,
+        "max": 32,
+        "esCritico": true,
+        "razonClinica": "Reemplazar pastelería y galletas por alimentos con alta densidad de micronutrientes."
+      }
+    ]
+  },
+  "trombosis_warfarina": {
+    "instruccionClinica": "Mantén una ingesta moderada y constante de verduras (sin eliminar por completo la fibra vegetal ni hacer excesos bruscos) y controla el sodio y las grasas saturadas.",
+    "erroresSembradosDescripcion": [
+      "Exceso masivo y brusco de espinaca/acelga cocida (4 porciones) que aporta megadosis de vitamina K y frena la Warfarina",
+      "Exceso de sodio y grasas por embutidos y snacks salados"
+    ],
+    "itemsBase": [
+      { "alimentoId": "espinaca_acelga_cocida", "porciones": 4 },
+      { "alimentoId": "jamon_vienesas", "porciones": 2 },
+      { "alimentoId": "papas_fritas_bolsa", "porciones": 2 },
+      { "alimentoId": "arroz_blanco_cocido", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "sodio",
+        "label": "Sodio cardioprotector (< 2000 mg)",
+        "unidad": "mg",
+        "min": 200,
+        "max": 2000,
+        "esCritico": true,
+        "razonClinica": "Evitar embutidos y snacks salados en paciente con patología tromboembólica cardiovascular."
+      },
+      {
+        "nutriente": "potasio",
+        "label": "Equilibrio de hojas verdes (K+ proxy)",
+        "unidad": "mg",
+        "min": 1200,
+        "max": 2700,
+        "esCritico": true,
+        "razonClinica": "Mantener 1 porción constante de verdura sin atracones de espinaca/acelga que alteren bruscamente la vitamina K y el INR."
+      },
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas magras",
+        "unidad": "g",
+        "min": 60,
+        "max": 115,
+        "esCritico": true,
+        "razonClinica": "Asegurar proteínas saludables (pollo, merluza, legumbres, huevo) en reemplazo de embutidos."
+      }
+    ]
+  },
+  "hipertension_eje_raas": {
+    "instruccionClinica": "Aplica el enfoque de 'Detectives del Sodio' y protección RAAS: baja el sodio a < 2000 mg/día y mantén el potasio en rango seguro (< 2500 mg) retirando la biosal de KCl y ultraprocesados.",
+    "erroresSembradosDescripcion": [
+      "Uso de sustituto de sal ('Biosal' con KCl) y exceso de plátano en paciente con Losartán (riesgo de hiperpotasemia)",
+      "Exceso de sodio por sopa en sobre, jamón y papas fritas envasadas"
+    ],
+    "itemsBase": [
+      { "alimentoId": "biosal_potasio", "porciones": 1 },
+      { "alimentoId": "caldo_cubito_sopa", "porciones": 1 },
+      { "alimentoId": "jamon_vienesas", "porciones": 2 },
+      { "alimentoId": "papas_fritas_bolsa", "porciones": 1 },
+      { "alimentoId": "platano", "porciones": 2 },
+      { "alimentoId": "arroz_blanco_cocido", "porciones": 2 },
+      { "alimentoId": "pechuga_pollo_plancha", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "sodio",
+        "label": "Sodio (< 2000 mg)",
+        "unidad": "mg",
+        "min": 200,
+        "max": 2000,
+        "esCritico": true,
+        "razonClinica": "El exceso de sodio expande el volumen extracelular y eleva la presión arterial (PA = GC × RVP)."
+      },
+      {
+        "nutriente": "potasio",
+        "label": "Potasio vigilado con ARA II (< 2500 mg)",
+        "unidad": "mg",
+        "min": 1000,
+        "max": 2500,
+        "esCritico": true,
+        "razonClinica": "Los ARA II (Losartán) e IECA disminuyen la aldosterona y retienen K+; prohibido usar biosal con KCl."
+      },
+      {
+        "nutriente": "fibra",
+        "label": "Fibra dietaria",
+        "unidad": "g",
+        "min": 15,
+        "max": 45,
+        "esCritico": true,
+        "razonClinica": "Aportar fibra cardioprotectora con cereales integrales, verduras y frutas de moderado potasio (manzana, pera, frutillas)."
+      }
+    ]
+  },
+  "aterosclerosis_cardiopatia_isquemica": {
+    "instruccionClinica": "Diseña una pauta antiaterogénica: reduce grasas totales (< 55 g), sodio (< 2000 mg) y azúcares simples, y aumenta la fibra soluble (avena, legumbres, frutas, verduras) para potenciar el descenso de LDL.",
+    "erroresSembradosDescripcion": [
+      "Exceso de grasas saturadas, sodio y azúcares por queso amarillo, embutidos, papas fritas y pastel",
+      "Déficit de fibra soluble (avena, legumbres, frutas y verduras)"
+    ],
+    "itemsBase": [
+      { "alimentoId": "queso_gauda", "porciones": 2 },
+      { "alimentoId": "jamon_vienesas", "porciones": 2 },
+      { "alimentoId": "papas_fritas_bolsa", "porciones": 1 },
+      { "alimentoId": "pastel_torta_crema", "porciones": 1 },
+      { "alimentoId": "pan_marraqueta", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "grasas",
+        "label": "Lípidos controlados",
+        "unidad": "g",
+        "min": 20,
+        "max": 55,
+        "esCritico": true,
+        "razonClinica": "Disminuir grasas saturadas/trans reduce el LDL plasmático que se infiltra y oxida en la íntima arterial."
+      },
+      {
+        "nutriente": "fibra",
+        "label": "Fibra cardioprotectora (≥ 20 g)",
+        "unidad": "g",
+        "min": 20,
+        "max": 48,
+        "esCritico": true,
+        "razonClinica": "La fibra soluble disminuye la absorción intestinal de colesterol y complementa el efecto de las estatinas."
+      },
+      {
+        "nutriente": "sodio",
+        "label": "Sodio (< 2000 mg)",
+        "unidad": "mg",
+        "min": 150,
+        "max": 2000,
+        "esCritico": true,
+        "razonClinica": "Controlar la presión arterial protege el endotelio coronario y reduce el trabajo miocárdico."
+      }
+    ]
+  },
+  "erc_hiperpotasemia": {
+    "instruccionClinica": "Aplica la Actividad 4 Renal: en esta paciente con ERC, edema e hiperpotasemia (K+ 5,9 mEq/L), restringe potasio (< 2100 mg), sodio (< 1800 mg) y fósforo (< 950 mg) manteniendo energía adecuada.",
+    "erroresSembradosDescripcion": [
+      "Sobrecarga peligrosa de potasio por plátano, palta, papa con piel y biosal de KCl",
+      "Exceso de sodio y fósforo inorgánico por sopa instantánea, jamón y papas fritas envasadas"
+    ],
+    "itemsBase": [
+      { "alimentoId": "platano", "porciones": 2 },
+      { "alimentoId": "palta_hass", "porciones": 2 },
+      { "alimentoId": "jamon_vienesas", "porciones": 1 },
+      { "alimentoId": "caldo_cubito_sopa", "porciones": 1 },
+      { "alimentoId": "papas_fritas_bolsa", "porciones": 1 },
+      { "alimentoId": "leche_entera", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "potasio",
+        "label": "Potasio restringido (< 2100 mg)",
+        "unidad": "mg",
+        "min": 700,
+        "max": 2100,
+        "esCritico": true,
+        "razonClinica": "Con K+ sérico de 5,9 mEq/L y menor excreción renal, el exceso de potasio dietario puede provocar arritmias graves."
+      },
+      {
+        "nutriente": "sodio",
+        "label": "Sodio restringido (< 1800 mg)",
+        "unidad": "mg",
+        "min": 150,
+        "max": 1800,
+        "esCritico": true,
+        "razonClinica": "Controlar la sobrecarga de volumen, el edema en extremidades inferiores y la HTA (155/95 mmHg)."
+      },
+      {
+        "nutriente": "fosforo",
+        "label": "Fósforo controlado (< 950 mg)",
+        "unidad": "mg",
+        "min": 250,
+        "max": 950,
+        "esCritico": true,
+        "razonClinica": "Prevenir hiperfosfatemia y alteración mineral ósea en ERC."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía nefroprotectora",
+        "unidad": "kcal",
+        "min": 1300,
+        "max": 2050,
+        "esCritico": false,
+        "razonClinica": "Aportar energía suficiente con arroz blanco, fideos, pollo/claras, manzana/compota y aceite de oliva."
+      }
+    ]
+  },
+  "lra_intrarrenal_nefrotoxicos": {
+    "instruccionClinica": "Soporte nutricional en Lesión Tubular Aguda: corrige la dieta hipoproteica extrema aportando energía suficiente (≥ 1400 kcal) y proteínas adecuadas (1,0–1,5 g/kg), manteniendo potasio y sodio controlados.",
+    "erroresSembradosDescripcion": [
+      "Dieta severamente hipoproteica e hipocalórica que acelera el catabolismo muscular en la LRA",
+      "Exceso de sodio y fósforo por bebida cola y sopa en sobre"
+    ],
+    "itemsBase": [
+      { "alimentoId": "bebida_gaseosa_azucarada", "porciones": 2 },
+      { "alimentoId": "caldo_cubito_sopa", "porciones": 2 },
+      { "alimentoId": "manzana_pera", "porciones": 1 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas individualizadas (1,0–1,5 g/kg)",
+        "unidad": "g",
+        "minPerKg": 1.0,
+        "maxPerKg": 1.55,
+        "esCritico": true,
+        "razonClinica": "En LRA la restricción excesiva de proteínas favorece la pérdida de masa muscular y empeora la evolución clínica."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía anticatabólica",
+        "unidad": "kcal",
+        "min": 1400,
+        "max": 2150,
+        "esCritico": true,
+        "razonClinica": "Asegurar aporte energético suficiente para frenar la proteólisis endógena y la producción de urea."
+      },
+      {
+        "nutriente": "sodio",
+        "label": "Sodio controlado (< 1900 mg)",
+        "unidad": "mg",
+        "min": 150,
+        "max": 1900,
+        "esCritico": true,
+        "razonClinica": "Ajustar sodio según presión arterial y balance hídrico."
+      }
+    ]
+  },
+  "asma_bronquial": {
+    "instruccionClinica": "Equilibra la alimentación antioxidante para asma: asegura fibra/frutas/verduras, controla azúcares simples y asegura aporte adecuado de potasio (≥ 1800 mg) ante el uso repetido de Salbutamol.",
+    "erroresSembradosDescripcion": [
+      "Dieta inflamatoria alta en azúcares simples y ultraprocesados (bebida gaseosa, galletas y papas fritas)",
+      "Bajo aporte de potasio y fibra antioxidante de frutas y verduras frescas"
+    ],
+    "itemsBase": [
+      { "alimentoId": "bebida_gaseosa_azucarada", "porciones": 2 },
+      { "alimentoId": "galletas_dulces_rellenas", "porciones": 2 },
+      { "alimentoId": "pan_marraqueta", "porciones": 2 },
+      { "alimentoId": "pechuga_pollo_plancha", "porciones": 1 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "potasio",
+        "label": "Potasio adecuado (vigilancia β2 agonista)",
+        "unidad": "mg",
+        "min": 1800,
+        "max": 3800,
+        "esCritico": true,
+        "razonClinica": "El Salbutamol en dosis altas favorece la entrada de K+ a la célula (riesgo de hipopotasemia); requiere buen aporte de frutas y verduras."
+      },
+      {
+        "nutriente": "fibra",
+        "label": "Fibra y antioxidantes",
+        "unidad": "g",
+        "min": 18,
+        "max": 45,
+        "esCritico": true,
+        "razonClinica": "Las frutas, verduras y fibra modulan la inflamación bronquial sistémica."
+      },
+      {
+        "nutriente": "azucaresSimples",
+        "label": "Azúcares simples",
+        "unidad": "g",
+        "min": 0,
+        "max": 32,
+        "esCritico": true,
+        "razonClinica": "Evitar sobrepeso/obesidad que aumenta la carga mecánica y empeora el control del asma."
+      }
+    ]
+  },
+  "fibrosis_restriccion_respiratoria": {
+    "instruccionClinica": "Optimiza la mecánica ventilatoria: asegura proteínas (1,2–1,6 g/kg) para los músculos inspiratorios, pero evita la sobrealimentación calórica y el exceso de azúcares simples que aumentan el trabajo respiratorio y el CO₂.",
+    "erroresSembradosDescripcion": [
+      "Exceso calórico y de azúcares simples (pastel, bebida gaseosa y papas fritas) que aumenta la producción de CO₂ y la presión abdominal sobre el diafragma",
+      "Bajo aporte de proteínas de alto valor biológico para el trabajo inspiratorio"
+    ],
+    "itemsBase": [
+      { "alimentoId": "pastel_torta_crema", "porciones": 2 },
+      { "alimentoId": "bebida_gaseosa_azucarada", "porciones": 2 },
+      { "alimentoId": "papas_fritas_bolsa", "porciones": 2 },
+      { "alimentoId": "pan_marraqueta", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas para diafragma (1,2–1,7 g/kg)",
+        "unidad": "g",
+        "minPerKg": 1.2,
+        "maxPerKg": 1.75,
+        "esCritico": true,
+        "razonClinica": "En el pulmón rígido (↓ compliance) el trabajo inspiratorio aumenta; se requiere preservar la masa muscular respiratoria."
+      },
+      {
+        "nutriente": "azucaresSimples",
+        "label": "Azúcares simples (< 30 g)",
+        "unidad": "g",
+        "min": 0,
+        "max": 30,
+        "esCritico": true,
+        "razonClinica": "Evitar sobrealimentación con carbohidratos simples que elevan el CO₂ y agravan la hiperglucemia por corticoides."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía controlada (sin sobrealimentar)",
+        "unidad": "kcal",
+        "min": 1350,
+        "max": 1950,
+        "esCritico": true,
+        "razonClinica": "Reducir gradualmente la carga mecánica toracoabdominal sin caer en desnutrición."
+      }
+    ]
+  },
+  "enfermedad_celiaca_malabsorcion": {
+    "instruccionClinica": "Sustituye todos los cereales con gluten (pan marraqueta, fideos, galletas) por fuentes naturales sin gluten (arroz, quínoa, choclo, papa) y asegura proteínas y fibra para recuperar el estado nutricional.",
+    "erroresSembradosDescripcion": [
+      "Presencia de alimentos con trigo/gluten en la bandeja (pan marraqueta, fideos y galletas dulces) que dañan las vellosidades",
+      "Déficit de proteínas de alto valor biológico (carnes, pescado, huevo, lácteos sin lactosa)"
+    ],
+    "itemsBase": [
+      { "alimentoId": "pan_marraqueta", "porciones": 2 },
+      { "alimentoId": "fideos_cocidos", "porciones": 2 },
+      { "alimentoId": "galletas_dulces_rellenas", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas de recuperación",
+        "unidad": "g",
+        "min": 70,
+        "max": 130,
+        "esCritico": true,
+        "razonClinica": "Reponer reservas proteicas y hierro con carnes magras, pescado, huevo, quesillo y legumbres."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía libre de gluten",
+        "unidad": "kcal",
+        "min": 1450,
+        "max": 2200,
+        "esCritico": true,
+        "razonClinica": "Alcanzar los requerimientos usando arroz, quínoa, papa, choclo, frutas y aceite de oliva."
+      },
+      {
+        "nutriente": "azucaresSimples",
+        "label": "Azúcares simples (< 30 g)",
+        "unidad": "g",
+        "min": 0,
+        "max": 30,
+        "esCritico": true,
+        "razonClinica": "Retirar galletas de trigo azucaradas y ultraprocesados que empeoran la diarrea osmótica."
+      }
+    ]
+  },
+  "cirrosis_ascitis_masld": {
+    "instruccionClinica": "Previene la sarcopenia cirrótica asegurando proteínas (1,2–1,6 g/kg) y energía suficiente (incluyendo colación nocturna), mientras restringes el sodio (< 2000 mg) y vigilas el potasio.",
+    "erroresSembradosDescripcion": [
+      "Restricción proteica errónea que acelera la pérdida muscular y la hipoalbuminemia",
+      "Exceso de sodio y potasio por caldo en cubito, jamón y biosal de KCl en paciente con Espironolactona"
+    ],
+    "itemsBase": [
+      { "alimentoId": "caldo_cubito_sopa", "porciones": 2 },
+      { "alimentoId": "biosal_potasio", "porciones": 1 },
+      { "alimentoId": "jamon_vienesas", "porciones": 1 },
+      { "alimentoId": "arroz_blanco_cocido", "porciones": 2 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas (1,2–1,7 g/kg — NO restringir)",
+        "unidad": "g",
+        "minPerKg": 1.2,
+        "maxPerKg": 1.75,
+        "esCritico": true,
+        "razonClinica": "En cirrosis es prioritario prevenir la desnutrición y la pérdida muscular con 1,2–1,5 g proteína/kg/día."
+      },
+      {
+        "nutriente": "sodio",
+        "label": "Sodio controlado para ascitis (< 2000 mg)",
+        "unidad": "mg",
+        "min": 200,
+        "max": 2000,
+        "esCritico": true,
+        "razonClinica": "Reducir el sodio dietario ayuda a controlar la retención de líquido peritoneal (ascitis) y el edema."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía total (con colación nocturna)",
+        "unidad": "kcal",
+        "min": 1500,
+        "max": 2300,
+        "esCritico": true,
+        "razonClinica": "Evitar el ayuno prolongado y el hipercatabolismo hepático."
+      }
+    ]
+  },
+  "insuficiencia_pancreatica_exocrina": {
+    "instruccionClinica": "Corrige la desnutrición por esteatorrea: aporta energía suficiente (≥ 1500 kcal), proteínas (≥ 75 g) y grasas moderadas de buena digestibilidad (35–65 g) acompañadas de Pancrelipasa en cada comida.",
+    "erroresSembradosDescripcion": [
+      "Dieta hipocalórica extrema casi sin proteínas ni grasas esenciales por temor a la esteatorrea",
+      "Exceso de bebidas azucaradas sin densidad proteica"
+    ],
+    "itemsBase": [
+      { "alimentoId": "bebida_gaseosa_azucarada", "porciones": 2 },
+      { "alimentoId": "manzana_pera", "porciones": 2 },
+      { "alimentoId": "arroz_blanco_cocido", "porciones": 1 }
+    ],
+    "reglas": [
+      {
+        "nutriente": "proteinas",
+        "label": "Proteínas de alto valor biológico",
+        "unidad": "g",
+        "min": 75,
+        "max": 135,
+        "esCritico": true,
+        "razonClinica": "Revertir la pérdida de peso y masa muscular secundaria a la maldigestión pancreática."
+      },
+      {
+        "nutriente": "kcal",
+        "label": "Energía suficiente",
+        "unidad": "kcal",
+        "min": 1500,
+        "max": 2350,
+        "esCritico": true,
+        "razonClinica": "Cubrir el requerimiento energético fraccionado junto con la administración de Pancrelipasa."
+      },
+      {
+        "nutriente": "grasas",
+        "label": "Lípidos moderados (para absorber Vit A, D, E, K)",
+        "unidad": "g",
+        "min": 30,
+        "max": 68,
+        "esCritico": true,
+        "razonClinica": "Con Pancrelipasa administrada en las comidas, se requiere un aporte moderado de grasas saludables para absorber vitaminas A, D, E y K."
+      }
+    ]
+  }
+}

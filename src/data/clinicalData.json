@@ -1,0 +1,1588 @@
+[
+  {
+    "id": "sindrome_metabolico",
+    "nombre": "Síndrome Metabólico",
+    "grupoEtarioTipico": ["adulto_joven", "adulto"],
+    "estandarAntropometrico": "IMC clásico adulto + circunferencia de cintura",
+    "sintomasValidos": [
+      "Hipertensión arterial (PA ≥ 130/85 mmHg)",
+      "Resistencia a la insulina (glucosa en ayuno ≥ 100 mg/dL)",
+      "Obesidad abdominal (cintura ≥ 90 cm en hombres / ≥ 80 cm en mujeres)",
+      "Triglicéridos elevados (≥ 150 mg/dL)",
+      "HDL bajo (< 40 mg/dL en hombres / < 50 mg/dL en mujeres)",
+      "Fatiga postprandial",
+      "Acantosis nigricans leve"
+    ],
+    "valoresLabEsperados": {
+      "glucosa_ayuno": "alta",
+      "trigliceridos": "altos",
+      "hdl": "bajo",
+      "ldl": "normal_alto",
+      "hba1c": "normal_alta",
+      "presion_arterial": "alta"
+    },
+    "tratamientoCorrecto": [
+      "Metformina 500-1000 mg/día (si hay resistencia a insulina documentada)",
+      "Losartán 50 mg/día (para control HTA)",
+      "Intervención nutricional hipocalórica moderada (-500 kcal del gasto estimado)",
+      "Actividad física aeróbica ≥ 150 min/semana",
+      "Reducción de sodio dietario < 2 g/día"
+    ],
+    "contraindicaciones": [
+      "Corticosteroides sistémicos (prednisona, dexametasona) — agravan resistencia a insulina y retención de sodio",
+      "Anticonceptivos orales combinados de alta dosis estrogénica — pueden elevar triglicéridos",
+      "Dieta cetogénica sin supervisión en HTA activa — riesgo de hipopotasemia"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Metformina + alcohol abundante: riesgo de acidosis láctica",
+      "Losartán + suplementos de potasio o dieta muy rica en potasio: hiperpotasemia"
+    ],
+    "notasEducativas": "El síndrome metabólico se diagnostica con ≥ 3 de 5 criterios ATP-III/IDF. La Metformina mejora la sensibilidad a insulina sin hipoglicemia. Los corticosteroides sistémicos son una contraindicación relativa mayor porque inducen hiperglucemia, retención de líquidos e HTA, agravando los tres componentes cardinales del síndrome. Al evaluar un caso de SM, verifica que ningún fármaco de la receta tenga efecto hiperglucemiante o retenedor de sodio.",
+    "sistemaCorporal": "Endocrino_Metabolico",
+    "resultadoAprendizaje": "RA2",
+    "dificultad": "media"
+  },
+  {
+    "id": "epoc",
+    "nombre": "Enfermedad Pulmonar Obstructiva Crónica (EPOC)",
+    "grupoEtarioTipico": ["adulto", "adulto_mayor"],
+    "estandarAntropometrico": "IMC clásico adulto (adultos) / IMC rango ampliado + circunferencia de pantorrilla (adultos mayores)",
+    "sintomasValidos": [
+      "Disnea progresiva de esfuerzo",
+      "Tos crónica productiva (expectoración matutina)",
+      "Sibilancias espiratorias",
+      "Uso de musculatura accesoria para respirar",
+      "Pérdida de peso no intencional",
+      "Fatiga crónica",
+      "Exacerbaciones frecuentes de vías respiratorias"
+    ],
+    "valoresLabEsperados": {
+      "espirometria_vef1_cvf": "bajo",
+      "saturacion_o2": "normal_baja",
+      "hematocrito": "normal_alto",
+      "albumina": "normal_baja",
+      "pcr": "elevada_exacerbacion"
+    },
+    "tratamientoCorrecto": [
+      "Salbutamol (broncodilatador de acción corta) 100 mcg inhalado c/4-6h o según necesidad",
+      "Budesonida inhalada 200-400 mcg/día (corticoide inhalado — DISTINTO al sistémico)",
+      "Tiotropio 18 mcg inhalado/día (broncodilatador de acción larga)",
+      "Dieta hiperproteica (1.2-1.5 g/kg/día) para preservar masa muscular respiratoria",
+      "Suplemento de Vitamina D si hay deficiencia"
+    ],
+    "contraindicaciones": [
+      "Betabloqueantes no selectivos (propranolol, atenolol) — inducen broncoespasmo severo",
+      "Morfina u opioides a dosis sedantes en fase estable — deprimen el drive respiratorio",
+      "Dieta hipercalórica con exceso de carbohidratos simples — aumenta producción de CO2 y agrava hipercapnia"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Corticoides sistémicos prolongados (si se usan en exacerbación) + dieta pobre en calcio/Vit D: mayor riesgo de osteoporosis",
+      "Salbutamol en dosis altas: puede producir hipopotasemia (entrada de K+ a la célula), temblor y taquicardia",
+      "Corticoides inhalados sin enjuague bucal posterior: riesgo de candidiasis orofaríngea y disfonía"
+    ],
+    "notasEducativas": "En EPOC confluyen bronquitis crónica (inflamación e hipersecreción de moco en vías aéreas) y enfisema (destrucción de paredes alveolares y pérdida de retroceso elástico, con aumento de compliance pero colapso espiratorio y atrapamiento aéreo). Puede evolucionar a insuficiencia respiratoria Tipo II (hipercápnica: PaO2 < 60 mmHg con PaCO2 > 45 mmHg) por hipoventilación alveolar y fatiga diafragmática. Tanto la desnutrición (debilita el diafragma y músculos intercostales) como la sobrealimentación con exceso de carbohidratos simples (aumenta la producción metabólica de CO2) empeoran la función respiratoria. No deben usarse antitusígenos (codeína, dextrometorfano) cuando hay tos productiva con secreciones abundantes.",
+    "sistemaCorporal": "Respiratorio",
+    "resultadoAprendizaje": "RA2",
+    "dificultad": "media",
+    "focoFisiopatologico": "ventilacion_intercambio_gaseoso",
+    "focoClinico": "Respiratorio · Obstrucción crónica (bronquitis/enfisema), hipercapnia Tipo II y equilibrio nutricional",
+    "conceptosClave": [
+      "Patrón obstructivo: FEV1/CVF < 0,70, atrapamiento aéreo e hiperinsuflación",
+      "Bronquitis crónica (hipersecreción de moco) vs. Enfisema (destrucción alveolar y pérdida de retroceso elástico)",
+      "Insuficiencia respiratoria Tipo II (hipercápnica: PaO2 < 60 y PaCO2 > 45 mmHg)",
+      "Equilibrio nutricional: prevenir sarcopenia diafragmática sin sobrealimentar (evitar exceso de CO2)",
+      "Broncodilatadores (β2 agonistas/antimuscarínicos), corticoides inhalados vs. sistémicos y mucolíticos (N-acetilcisteína)"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Inflamación crónica y pérdida de retroceso elástico → disminución del calibre en espiración → atrapamiento aéreo e hiperinsuflación → mayor trabajo respiratorio y fatiga diafragmática → hipoventilación alveolar con hipercapnia ( ↑ PaCO2)",
+        "esCorrecta": true,
+        "explicacion": "Correcto: en EPOC la obstrucción al flujo espiratorio y la pérdida de soporte elástico alveolar generan atrapamiento aéreo, aumentan el gasto energético ventilatorio y pueden llevar a insuficiencia respiratoria hipercápnica (Tipo II)."
+      },
+      {
+        "texto": "Engrosamiento fibrótico intersticial puro → pulmón rígido con FEV1/CVF aumentado → hiperventilación compensatoria permanente sin retención de CO2",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: eso describe un patrón restrictivo como la fibrosis pulmonar, no una enfermedad obstructiva como la EPOC."
+      },
+      {
+        "texto": "Broncoconstricción aislada totalmente reversible sin daño parenquimatoso ni atrapamiento aéreo → normalización completa entre crisis",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la reversibilidad completa caracteriza al asma bronquial; en la EPOC existe limitación persistente del flujo aéreo y remodelación/destrucción alveolar."
+      }
+    ]
+  },
+  {
+    "id": "hipotiroidismo",
+    "nombre": "Hipotiroidismo Primario",
+    "grupoEtarioTipico": ["adulto_joven", "adulto", "adulto_mayor"],
+    "estandarAntropometrico": "IMC clásico adulto",
+    "sintomasValidos": [
+      "Fatiga y somnolencia crónica",
+      "Aumento de peso sin cambio dietario",
+      "Intolerancia al frío",
+      "Estreñimiento",
+      "Piel seca y cabello quebradizo",
+      "Bradycardia (FC < 60 lpm)",
+      "Edema facial y periorbitario matutino (mixedema)",
+      "Depresión o lentitud cognitiva"
+    ],
+    "valoresLabEsperados": {
+      "tsh": "alto",
+      "t4_libre": "bajo",
+      "colesterol_total": "alto",
+      "ldl": "alto",
+      "hemoglobina": "normal_baja"
+    },
+    "tratamientoCorrecto": [
+      "Levotiroxina sódica (T4) 1.6 mcg/kg/día vía oral, en ayunas, 30-60 min antes del desayuno",
+      "Ajuste de dosis según TSH cada 6-8 semanas hasta alcanzar rango objetivo (TSH 0.5-2.5 mUI/L)",
+      "Educación nutricional: evitar consumo de soya, fibra excesiva y alimentos bociógenos en exceso junto a la toma"
+    ],
+    "contraindicaciones": [
+      "Amiodarona — contiene yodo en alta cantidad, puede alterar drásticamente la función tiroidea y el metabolismo de la Levotiroxina",
+      "Suplementos de calcio o hierro tomados SIMULTÁNEAMENTE con Levotiroxina — reducen absorción hasta 40%",
+      "Antiácidos con aluminio o magnesio u Omeprazol administrados junto a la Levotiroxina y el café — reducen absorción intestinal",
+      "Colestiramina — secuestra T4 en el intestino"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Levotiroxina + calcio o hierro simultáneo: reducción de absorción hasta 40% por quelación intestinal; separar ≥ 2–4 horas",
+      "Levotiroxina + café o desayuno inmediato: disminuye su absorción; debe tomarse en ayunas 30–60 min antes del desayuno",
+      "Levotiroxina + Omeprazol (en pacientes con ERGE concomitante): el cambio de pH gástrico puede modificar la disolución y absorción de T4"
+    ],
+    "notasEducativas": "En el hipotiroidismo primario disminuye la producción de hormonas tiroideas (T3 y T4), reduciendo el gasto metabólico basal, enlenteciendo el tránsito intestinal (estreñimiento) y alterando el perfil lipídico (aumento de LDL). Por retroalimentación negativa en el eje hipotálamo-hipófisis, la TSH se eleva. La Levotiroxina reemplaza la hormona T4 y debe administrarse en ayunas (30–60 min antes del desayuno) con agua, lejos de café, lácteos, suplementos de calcio/hierro y omeprazol.",
+    "sistemaCorporal": "Endocrino_Metabolico",
+    "resultadoAprendizaje": "RA3",
+    "dificultad": "alta",
+    "focoFisiopatologico": "eje_endocrino",
+    "focoClinico": "Endocrino y Digestivo · Eje hipotálamo-hipófisis-tiroides y horarios de administración de Levotiroxina",
+    "conceptosClave": [
+      "Eje hipotálamo-hipófisis-tiroides y retroalimentación negativa (↓ T4 libre → ↑ TSH)",
+      "Disminución del gasto metabólico basal, estreñimiento y dislipidemia secundaria",
+      "Contraste con hipertiroidismo (↑ gasto metabólico, pérdida de peso, taquicardia, temblor, uso de metimazol)",
+      "Horario crítico: Levotiroxina en ayunas 30–60 min antes del desayuno",
+      "Interacciones que reducen absorción de Levotiroxina: hierro, calcio, café, lácteos y omeprazol"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Déficit primario de T3/T4 → pérdida de retroalimentación negativa hipofisaria (↑ TSH) + reducción del metabolismo basal y receptores LDL → administración de Levotiroxina con café/calcio/omeprazol impide su absorción intestinal",
+        "esCorrecta": true,
+        "explicacion": "Correcto: el déficit tiroideo eleva la TSH por retroalimentación negativa y reduce la tasa metabólica; además, tomar la Levotiroxina junto al desayuno, café o calcio bloquea su absorción intestinal."
+      },
+      {
+        "texto": "Exceso de hormonas tiroideas → hipermetabolismo con aumento del tránsito intestinal → el café potencia en exceso el efecto de la Levotiroxina",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: el exceso de hormonas tiroideas corresponde al hipertiroidismo, y el café disminuye (no potencia) la absorción de Levotiroxina."
+      },
+      {
+        "texto": "Falla primaria del hipotálamo con TSH indetectable → aumento de absorción intestinal de Levotiroxina en presencia de calcio y lácteos",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: en el hipotiroidismo primario la TSH está elevada, y el calcio/lácteos disminuyen la absorción de Levotiroxina."
+      }
+    ]
+  },
+  {
+    "id": "insuficiencia_cardiaca",
+    "nombre": "Insuficiencia Cardíaca Crónica",
+    "grupoEtarioTipico": ["adulto", "adulto_mayor"],
+    "estandarAntropometrico": "IMC clásico adulto / IMC ampliado + sarcopenia en adulto mayor",
+    "sintomasValidos": [
+      "Edema periférico en tobillos y piernas",
+      "Disnea de esfuerzo (primero con grandes esfuerzos, luego con mínimos)",
+      "Ortopnea (disnea al acostarse, requiere elevar cabeza)",
+      "Disnea paroxística nocturna",
+      "Fatiga y reducción de la tolerancia al ejercicio",
+      "Tos nocturna o seca",
+      "Distensión venosa yugular"
+    ],
+    "valoresLabEsperados": {
+      "bnp_probnp": "alto",
+      "sodio": "normal_bajo",
+      "potasio": "normal_bajo",
+      "creatinina": "normal_alta",
+      "albumina": "normal_baja",
+      "hemoglobina": "normal_baja"
+    },
+    "tratamientoCorrecto": [
+      "Furosemida 20-40 mg/día vía oral (diurético de asa en NKCC2 — aumenta eliminación de Na+, agua y K+ para reducir congestión)",
+      "Enalapril (IECA) o Losartán (ARA II) — bloquean el eje RAAS reduciendo vasoconstricción y aldosterona",
+      "Espironolactona 25 mg/día (antagonista de aldosterona ahorrador de K+ en túbulo colector)",
+      "Restricción de sodio ≤ 2 g/día y evitar sustitutos de sal con KCl si usa ARA II + Espironolactona",
+      "Restricción de líquidos 1.5-2 L/día si hay hiponatremia o congestión marcada",
+      "Monitoreo diario de peso (aumento > 2 kg en 3 días = señal de alarma)"
+    ],
+    "contraindicaciones": [
+      "AINEs (ibuprofeno, naproxeno, diclofenaco) — causan vasoconstricción de arteriola aferente, retienen sodio y bloquean el efecto de diuréticos e IECA/ARA II",
+      "Dieta rica en sodio (> 3 g/día: embutidos, sopas en sobre, caldos concentrados) — antagoniza la Furosemida y agrava el edema",
+      "Verapamilo o diltiazem (calcioantagonistas no dihidropiridínicos) — efecto inotrópico negativo en IC sistólica"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Furosemida (diurético de asa): aumenta excreción urinaria de K+ y Mg2+ (riesgo de hipocalemia)",
+      "Losartán (ARA II) + Espironolactona (ahorrador de K+) + sales de potasio/suplementos: alto riesgo de hiperpotasemia y arritmias",
+      "AINEs + diuréticos + IECA/ARA II ('triple whammy'): caída aguda de la filtración glomerular e injuria renal"
+    ],
+    "notasEducativas": "En la insuficiencia cardíaca la secuencia fisiopatológica es: ↓ función cardíaca → ↓ gasto cardíaco → activación compensatoria del eje RAAS y sistema simpático → retención de Na+ y agua + vasoconstricción → congestión pulmonar y sistémica (disnea, edema en extremidades inferiores, aumento de peso). Cuando el paciente recibe Furosemida (que pierde K+ en el asa de Henle) combinada con Losartán y Espironolactona (que retienen K+ al bloquear el receptor AT1 y la aldosterona en el túbulo colector), el nutricionista debe vigilar estrechamente el potasio sérico y prohibir los sustitutos de sal con cloruro de potasio.",
+    "sistemaCorporal": "Cardiovascular",
+    "resultadoAprendizaje": "RA1",
+    "dificultad": "alta",
+    "focoFisiopatologico": "insuficiencia_cardiaca",
+    "focoClinico": "Cardiovascular y Renal · Secuencia de la Insuficiencia Cardíaca, congestión y manejo de K+ con diuréticos y RAAS",
+    "conceptosClave": [
+      "Secuencia IC: ↓ función cardíaca → ↓ gasto cardíaco → activación RAAS + simpático → retención Na+/agua + vasoconstricción → congestión",
+      "Furosemida (asa de Henle, inhibe Na+/K+/2Cl− → pierde K+) vs. Espironolactona (túbulo colector, bloquea aldosterona → retiene K+)",
+      "Losartán (ARA II, bloquea receptor AT1) disminuye aldosterona y retiene K+",
+      "Control estricto de sodio, líquidos, peso diario y vigilancia de potasio sérico"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "↓ Función cardíaca → ↓ gasto cardíaco → activación de RAAS y sistema simpático → retención de Na+/agua y vasoconstricción → congestión pulmonar y edema periférico",
+        "esCorrecta": true,
+        "explicacion": "Correcto: la caída del gasto cardíaco activa mecanismos neurohumorales (RAAS y simpático) que inicialmente intentan mantener la perfusión, pero terminan provocando sobrecarga hidrosalina y congestión."
+      },
+      {
+        "texto": "↑ Gasto cardíaco primario → inhibición total de renina y aldosterona → pérdida masiva de sodio urinario → edema por hiponatremia pura",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: en la insuficiencia cardíaca el gasto cardíaco disminuye y el eje RAAS se activa (no se inhibe), reteniendo sodio y agua."
+      },
+      {
+        "texto": "Vasodilatación periférica espontánea → aumento de la filtración glomerular → exceso de excreción de agua sin participación hormonal",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: ocurre vasoconstricción periférica mediada por angiotensina II y sistema simpático, con reducción de la perfusión renal."
+      }
+    ]
+  },
+  {
+    "id": "desnutricion_infantil_aguda",
+    "nombre": "Desnutrición Aguda Infantil",
+    "grupoEtarioTipico": ["infante"],
+    "estandarAntropometrico": "Puntaje Z OMS: peso/talla (P/T). Aguda: P/T < -2 DS (moderada) o < -3 DS (severa)",
+    "sintomasValidos": [
+      "Curva de peso/talla estancada o en descenso",
+      "Irritabilidad y llanto fácil",
+      "Masa muscular disminuida (muslos y glúteos delgados)",
+      "Piel descamada y cabello quebradizo o decolorado",
+      "Infecciones recurrentes (déficit inmunológico secundario)",
+      "Retraso en el desarrollo psicomotor",
+      "Edema en dorso de pies y manos (en forma edematosa: kwashiorkor)"
+    ],
+    "valoresLabEsperados": {
+      "albumina": "baja",
+      "hemoglobina": "baja",
+      "glucosa": "normal_baja",
+      "potasio": "bajo",
+      "fosforo": "normal_bajo",
+      "proteinas_totales": "bajas"
+    },
+    "tratamientoCorrecto": [
+      "Fase de estabilización (primeros 7 días): F-75 (fórmula terapéutica con 75 kcal/100 mL), volumen fraccionado c/2-3h",
+      "Fase de rehabilitación (semanas 2-6): F-100 (100 kcal/100 mL) o ATPE (alimento terapéutico de uso listo)",
+      "Suplemento de vitamina A, zinc y ácido fólico según protocolo OMS",
+      "Antibióticos empíricos en desnutrición severa complicada",
+      "Estimulación sensorial y juego en ambiente estructurado"
+    ],
+    "contraindicaciones": [
+      "Reintroducción alimentaria masiva sin protocolo de transición — riesgo de Síndrome de Realimentación (hipofosfatemia, arritmias, edema agudo)",
+      "Volumen excesivo de líquidos en fase inicial — riesgo cardíaco en corazón comprometido",
+      "Hierro en fase de estabilización antes de la semana 2 — puede precipitar estrés oxidativo cuando hay déficit de vitamina A y zinc"
+    ],
+    "interaccionesFarmacoNutriente": [],
+    "notasEducativas": "El Síndrome de Realimentación es la complicación más temida en la recuperación nutricional intensiva. La reintroducción rápida de glucosa desencadena captación celular masiva de fósforo, potasio y magnesio, precipitando hipofosfatemia severa, arritmias y fallo cardíaco. El protocolo OMS de fases (F-75 → F-100) existe para prevenir este síndrome al avanzar gradualmente la densidad calórica. Si detectas una indicación que salta este protocolo, es una señal de alarma clínica directa.",
+    "sistemaCorporal": "Digestivo",
+    "resultadoAprendizaje": "RA1",
+    "dificultad": "alta"
+  },
+  {
+    "id": "desnutricion_cronica_infantil",
+    "nombre": "Desnutrición Crónica Infantil (Retraso del Crecimiento)",
+    "grupoEtarioTipico": ["infante", "nino"],
+    "estandarAntropometrico": "Puntaje Z OMS: talla/edad (T/E). Crónica: T/E < -2 DS",
+    "sintomasValidos": [
+      "Talla significativamente por debajo del canal de crecimiento familiar",
+      "Peso/edad bajo pero peso/talla puede ser normal (niño pequeño pero proporcionado)",
+      "Retraso en la maduración ósea (edad ósea menor a la cronológica)",
+      "Desarrollo cognitivo y escolar afectado",
+      "Curva de talla estancada en los primeros 1000 días de vida"
+    ],
+    "valoresLabEsperados": {
+      "igf1": "bajo",
+      "albumina": "normal_baja",
+      "hemoglobina": "normal_baja",
+      "zinc_serico": "bajo"
+    },
+    "tratamientoCorrecto": [
+      "Dieta densa en nutrientes adaptada a la edad, con proteínas de alto valor biológico",
+      "Suplemento de zinc 10 mg/día por 3 meses (déficit de zinc limita la síntesis de IGF-1)",
+      "Suplemento de hierro y vitamina A si hay deficiencias confirmadas",
+      "Seguimiento mensual de talla y peso con gráficas OMS",
+      "Estimulación temprana del desarrollo psicomotor"
+    ],
+    "contraindicaciones": [
+      "Sustitución de lactancia materna por agua o caldos antes de los 6 meses — acelera la desnutrición",
+      "Introducción de alimentos complementarios hipocalóricos sin densidad energética adecuada — perpetúa el déficit"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Zinc + hierro simultáneo en altas dosis: competencia por transportadores intestinales (DMT-1); administrar en momentos separados"
+    ],
+    "notasEducativas": "La desnutrición crónica (stunting) refleja un déficit nutricional mantenido durante meses o años, principalmente en los primeros 1000 días. A diferencia de la aguda, no se revierte con intervención breve: las consecuencias en el neurodesarrollo pueden ser permanentes. El IGF-1 bajo con zinc sérico disminuido confirma el impacto en el eje de crecimiento. Identifica si los factores de riesgo documentados (alimentación inadecuada en etapas previas) están siendo abordados en la indicación.",
+    "sistemaCorporal": "Digestivo",
+    "resultadoAprendizaje": "RA2",
+    "dificultad": "baja"
+  },
+  {
+    "id": "obesidad_infantil",
+    "nombre": "Obesidad Infantil / Adolescente",
+    "grupoEtarioTipico": ["nino", "adolescente"],
+    "estandarAntropometrico": "IMC/edad OMS (percentil o puntaje Z). Sobrepeso: +1 a +2 DS; Obesidad: > +2 DS",
+    "sintomasValidos": [
+      "IMC/edad por encima del percentil 95 (obesidad) o 85-95 (sobrepeso)",
+      "Acantosis nigricans en cuello y pliegues (señal de resistencia a insulina)",
+      "Sedentarismo e inactividad física reportada",
+      "Apnea del sueño o ronquido nocturno",
+      "Dificultad para la actividad física sostenida",
+      "Preocupación excesiva por la imagen corporal (señal de alerta para TCANE)"
+    ],
+    "valoresLabEsperados": {
+      "glucosa_ayuno": "normal_alta",
+      "trigliceridos": "normales_altos",
+      "hdl": "normal_bajo",
+      "insulina_basal": "alta",
+      "homa_ir": "elevado"
+    },
+    "tratamientoCorrecto": [
+      "Intervención nutricional conductual: no dieta restrictiva, sino educación en alimentación saludable y autorregulación",
+      "Aumento progresivo de actividad física: ≥ 60 min/día de actividad moderada-intensa (OMS niños/adolescentes)",
+      "Terapia familiar centrada en cambio de hábitos del hogar",
+      "Seguimiento antropométrico mensual con metas de mantenimiento de peso (no pérdida en niños en crecimiento activo)",
+      "Derivación a psicología si hay señales de trastorno de conducta alimentaria"
+    ],
+    "contraindicaciones": [
+      "Dietas hipocalóricas extremas sin supervisión médica y nutricional — constituyen MALA PRAXIS en menores: pueden comprometer el crecimiento estatural y precipitar trastornos de la conducta alimentaria",
+      "Fármacos para pérdida de peso (orlistat, sibutramina) sin indicación pediátrica especializada",
+      "Metas de pérdida de peso agresivas en adolescentes con signos de preocupación por la imagen corporal — riesgo de desencadenar anorexia o bulimia"
+    ],
+    "interaccionesFarmacoNutriente": [],
+    "notasEducativas": "En menores de 18 años, el objetivo primario en sobrepeso NO es perder peso sino mantenerlo mientras se crece en talla (lo que hace descender el IMC/edad). Las dietas restrictivas con metas calóricas rígidas son contraindicadas porque comprometen el aporte de micronutrientes en periodos críticos de crecimiento y son un factor de riesgo para trastornos de conducta alimentaria. Reconocer la acantosis nigricans como señal de resistencia a insulina es clave para el diagnóstico diferencial.",
+    "sistemaCorporal": "Endocrino_Metabolico",
+    "resultadoAprendizaje": "RA1",
+    "dificultad": "media"
+  },
+  {
+    "id": "diabetes_mellitus_t1",
+    "nombre": "Diabetes Mellitus Tipo 1",
+    "grupoEtarioTipico": ["adolescente", "adulto_joven"],
+    "estandarAntropometrico": "IMC/edad OMS (adolescentes) / IMC clásico adulto (adultos jóvenes)",
+    "sintomasValidos": [
+      "Poliuria (orinar en exceso, incluyendo nicturia)",
+      "Polidipsia (sed intensa y persistente)",
+      "Pérdida de peso no intencional rápida (días a semanas)",
+      "Polifagia (hambre constante pese a ingerir)",
+      "Fatiga intensa",
+      "Visión borrosa transitoria",
+      "Aliento cetónico (olor a frutas en cetoacidosis incipiente)"
+    ],
+    "valoresLabEsperados": {
+      "glucosa_ayuno": "muy_alta",
+      "hba1c": "alta",
+      "cpeptido": "muy_bajo",
+      "cetonas_orina": "positivo",
+      "anticuerpos_anti_gad": "positivo"
+    },
+    "tratamientoCorrecto": [
+      "Insulina basal (glargina o detemir) + insulina rápida preprandial (lispro, aspart, glulisina)",
+      "Conteo de carbohidratos para ajuste de dosis de insulina rápida (relación insulina:carbohidrato)",
+      "Monitoreo glucémico frecuente (≥ 4 veces/día o sensor continuo de glucosa)",
+      "Plan de alimentación flexible (no restrictivo en carbohidratos complejos saludables)",
+      "Educación en manejo de hipoglicemia: regla del 15 (15 g de carbohidrato simple, controlar en 15 min)"
+    ],
+    "contraindicaciones": [
+      "Ayuno prolongado sin ajuste de dosis de insulina basal — riesgo de hipoglicemia severa",
+      "Metformina como tratamiento único — no aplica en DM1 (puede usarse como coadyuvante pero NUNCA reemplaza la insulina)",
+      "Dietas muy bajas en carbohidratos sin supervisión — dificultan el conteo y aumentan riesgo de cetosis",
+      "Sulfonilureas (glibenclamida) — estimulan células beta destruidas, sin efecto y con riesgo de hipoglicemia"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Insulina rápida + ingesta de carbohidratos de alto índice glucémico sin ajuste: hiperglucemia postprandial severa",
+      "Insulina basal + ayuno + actividad física intensa: hipoglicemia grave"
+    ],
+    "notasEducativas": "La DM1 resulta de la destrucción autoinmune de células beta pancreáticas (anti-GAD positivo, péptido-C muy bajo). La insulina es absolutamente indispensable. Las Sulfonilureas no tienen ningún efecto porque actúan estimulando la secreción de insulina endógena — en DM1 no hay células beta funcionales. La Metformina puede usarse como coadyuvante, nunca como monoterapia. El ayuno prolongado sin reducir la insulina basal es una de las causas más frecuentes de hipoglicemia grave en DM1.",
+    "sistemaCorporal": "Endocrino_Metabolico",
+    "resultadoAprendizaje": "RA3",
+    "dificultad": "alta"
+  },
+  {
+    "id": "sarcopenia_disfagia",
+    "nombre": "Sarcopenia con Riesgo de Disfagia",
+    "grupoEtarioTipico": ["adulto_mayor"],
+    "estandarAntropometrico": "IMC ampliado (18.5-27 aceptable) + fuerza de prensión (dinamometría) + circunferencia de pantorrilla (< 31 cm = alerta)",
+    "sintomasValidos": [
+      "Pérdida de masa y fuerza muscular (fuerza de prensión < 27 kg hombres / < 16 kg mujeres)",
+      "Circunferencia de pantorrilla < 31 cm",
+      "Dificultad para tragar líquidos (atragantamiento, tos post-deglución)",
+      "Dificultad para tragar sólidos (necesita más tiempo, fatiga al masticar)",
+      "Pérdida de peso no intencional > 5% en 6 meses",
+      "Velocidad de marcha lenta (< 0.8 m/s en test de 6 metros)",
+      "Caídas frecuentes en los últimos 3 meses"
+    ],
+    "valoresLabEsperados": {
+      "albumina": "baja",
+      "vitamina_d": "baja",
+      "pcr": "leve_elevacion",
+      "creatinina": "normal_baja",
+      "hemoglobina": "normal_baja"
+    },
+    "tratamientoCorrecto": [
+      "Dieta hiperproteica: 1.2-1.5 g proteína/kg/día (priorizar proteínas de alto valor biológico: carne, pescado, huevo, lácteos)",
+      "Textura modificada de los alimentos si hay disfagia: IDDSI nivel 4-6 según severidad",
+      "Espesante en líquidos si hay disfagia a líquidos (miel, néctar según IDDSI)",
+      "Suplemento de vitamina D + calcio si hay deficiencia",
+      "Ejercicio de resistencia progresivo supervisado (entrenamiento de fuerza adaptado)",
+      "Fonoaudiología para rehabilitación deglutoria"
+    ],
+    "contraindicaciones": [
+      "Alimentos de consistencia sólida dura o pegajosa en disfagia severa — riesgo directo de aspiración y neumonía aspirativa",
+      "Agua pura sin espesar en disfagia a líquidos confirmada — aspiración silente",
+      "Dieta hiposódica extrema sin evaluación del estado de hidratación — riesgo de hiponatremia e hipotensión en adultos mayores",
+      "Reposo absoluto prolongado — acelera la sarcopenia (inmovilización es la causa más rápida de pérdida muscular)"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Vitamina D + calcio + diuréticos de asa (furosemida): la furosemida aumenta excreción de calcio; monitorear",
+      "Proteína en polvo + insuficiencia renal crónica: carga proteica puede agravar la función renal (requiere ajuste individual)"
+    ],
+    "notasEducativas": "La disfagia afecta al 15-22% de los adultos mayores en comunidad y hasta al 60-80% de los institucionalizados. La neumonía aspirativa es la complicación más grave y frecuentemente mortal. La escala IDDSI (International Dysphagia Diet Standardisation Initiative) clasifica 8 niveles de textura (0=líquido fino, 7=normal). Si la anamnesis documenta atragantamiento o tos post-deglución y la indicación nutricional no contempla textura modificada o líquidos espesados, es una señal de riesgo vital.",
+    "sistemaCorporal": "Digestivo",
+    "resultadoAprendizaje": "RA1",
+    "dificultad": "media"
+  },
+
+  {
+    "id": "lesion_por_presion_sacra",
+    "nombre": "Lesión por Presión Sacra (Estadio II)",
+    "grupoEtarioTipico": ["adulto_mayor"],
+    "estandarAntropometrico": "IMC ampliado adulto mayor + evaluación de riesgo de úlcera (Braden/Norton)",
+    "sintomasValidos": [
+      "Eritema sacro que no palidece a la presión (señal de Categoría II)",
+      "Aumento de temperatura local en zona sacra",
+      "Sensibilidad disminuida en extremidades inferiores (neuropatía diabética)",
+      "Inmovilidad prolongada en decúbito supino",
+      "Disminución de ingesta alimentaria en las últimas 24 horas",
+      "Ausencia de dolor en zona afectada pese a daño tisular visible",
+      "Evolución a pérdida superficial de tejido si no se cambia posición"
+    ],
+    "valoresLabEsperados": {
+      "albumina": "bajo",
+      "glucosa_ayuno": "alto",
+      "hemoglobina": "normal_baja",
+      "vitamina_d": "bajo",
+      "proteinas_totales": "bajas"
+    },
+    "tratamientoCorrecto": [
+      "Dieta hiperproteica: 1.2–1.5 g proteína/kg/día para soporte de cicatrización",
+      "Suplemento de vitamina C 500 mg/día + zinc 15 mg/día (síntesis de colágeno)",
+      "Hidratación adecuada: mínimo 30 mL/kg/día para perfusión tisular",
+      "Cambios de posición c/2 horas y superficies antiescaras",
+      "Control glucémico (meta glicemia 140–180 mg/dL en hospitalizado)",
+      "Tamizaje nutricional formal (MNA o NRS-2002)"
+    ],
+    "contraindicaciones": [
+      "Restricción proteica sin evaluación renal — retarda la síntesis de matriz extracelular y la cicatrización",
+      "Corticosteroides sistémicos prolongados — suprimen la fase proliferativa de cicatrización y agravan la hiperglicemia",
+      "Dieta hipocalórica severa (< 60% de requerimiento) sin soporte nutricional complementario — favorece catabolismo y pérdida de masa muscular"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Corticosteroides + dieta pobre en proteínas: mayor pérdida de masa muscular y retraso de cicatrización",
+      "Diuréticos de asa (furosemida) + baja ingesta hídrica: deshidratación que reduce perfusión y agrava isquemia local"
+    ],
+    "notasEducativas": "La lesión por presión se produce cuando la presión sostenida comprime los vasos capilares, genera isquemia → hipoxia → falla de la Na+/K+ ATPasa → entrada de Na+ y agua → tumefacción celular → daño mitocondrial. La ausencia de dolor NO descarta daño tisular: la neuropatía diabética elimina la señal de alarma. El eritema no blanqueable indica daño ya establecido en dermis profunda (lesión irreversible inicial). La desnutrición (albúmina baja, ingesta reducida) compromete la síntesis de colágeno tipo I y III, la respuesta inmune y la capacidad de epitelización → la intervención nutricional precoz es tan importante como el cambio postural.",
+    "sistemaCorporal": "Cardiovascular",
+    "resultadoAprendizaje": "RA1",
+    "dificultad": "media",
+    "focoFisiopatologico": "lesion_celular",
+    "focoClinico": "Clase 1.1 · Homeostasis, lesión reversible/irreversible, necrosis y reparación",
+    "conceptosClave": [
+      "Isquemia e hipoxia tisular",
+      "Falla de bomba Na+/K+ ATPasa por déficit de ATP",
+      "Lesión reversible vs. lesión irreversible",
+      "Necrosis e inflamación secundaria",
+      "Rol de la nutrición en la cicatrización"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Presión sostenida → compresión vascular → hipoxia → falla ATP → tumefacción celular → daño mitocondrial → muerte celular",
+        "esCorrecta": true,
+        "explicacion": "La secuencia correcta: isquemia genera déficit energético que colapsa las bombas iónicas. Sin ATP, la Na+/K+ ATPasa falla y el Na+ entra a la célula con agua. Si se mantiene, el Ca2+ intracelular aumenta, se activan enzimas destructivas y ocurre muerte celular."
+      },
+      {
+        "texto": "Presión sostenida → inflamación directa → edema → necrosis por compresión mecánica pura",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la inflamación es consecuencia de la necrosis, no su causa. La secuencia inicia con isquemia por compresión vascular, no inflamación directa."
+      },
+      {
+        "texto": "Presión sostenida → activación leucocitaria → liberación de citocinas → daño celular por inflamación excesiva",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: los leucocitos se reclutan después de la muerte celular (en respuesta al contenido intracelular liberado), no son el mecanismo primario de daño en la lesión por presión."
+      }
+    ]
+  },
+
+  {
+    "id": "neumonia_bacteriana_aguda",
+    "nombre": "Neumonía Bacteriana Aguda",
+    "grupoEtarioTipico": ["adulto", "adulto_joven"],
+    "estandarAntropometrico": "IMC clásico adulto",
+    "sintomasValidos": [
+      "Tos productiva con expectoración mucopurulenta (48 horas de evolución)",
+      "Disnea de aparición aguda",
+      "Dolor torácico pleurítico (aumenta con la respiración)",
+      "Fiebre 38.7 °C con sensación febril subjetiva",
+      "Taquicardia (> 100 lpm)",
+      "Crépitos en base pulmonar derecha al examen",
+      "Menor apetito desde el inicio del cuadro infeccioso"
+    ],
+    "valoresLabEsperados": {
+      "pcr": "elevada_exacerbacion",
+      "albumina": "normal_baja",
+      "hemoglobina": "normal_baja",
+      "sodio": "normal_bajo",
+      "glucosa_ayuno": "normal_alto"
+    },
+    "tratamientoCorrecto": [
+      "Antibioticoterapia empírica (amoxicilina-clavulánico o azitromicina según presentación)",
+      "Soporte nutricional oral o enteral: normocalórico-hiperproteico durante infección activa",
+      "Hidratación oral o intravenosa según tolerancia y estado clínico",
+      "Reposo y monitoreo de saturación de O2",
+      "Antipirético si fiebre > 38.5 °C (paracetamol como primera línea)"
+    ],
+    "contraindicaciones": [
+      "AINEs (ibuprofeno, naproxeno) en infección respiratoria aguda — enmascaran signos de alarma, pueden retrasar la resolución y aumentar riesgo de complicaciones pleurales",
+      "Restricción calórica severa durante infección activa — el estado hipermetabólico de la infección aumenta requerimientos en 20-30%; la restricción favorece catabolismo muscular",
+      "Mucolíticos con codeína o antihistamínicos sedantes — suprimen el reflejo tusígeno que drena el exudado pulmonar"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Antibióticos de amplio espectro + dieta pobre en fibra/probióticos: mayor disbiosis intestinal durante el tratamiento",
+      "Fiebre elevada + baja ingesta hídrica: deshidratación que concentra secreciones y dificulta la expectoración"
+    ],
+    "notasEducativas": "La neumonía bacteriana desencadena inflamación aguda clásica: el agente (bacteria) es reconocido por células centinela (macrófagos alveolares) → liberan mediadores (IL-1, TNF-α, IL-6) → vasodilatación + aumento de permeabilidad vascular → salida de leucocitos y proteínas al alveolo → exudado purulento. Las manifestaciones sistémicas (fiebre, taquicardia, anorexia, leucocitosis, PCR elevada) son todas mediadas por citocinas proinflamatorias. El dolor pleurítico refleja extensión de la inflamación a la pleura. La anorexia inducida por IL-1 y TNF-α es adaptativa pero representa un riesgo nutricional real, especialmente si el paciente ya tiene déficits previos.",
+    "sistemaCorporal": "Respiratorio",
+    "resultadoAprendizaje": "RA1",
+    "dificultad": "baja",
+    "focoFisiopatologico": "inflamacion_aguda",
+    "focoClinico": "Clase 1.1 · Inflamación aguda, cambios vasculares, mediadores y respuesta sistémica",
+    "conceptosClave": [
+      "Reconocimiento del agente → respuesta innata",
+      "Vasodilatación y aumento de permeabilidad vascular",
+      "Reclutamiento de neutrófilos y fagocitosis",
+      "Respuesta sistémica: fiebre, leucocitosis, PCR, anorexia",
+      "Diferenciación signo/síntoma"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Reconocimiento bacteriano por macrófagos → citocinas (IL-1, TNF-α) → vasodilatación + aumento de permeabilidad → reclutamiento neutrófilos → fagocitosis → resolución/reparación",
+        "esCorrecta": true,
+        "explicacion": "Secuencia correcta de inflamación aguda: estímulo → mediadores → cambios vasculares → reclutamiento leucocitario → eliminación del agente. Los neutrófilos predominan en las primeras horas de infección bacteriana."
+      },
+      {
+        "texto": "Bacteria → daño celular directo → necrosis de tejido pulmonar → inflamación crónica → fibrosis pulmonar",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la neumonía aguda genera inflamación aguda (no crónica) con resolución esperada. La fibrosis es una complicación tardía e infrecuente en cuadros no complicados."
+      },
+      {
+        "texto": "Bacteria → activación del complemento → lisis bacteriana directa → sin respuesta celular requerida",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: el complemento contribuye pero no elimina la infección por sí solo. La respuesta celular leucocitaria (especialmente neutrófilos) es indispensable en la defensa antibacteriana."
+      }
+    ]
+  },
+
+  {
+    "id": "dehiscencia_herida_quirurgica",
+    "nombre": "Dehiscencia de Herida Quirúrgica con Infección",
+    "grupoEtarioTipico": ["adulto"],
+    "estandarAntropometrico": "IMC clásico adulto + tamizaje nutricional perioperatorio",
+    "sintomasValidos": [
+      "Aumento progresivo del dolor en herida operatoria (día 5 posoperatorio)",
+      "Eritema perilesional progresivo",
+      "Exudado turbio o purulento en la herida",
+      "Separación parcial de bordes quirúrgicos (dehiscencia)",
+      "Glucemias persistentemente elevadas (> 180 mg/dL)",
+      "Ingesta alimentaria < 50% de lo indicado en los últimos días",
+      "Pérdida de peso durante el mes previo a la cirugía"
+    ],
+    "valoresLabEsperados": {
+      "glucosa_ayuno": "alto",
+      "albumina": "bajo",
+      "pcr": "elevada_exacerbacion",
+      "proteinas_totales": "bajas",
+      "vitamina_d": "bajo"
+    },
+    "tratamientoCorrecto": [
+      "Dieta hiperproteica: 1.5–2.0 g proteína/kg/día para soporte de cicatrización activa",
+      "Suplemento oral: vitamina C 500–1000 mg/día + zinc 15–30 mg/día",
+      "Control glucémico estricto: meta glicemia 140–180 mg/dL en hospitalizado (hiperglicemia retrasa cicatrización)",
+      "Suplemento nutricional oral o enteral si ingesta < 60% del requerimiento",
+      "Debridamiento quirúrgico y antibioticoterapia local o sistémica según cultivo",
+      "Curas con apósitos adecuados según fase de cicatrización"
+    ],
+    "contraindicaciones": [
+      "Restricción proteica en paciente con herida abierta — la síntesis de colágeno (tipos I y III) requiere proteína y vitamina C; su déficit paraliza la fase proliferativa",
+      "Dieta hipocalórica severa en posoperatorio — el balance energético negativo desvía aminoácidos hacia gluconeogénesis, privando a la herida de sustratos",
+      "Corticosteroides sistémicos en posoperatorio de cicatrización comprometida — suprimen la proliferación de fibroblastos y la epitelización"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Antibióticos betalactámicos + malnutrición proteica: menor síntesis de proteínas de fase aguda, respuesta inmune deficiente",
+      "Hiperglicemia no controlada + cicatrización: glucosilación de proteínas de la matriz extracelular altera la función del colágeno y limita la angiogénesis"
+    ],
+    "notasEducativas": "La cicatrización tiene 4 fases: 1) Hemostasia (minutos-horas): coágulo y matriz provisional. 2) Inflamación (días 1-4): limpieza, mediadores, macrófagos. 3) Proliferación (días 4-21): fibroblastos, colágeno, angiogénesis, epitelización. 4) Remodelación (semanas-meses): reorganización del colágeno, resistencia. La dehiscencia con exudado turbio indica estancamiento en la fase inflamatoria (infección). Los factores que retrasan la cicatrización en este caso son: infección activa (prolonga inflamación), hiperglicemia (altera función leucocitaria y colágeno), desnutrición (déficit de sustratos), pérdida de peso previa (reservas agotadas). La cicatrización por segunda intención ocurre porque los bordes están separados, hay mayor pérdida tisular y se requiere más tejido de granulación, contracción y epitelización.",
+    "sistemaCorporal": "Digestivo",
+    "resultadoAprendizaje": "RA2",
+    "dificultad": "alta",
+    "focoFisiopatologico": "cicatrizacion",
+    "focoClinico": "Clase 1.1 · Cicatrización: fases, factores que la alteran y segunda intención",
+    "conceptosClave": [
+      "Cuatro fases de la cicatrización (hemostasia, inflamación, proliferación, remodelación)",
+      "Cicatrización por primera vs. segunda intención",
+      "Factores que retrasan la reparación: infección, hiperglicemia, desnutrición",
+      "Rol de proteínas y vitamina C en síntesis de colágeno",
+      "Tamizaje nutricional perioperatorio"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Infección activa → prolongación de la fase inflamatoria → mayor daño tisular → retraso de la proliferación de fibroblastos → dehiscencia por falta de colágeno maduro",
+        "esCorrecta": true,
+        "explicacion": "Correcto: la infección mantiene activos los mediadores inflamatorios, que si se prolongan dañan el tejido circundante y bloquean la transición a la fase proliferativa. La hiperglicemia y la desnutrición actúan sinérgicamente agravando el retraso."
+      },
+      {
+        "texto": "Infección → apoptosis masiva de fibroblastos → cicatrización por primera intención sin tejido de granulación",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la infección no elimina los fibroblastos por apoptosis masiva; los inhibe y retarda su acción. Además, con bordes separados la cicatrización es por segunda intención (requiere tejido de granulación), no primera."
+      },
+      {
+        "texto": "Hiperglicemia → osmolaridad elevada → deshidratación celular local → necrosis directa de todos los bordes",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la hiperglicemia afecta la cicatrización principalmente por glucosilación de proteínas de la matriz y alteración de la función leucocitaria, no por necrosis directa osmótica de los bordes."
+      }
+    ]
+  },
+
+  {
+    "id": "deshidratacion_homeostenosis",
+    "nombre": "Deshidratación Aguda por Homeostenosis en Adulto Mayor",
+    "grupoEtarioTipico": ["adulto_mayor"],
+    "estandarAntropometrico": "IMC ampliado adulto mayor (22–27 aceptable) + evaluación de hidratación clínica",
+    "sintomasValidos": [
+      "Debilidad marcada de inicio súbito (2 días de evolución)",
+      "Mareos al ponerse de pie (hipotensión ortostática)",
+      "Confusión leve de inicio reciente (3 días de evolución)",
+      "Inapetencia marcada durante el episodio de gastroenteritis",
+      "Baja ingesta de líquidos durante 2 días",
+      "Buena funcionalidad basal previa al episodio (vivía de forma independiente)",
+      "Sin deterioro funcional progresivo previo"
+    ],
+    "valoresLabEsperados": {
+      "sodio": "normal_bajo",
+      "potasio": "bajo",
+      "creatinina": "normal_alta",
+      "albumina": "normal_baja",
+      "hemoglobina": "normal_baja"
+    },
+    "tratamientoCorrecto": [
+      "Rehidratación oral fraccionada: 200–250 mL c/2h si tolerada (soluciones con electrolitos)",
+      "Corrección de desequilibrio electrolítico (sodio y potasio) con monitoreo",
+      "Dieta blanda de alta densidad energética y proteica adaptada a tolerancia",
+      "Evaluación de hidratación: diuresis, mucosas, turgencia, signos de hipotensión ortostática",
+      "Suspensión transitoria de medicamentos que agravan deshidratación (diuréticos, AINEs)",
+      "Revisión de polifarmacia y potenciales interacciones en contexto de deshidratación"
+    ],
+    "contraindicaciones": [
+      "Restricción hídrica sin indicación médica formal — agrava la deshidratación y la insuficiencia renal prerrenal en contexto de pérdidas activas",
+      "Diuréticos de asa (furosemida) sin reevaluar la indicación — en deshidratación activa aumentan la depleción de volumen y el riesgo de insuficiencia renal",
+      "Laxantes orales o enemas en adulto mayor deshidratado — agrava las pérdidas de agua y electrolitos"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Furosemida + baja ingesta hídrica: deshidratación severa, hipotensión, insuficiencia renal prerrenal",
+      "AINEs + deshidratación: reducen filtrado glomerular y pueden precipitar insuficiencia renal aguda"
+    ],
+    "notasEducativas": "La homeostenosis es la reducción de la reserva fisiológica con el envejecimiento. Una mujer de 81 años que funciona independientemente tiene envejecimiento cronológico avanzado pero buen envejecimiento biológico funcional. La diferencia es crucial: la edad no predice la capacidad. Ante un estresor 'pequeño' (gastroenteritis de 2 días), su menor reserva renal (menor TFG basal, menor capacidad de concentración), cardiovascular (menor respuesta cronótropa, mayor rigidez arterial) y muscular (menor masa que amortigüe la debilidad) hace que el umbral de compensación se supere más rápido que en un adulto joven. La confusión de inicio agudo, la hipotensión ortostática y el deterioro funcional súbito NO son envejecimiento normal: son signos de patología aguda que requieren investigación y tratamiento.",
+    "sistemaCorporal": "Renal",
+    "resultadoAprendizaje": "RA1",
+    "dificultad": "baja",
+    "focoFisiopatologico": "homeostenosis",
+    "focoClinico": "Clase 1.2 · Reserva funcional, homeostenosis y descompensación ante un estresor",
+    "conceptosClave": [
+      "Envejecimiento cronológico vs. envejecimiento biológico",
+      "Homeostenosis: reducción del margen de respuesta adaptativa",
+      "Diferenciación envejecimiento normal vs. patología aguda",
+      "Reserva renal, cardiovascular y muscular reducida con la edad",
+      "Valoración integral del adulto mayor (funcional, cognitiva, nutricional, hidratación)"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Homeostenosis → menor reserva renal y cardiovascular → gastroenteritis supera umbral de compensación → deshidratación con hipotensión ortostática y confusión aguda",
+        "esCorrecta": true,
+        "explicacion": "Correcto: la homeostenosis explica que un adulto mayor con buena funcionalidad basal pueda descompensarse ante estresores que un adulto joven toleraría sin manifestaciones clínicas evidentes."
+      },
+      {
+        "texto": "Edad avanzada → deterioro cognitivo progresivo normal → la confusión es esperable sin necesidad de investigación adicional",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la confusión de inicio agudo (3 días) en una persona sin deterioro cognitivo previo es siempre patología aguda (delirium) que debe investigarse. NO es envejecimiento normal."
+      },
+      {
+        "texto": "Gastroenteritis → inflamación intestinal crónica → reducción permanente de la reserva funcional → dependencia definitiva",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la gastroenteritis aguda es un estresor puntual. Con tratamiento adecuado, la paciente puede recuperar su nivel funcional basal. La descompensación fue aguda, no implica irreversibilidad."
+      }
+    ]
+  },
+
+  {
+    "id": "sarcopenia_fragilidad_inflammaging",
+    "nombre": "Sarcopenia con Fragilidad e Inflammaging",
+    "grupoEtarioTipico": ["adulto_mayor"],
+    "estandarAntropometrico": "IMC ampliado (22–27) + fuerza de prensión + velocidad de marcha (EWGSOP2)",
+    "sintomasValidos": [
+      "Disminución de velocidad de marcha (< 0.8 m/s) durante el último año",
+      "Dificultad para levantarse de una silla sin apoyarse (fuerza de cuádriceps reducida)",
+      "Dos caídas sin fractura en los últimos 6 meses",
+      "Apetito reducido con alimentación poco variada",
+      "Consumo de solo 1 comida con fuente proteica en varios días",
+      "Inactividad física desde fallecimiento de compañero de caminata",
+      "Sin enfermedad aguda evidente en el momento de la consulta"
+    ],
+    "valoresLabEsperados": {
+      "albumina": "normal_baja",
+      "vitamina_d": "bajo",
+      "pcr": "elevada_exacerbacion",
+      "hemoglobina": "normal_baja",
+      "proteinas_totales": "bajas"
+    },
+    "tratamientoCorrecto": [
+      "Dieta hiperproteica: 1.2–1.5 g proteína/kg/día con proteínas de alto valor biológico distribuidas en 3 comidas",
+      "Ejercicio de resistencia progresivo supervisado (2–3 sesiones/semana): el único estímulo que revierte la sarcopenia",
+      "Suplemento de vitamina D si 25-OH-D < 30 ng/mL (rol en función muscular y síntesis proteica)",
+      "Evaluación de riesgo de caídas y adaptación del entorno",
+      "Valoración del estado emocional y apoyo social (factor modificador de la adherencia)",
+      "Tamizaje con SARC-F o EWGSOP2: fuerza de prensión y velocidad de marcha"
+    ],
+    "contraindicaciones": [
+      "Reposo absoluto prolongado — acelera la sarcopenia: la inmovilización es la causa más rápida de pérdida muscular en adultos mayores (atrofia de desuso)",
+      "Dieta muy baja en proteínas (< 0.8 g/kg/día) — insuficiente para síntesis proteica muscular; favorece balance muscular negativo e inflammaging",
+      "Sedantes o hipnóticos de vida media larga (benzodiacepinas) sin indicación estricta — aumentan el riesgo de caídas y reducen la actividad física espontánea"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Vitamina D + escasa exposición solar + baja ingesta de lácteos: déficit sinérgico que afecta función muscular y síntesis proteica",
+      "Proteína en polvo en alta dosis + insuficiencia renal no evaluada: riesgo de sobrecarga proteica renal; siempre evaluar función renal antes"
+    ],
+    "notasEducativas": "La sarcopenia es pérdida de masa y fuerza muscular (criterios EWGSOP2: fuerza de prensión, velocidad de marcha, masa muscular). La fragilidad es un síndrome de vulnerabilidad multisistémica con mayor riesgo de eventos adversos (caídas, hospitalización, dependencia). Pueden coexistir pero no son lo mismo: la sarcopenia es una condición muscular específica; la fragilidad es un fenotipo global de reserva reducida. El inflammaging (inflamación crónica de bajo grado) y la senescencia celular (células que no se dividen pero liberan mediadores proinflamatorios: fenotipo secretor asociado a senescencia, SASP) contribuyen a la pérdida muscular manteniendo un estado catabólico de bajo nivel que supera la síntesis proteica. La inactividad y la baja ingesta proteica son los dos factores modificables más potentes en este contexto.",
+    "sistemaCorporal": "Musculoesqueletico",
+    "resultadoAprendizaje": "RA2",
+    "dificultad": "media",
+    "focoFisiopatologico": "sarcopenia_fragilidad",
+    "focoClinico": "Clase 1.2 · Sarcopenia, fragilidad, inflammaging y senescencia celular",
+    "conceptosClave": [
+      "Sarcopenia: criterios de fuerza, masa y desempeño (EWGSOP2)",
+      "Fragilidad: vulnerabilidad multisistémica vs. sarcopenia como condición muscular",
+      "Inflammaging: inflamación crónica de bajo grado asociada al envejecimiento",
+      "Senescencia celular y fenotipo secretor (SASP)",
+      "Inactividad + déficit proteico = balance muscular negativo"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Inactividad + baja ingesta proteica → balance muscular negativo → pérdida de masa y fuerza → inflammaging amplifica el catabolismo → sarcopenia con fenotipo de fragilidad",
+        "esCorrecta": true,
+        "explicacion": "Correcto: la inactividad elimina el estímulo mecánico necesario para la síntesis proteica muscular; el déficit proteico reduce los sustratos. El inflammaging (inflamación crónica de bajo grado) aumenta el catabolismo basal, resultando en pérdida funcional progresiva."
+      },
+      {
+        "texto": "Envejecimiento → apoptosis masiva de miofibrillas tipo II → pérdida total e irreversible de la capacidad de síntesis proteica muscular",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la sarcopenia no es causada por apoptosis masiva irreversible. Las fibras tipo II disminuyen pero el proceso es parcialmente reversible con ejercicio de resistencia y aporte proteico adecuado."
+      },
+      {
+        "texto": "Caídas → inmovilización forzada → fractura oculta → dolor → restricción de movimiento → sarcopenia secundaria a trauma",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: en este caso no hay fractura. Las caídas son consecuencia de la sarcopenia y fragilidad preexistentes, no su causa principal. La secuencia causal va en sentido inverso."
+      }
+    ]
+  },
+
+  {
+    "id": "sindrome_geriatrico_complejo",
+    "nombre": "Síndrome Geriátrico Complejo (Envejecimiento Patológico)",
+    "grupoEtarioTipico": ["adulto_mayor"],
+    "estandarAntropometrico": "IMC ampliado + MNA (Mini Nutritional Assessment) + tamizaje de disfagia",
+    "sintomasValidos": [
+      "Pérdida involuntaria de 4 kg en 3 semanas (> 5% del peso corporal en menos de 1 mes)",
+      "Abandono súbito de la preparación de comidas (pérdida de actividad instrumental de la vida diaria)",
+      "Episodios de desorientación nocturna de inicio reciente",
+      "Tres caídas en el período evaluado",
+      "Cansancio referido (síntoma de agotamiento de reservas)",
+      "Poco apetito persistente",
+      "Dificultad reciente para masticar alimentos duros (problema bucodental o masticatorio)"
+    ],
+    "valoresLabEsperados": {
+      "albumina": "bajo",
+      "vitamina_d": "bajo",
+      "hemoglobina": "bajo",
+      "proteinas_totales": "bajas",
+      "sodio": "normal_bajo"
+    },
+    "tratamientoCorrecto": [
+      "Textura modificada de alimentos según nivel de disfagia/masticación (IDDSI nivel 5–6 si dificultad para sólidos duros)",
+      "Suplemento nutricional oral hipercalórico hiperproteico: 2 unidades/día entre comidas",
+      "Derivación a odontología o prótesis dental si hay problemas de masticación",
+      "Valoración integral geriátrica: funcionalidad, cognición, nutrición, medicación, entorno",
+      "Revisión de polifarmacia y suspensión de medicamentos que disminuyan apetito o alteren cognición",
+      "Vitamina D + calcio si hay déficit confirmado"
+    ],
+    "contraindicaciones": [
+      "Atribuir todos los cambios al 'envejecimiento normal' sin investigación — la velocidad y el impacto funcional de los cambios descritos superan lo esperable y orientan a causa patológica tratable",
+      "Agua pura sin espesar si hay disfagia confirmada a líquidos — riesgo de aspiración silente y neumonía aspirativa",
+      "Sedantes (benzodiacepinas, antihistamínicos) sin indicación precisa — aumentan riesgo de caídas, confusión y reducen ingesta"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Polifarmacia (> 5 fármacos) + baja ingesta: mayor riesgo de interacciones, náuseas, inapetencia farmacológica",
+      "Suplemento de calcio + carbonato + fármacos con absorción pH-dependiente: separar ≥ 2 horas"
+    ],
+    "notasEducativas": "El envejecimiento normal es lento, progresivo y con impacto funcional mínimo. Un cambio en 3 semanas que incluye pérdida de 4 kg, desorientación, 3 caídas y abandono de actividades de la vida diaria NO es envejecimiento normal: es patología aguda o subaguda que requiere valoración integral urgente. La familia que atribuye todo a 'ya está vieja' comete el error más frecuente que retrasa el diagnóstico. Los hallazgos que no son envejecimiento esperable: pérdida ponderal involuntaria rápida, desorientación de inicio reciente, caídas múltiples, abandono súbito de AVDI, anorexia marcada y dificultad nueva para masticar. La valoración integral geriátrica (VIG) explora: nutrición, cognición/delirium, funcionalidad, medicación, hidratación, entorno y apoyo social. Desde el rol del nutricionista: riesgo de desnutrición, dificultad de masticación y pérdida funcional son los tres problemas más urgentes.",
+    "sistemaCorporal": "Musculoesqueletico",
+    "resultadoAprendizaje": "RA1",
+    "dificultad": "alta",
+    "focoFisiopatologico": "sindrome_geriatrico",
+    "focoClinico": "Clase 1.2 · Envejecimiento normal vs. patológico, reserva funcional y valoración integral",
+    "conceptosClave": [
+      "Diferenciación envejecimiento normal vs. patología (velocidad + impacto funcional)",
+      "Síndrome geriátrico: presentación atípica de múltiples patologías simultáneas",
+      "Valoración integral geriátrica (VIG): 5 dominios",
+      "Riesgo de desnutrición en adulto mayor con pérdida ponderal involuntaria",
+      "Disfagia/masticación: impacto en selección y consumo alimentario"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Múltiples factores simultáneos (patología subyacente + reservas agotadas + déficit nutricional) → pérdida acelerada de funcionalidad → síndrome geriátrico con deterioro en cascada",
+        "esCorrecta": true,
+        "explicacion": "Correcto: el síndrome geriátrico resulta de la confluencia de múltiples problemas que se amplifican mutuamente. La velocidad y el impacto funcional de los cambios (3 semanas) indican que existe una causa aguda/subaguda que agotó las ya reducidas reservas fisiológicas."
+      },
+      {
+        "texto": "Envejecimiento cronológico avanzado → deterioro progresivo inevitable → cambios esperables en cualquier persona de 79 años sin necesidad de intervención específica",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la edad cronológica no determina la funcionalidad. Antes de este período la paciente era independiente. Los cambios son agudos/subagudos, no progresivos graduales. Siempre requieren investigación de causa tratable."
+      },
+      {
+        "texto": "Caídas repetidas → trauma craneal leve → confusión secundaria → depresión → inapetencia como única cadena causal lineal",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: el síndrome geriátrico es multifactorial y no puede explicarse con una cadena causal lineal única. La confusión, las caídas, la pérdida ponderal y la inapetencia son problemas simultáneos con múltiples etiologías posibles que requieren valoración integral."
+      }
+    ]
+  },
+
+  {
+    "id": "anemia_ferropenica",
+    "nombre": "Anemia Ferropénica por Interacción Alimentaria",
+    "grupoEtarioTipico": ["adulto_joven", "adulto"],
+    "estandarAntropometrico": "IMC clásico adulto",
+    "sintomasValidos": [
+      "Fatiga persistente y debilidad muscular pese a tomar suplemento de hierro",
+      "Disnea de esfuerzo leve-moderada",
+      "Taquicardia compensatoria (palpitaciones al subir escaleras)",
+      "Mareos frecuentes y palidez mucocutánea",
+      "Toma de sulfato ferroso cada mañana junto con café con leche"
+    ],
+    "valoresLabEsperados": {
+      "hemoglobina": "baja",
+      "hematocrito": "bajo",
+      "ferritina": "baja",
+      "saturacion_o2": "normal"
+    },
+    "tratamientoCorrecto": [
+      "Sulfato ferroso (Fe2+) vía oral administrado lejos de café, té y lácteos, acompañado de fuente de vitamina C (jugo de naranja/cítricos)",
+      "Dieta rica en hierro hemo (carnes magras, pescado) y hierro no hemo combinado con ácido ascórbico",
+      "Separar al menos 2 horas el consumo de té, café y calcio/lácteos respecto a la toma del hierro",
+      "Educación sobre RAM gastrointestinales del sulfato ferroso (náuseas, estreñimiento, molestias GI)"
+    ],
+    "contraindicaciones": [
+      "Administración de Sulfato Ferroso junto con café, té o leche (calcio) — los taninos/polifenoles y el calcio inhiben drásticamente la absorción intestinal de Fe2+",
+      "Suspensión brusca del suplemento de hierro sin completar repleción de depósitos de ferritina",
+      "Dieta vegetariana baja en vitamina C y con alto consumo de té en las comidas principales — perpetúa la malabsorción de hierro no hemo"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Sulfato ferroso (Fe2+) + café o té: polifenoles y taninos forman complejos insolubles que reducen la absorción de hierro",
+      "Sulfato ferroso + calcio o lácteos cercanos a la toma: competencia por transporte divalent en enterocito; disminuye absorción",
+      "Sulfato ferroso + vitamina C (ácido ascórbico): mantiene el hierro en estado ferroso (Fe2+) soluble y favorece su absorción"
+    ],
+    "notasEducativas": "En la anemia ferropénica el problema no es solo 'tener pocos glóbulos rojos': el déficit de hierro (por baja ingesta, mayores requerimientos, pérdidas o menor absorción) reduce la síntesis de hemoglobina (eritrocito hipocrómico), disminuyendo la capacidad de transporte de O2 hacia los tejidos y generando hipoxia tisular relativa. El organismo compensa aumentando la frecuencia cardíaca (taquicardia), manifestándose con fatiga, disnea y mareos. No basta con prescribir sulfato ferroso: si la paciente lo toma junto con café con leche cada mañana, el calcio y los polifenoles del café bloquean su absorción y el cuadro no mejora.",
+    "sistemaCorporal": "Cardiovascular",
+    "resultadoAprendizaje": "RA3",
+    "dificultad": "baja",
+    "focoFisiopatologico": "anemia_transporte_o2",
+    "focoClinico": "Cardiovascular (Hematología) · Transporte de O2, anemia ferropénica e interacción Sulfato Ferroso + alimentación",
+    "conceptosClave": [
+      "Secuencia de la anemia: ↓ Fe → ↓ Hemoglobina → ↓ transporte de O2 → hipoxia tisular relativa → fatiga, disnea y taquicardia",
+      "Por qué la anemia produce taquicardia: compensación cardíaca ante menor transporte de O2",
+      "Sulfato ferroso (Fe2+): aporta hierro para síntesis de Hb; RAM: náuseas, estreñimiento y molestias GI",
+      "Factores que modifican la absorción: Vitamina C favorece; té, café y calcio/lácteos disminuyen la absorción"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "↓ Hierro biodisponible (quelado por café/calcio) → ↓ síntesis de hemoglobina → ↓ capacidad de transporte de O2 → hipoxia tisular relativa → taquicardia compensatoria, disnea y fatiga",
+        "esCorrecta": true,
+        "explicacion": "Correcto: el hierro administrado con café con leche no se absorbe adecuadamente; persiste la menor concentración de hemoglobina, cae el transporte de O2 y el corazón aumenta la frecuencia cardíaca para compensar."
+      },
+      {
+        "texto": "↓ Hierro → destrucción directa de plaquetas → falla de la hemostasia primaria → taquicardia por activación de trombina",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: el hierro participa en la síntesis de hemoglobina en el eritrocito para el transporte de O2, no en la agregación plaquetaria."
+      },
+      {
+        "texto": "Café con leche → estimulación directa de la médula ósea → exceso de eritrocitos hipocrómicos que obstruyen el flujo coronario",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: el café y los lácteos disminuyen la absorción intestinal del sulfato ferroso en el duodeno."
+      }
+    ]
+  },
+
+  {
+    "id": "trombosis_warfarina",
+    "nombre": "Trombosis Venosa Profunda en Tratamiento con Warfarina",
+    "grupoEtarioTipico": ["adulto", "adulto_mayor"],
+    "estandarAntropometrico": "IMC clásico adulto / IMC ampliado adulto mayor",
+    "sintomasValidos": [
+      "Antecedente reciente de trombosis venosa profunda (TVP) en extremidad inferior",
+      "En tratamiento anticoagulante oral con Warfarina sódica 5 mg/día",
+      "Cambios bruscos en el consumo de verduras de hoja verde (espinaca, acelga, brócoli)",
+      "Consumo reciente de suplementos concentrados de ajo, jengibre, cúrcuma y vitamina E",
+      "Equimosis fáciles o fluctuaciones marcadas del INR en controles recientes"
+    ],
+    "valoresLabEsperados": {
+      "inr": "bajo",
+      "hemoglobina": "normal",
+      "proteinas_totales": "normal",
+      "creatinina": "normal"
+    },
+    "tratamientoCorrecto": [
+      "Educación nutricional en Warfarina: NO eliminar las verduras de hoja verde, sino mantener una ingesta diaria constante y regular de vitamina K",
+      "Suspender megadosis o suplementos concentrados de ajo, jengibre, cúrcuma, omega-3 en alta dosis y vitamina E que alteran la coagulación/agregación",
+      "Monitoreo periódico de INR para ajustar dosis de Warfarina",
+      "Alimentación cardioprotectora equilibrada e hidratación adecuada"
+    ],
+    "contraindicaciones": [
+      "Eliminar por completo todas las verduras de hoja verde o variar drásticamente su consumo de una semana a otra — desestabiliza el INR y el efecto de la Warfarina",
+      "Suplementos herbales/concentrados con efecto anticoagulante o antiagregante (ajo, jengibre, cúrcuma, vitamina E en altas dosis) — potencian el riesgo de sangrado",
+      "Confundir un antiagregante plaquetario (AAS, clopidogrel) con un anticoagulante (warfarina, apixabán) y suspender la warfarina sin indicación médica"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Warfarina + Vitamina K (espinaca, acelga, brócoli, lechuga, repollo, perejil): la vitamina K antagoniza el efecto de la warfarina; se debe mantener una ingesta constante",
+      "Warfarina/Antiagregantes + ajo, cebolla, jengibre, cúrcuma, omega-3 y vitamina E: pueden potenciar el efecto antitrombótico y aumentar el riesgo de sangrado"
+    ],
+    "notasEducativas": "La hemostasia normal requiere adhesión y activación plaquetaria seguidas de la cascada de coagulación (vía intrínseca y extrínseca → factor X → trombina IIa → fibrina Ia estabilizada por factor XIIIa). Es fundamental distinguir un antiagregante (AAS, clopidogrel: actúa sobre plaquetas, útil en trombosis arterial) de un anticoagulante (warfarina, heparina, apixabán, rivaroxabán: actúa sobre la cascada de coagulación y fibrina, útil en trombosis venosa). La Warfarina disminuye la acción de la vitamina K reduciendo la formación de factores de coagulación; por ello, el objetivo nutricional NO es prohibir las verduras de hoja verde, sino mantener una ingesta constante de vitamina K.",
+    "sistemaCorporal": "Cardiovascular",
+    "resultadoAprendizaje": "RA3",
+    "dificultad": "media",
+    "focoFisiopatologico": "hemostasia_trombosis",
+    "focoClinico": "Cardiovascular · Cascada de coagulación, antiagregante vs. anticoagulante e interacción Warfarina + Vitamina K",
+    "conceptosClave": [
+      "Secuencia de hemostasia: lesión vascular → adhesión plaquetaria (vWF) → activación/agregación → cascada de coagulación (X → trombina IIa → fibrina Ia)",
+      "Antiagregante (plaquetas: AAS, clopidogrel) ≠ Anticoagulante (coagulación/fibrina: warfarina, heparina, apixabán)",
+      "Warfarina + Vitamina K (espinaca, acelga, brócoli, lechuga, repollo, perejil): mantener ingesta constante, no eliminar verduras",
+      "Alimentos con efecto antiagregante/anticoagulante: ajo, jengibre, cúrcuma, omega-3 y vitamina E"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Warfarina inhibe el ciclo de la vitamina K hepática (↓ factores de coagulación y fibrina) → variaciones bruscas en la ingesta de hojas verdes (vitamina K) alteran la síntesis de factores y desestabilizan la anticoagulación",
+        "esCorrecta": true,
+        "explicacion": "Correcto: la warfarina actúa bloqueando la regeneración de vitamina K necesaria para sintetizar factores de coagulación. Por eso una ingesta errática de vitamina K modifica directamente su eficacia."
+      },
+      {
+        "texto": "Warfarina bloquea directamente el receptor de ADP plaquetario igual que el clopidogrel → la vitamina K destruye las plaquetas circulantes",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: el bloqueo del receptor de ADP plaquetario corresponde al clopidogrel (antiagregante), mientras que la warfarina es un anticoagulante que actúa sobre factores dependientes de vitamina K."
+      },
+      {
+        "texto": "La vitamina K activa la plasmina para disolver el coágulo → es obligatorio prohibir de por vida cualquier verdura verde en pacientes con warfarina",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la vitamina K participa en la síntesis de factores de coagulación, y la recomendación clínica actual es mantener un consumo constante de verduras verdes, no eliminarlas."
+      }
+    ]
+  },
+
+  {
+    "id": "hipertension_eje_raas",
+    "nombre": "Hipertensión Arterial Esencial con Tratamiento en Eje RAAS",
+    "grupoEtarioTipico": ["adulto", "adulto_mayor"],
+    "estandarAntropometrico": "IMC clásico adulto + circunferencia de cintura",
+    "sintomasValidos": [
+      "Presión arterial persistentemente elevada (150/95 mmHg)",
+      "Consumo frecuente de alimentos procesados altos en sodio (embutidos, snacks, sopas en sobre)",
+      "Cefalea occipital matutina ocasional",
+      "En tratamiento con Losartán 50 mg/día (o Enalapril) e Hidroclorotiazida",
+      "Uso reciente de 'sal dietética' con cloruro de potasio por iniciativa propia"
+    ],
+    "valoresLabEsperados": {
+      "presion_arterial": "alta",
+      "sodio": "normal_alto",
+      "potasio": "alto",
+      "creatinina": "normal"
+    },
+    "tratamientoCorrecto": [
+      "Reducción del consumo de sodio (< 2000 mg/día), limitando ultraprocesados y condimentando con hierbas y especias naturales",
+      "Suspender sustitutos de sal con cloruro de potasio (KCl) cuando se utiliza ARA II (Losartán) o IECA (Enalapril) por riesgo de hiperpotasemia",
+      "Patrón alimentario cardioprotector (tipo DASH) ajustando el potasio dietario según kalemia y fármacos",
+      "Control de peso corporal y actividad física aeróbica regular"
+    ],
+    "contraindicaciones": [
+      "Reemplazar automáticamente la sal común por sales ricas en potasio (KCl) en pacientes que usan ARA II, IECA o Espironolactona — precipita hiperpotasemia",
+      "Consumo elevado de sodio en la dieta — expande el volumen extracelular, eleva el gasto cardíaco y antagoniza a los antihipertensivos",
+      "Uso concomitante de AINEs (ibuprofeno) de forma crónica — reduce la perfusión renal, eleva la PA y aumenta el potasio sérico"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "ARA II (Losartán, Valsartán) e IECA (Enalapril, Ramipril): disminuyen la aldosterona y reducen la excreción renal de K+ → riesgo de hiperpotasemia con suplementos o sales de K+",
+      "IECA (Enalapril): puede producir tos seca persistente, hipotensión e hiperpotasemia",
+      "Hidroclorotiazida (diurético tiazídico en túbulo distal) y Furosemida (asa): disminuyen Na+ y K+; Espironolactona (colector): aumenta K+"
+    ],
+    "notasEducativas": "La presión arterial depende de PA ≈ Gasto Cardíaco (GC) × Resistencia Vascular Periférica (RVP). Ante disminución de la perfusión renal o activación simpática, las células yuxtaglomerulares liberan Renina → convierte Angiotensinógeno (hígado) en Angiotensina I → la ECA (endotelio pulmonar) la transforma en Angiotensina II → produce vasoconstricción (↑ RVP) y estimula la Aldosterona en la corteza suprarrenal (↑ reabsorción de Na+ y agua y ↑ excreción de K+ en túbulo distal y colector → ↑ volumen y PA). Al bloquear la ECA (IECA) o el receptor AT1 (ARA II como Losartán), disminuye la aldosterona y se retiene K+, por lo que el nutricionista debe vigilar el potasio.",
+    "sistemaCorporal": "Cardiovascular",
+    "resultadoAprendizaje": "RA2",
+    "dificultad": "media",
+    "focoFisiopatologico": "eje_raas_hta",
+    "focoClinico": "Cardiovascular y Renal · PA = GC × RVP, cascada RAAS, blancos terapéuticos (IECA/ARA II/diuréticos) y electrolitos",
+    "conceptosClave": [
+      "Determinantes de la presión arterial: PA ≈ Gasto Cardíaco (GC) × Resistencia Vascular Periférica (RVP)",
+      "Cascada RAAS: Renina → Angiotensina I → ECA → Angiotensina II → Vasoconstricción + Aldosterona (retiene Na+/agua)",
+      "Blancos terapéuticos: IECA (bloquea ECA), ARA II (bloquea receptor AT1), Espironolactona (bloquea aldosterona)",
+      "Por qué un ARA II o IECA obliga a vigilar el K+: al disminuir la aldosterona, disminuye la excreción renal de K+ (riesgo de hiperpotasemia)"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "↓ Perfusión renal → liberación de renina → angiotensina I → ECA → angiotensina II → vasoconstricción (↑ RVP) y secreción de aldosterona (↑ reabsorción de Na+ y agua, ↑ GC) → ↑ presión arterial; los ARA II bloquean el receptor AT1 disminuyendo aldosterona y reteniendo K+",
+        "esCorrecta": true,
+        "explicacion": "Correcto: describe con precisión la cascada RAAS y explica por qué el bloqueo del receptor AT1 con Losartán reduce la presión arterial pero disminuye la excreción urinaria de potasio."
+      },
+      {
+        "texto": "↑ Perfusión renal → inhibición de renina → vasodilatación arterial directa → los ARA II estimulan la aldosterona causando pérdida masiva de potasio",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: el eje RAAS se activa ante menor perfusión renal, y los ARA II disminuyen (no estimulan) la secreción de aldosterona, por lo que tienden a elevar el potasio sérico."
+      },
+      {
+        "texto": "Exceso de sodio → disminución del volumen extracelular → caída del gasto cardíaco → compensación por bradicardia parasimpática",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: el exceso de sodio aumenta la osmolaridad y expande el volumen extracelular, incrementando el retorno venoso, el gasto cardíaco y la presión arterial."
+      }
+    ]
+  },
+
+  {
+    "id": "aterosclerosis_cardiopatia_isquemica",
+    "nombre": "Aterosclerosis Coronaria y Dislipidemia en Tratamiento con Estatinas",
+    "grupoEtarioTipico": ["adulto", "adulto_mayor"],
+    "estandarAntropometrico": "IMC clásico adulto + circunferencia de cintura",
+    "sintomasValidos": [
+      "Dolor u opresión retroesternal desencadenado por el esfuerzo físico que cede con el reposo (angina estable)",
+      "Antecedente de dislipidemia (LDL elevado, HDL bajo) e hipertensión arterial",
+      "En tratamiento con Atorvastatina 40 mg/día y Ácido Acetilsalicílico (AAS) 100 mg/día",
+      "Consumo diario de jugo de pomelo (toronja) en el desayuno junto con sus medicamentos",
+      "Mialgias (dolores musculares) de aparición reciente en muslos y pantorrillas"
+    ],
+    "valoresLabEsperados": {
+      "colesterol_total": "alto",
+      "ldl": "alto",
+      "hdl": "bajo",
+      "trigliceridos": "altos",
+      "presion_arterial": "alta"
+    },
+    "tratamientoCorrecto": [
+      "Suspender el consumo de pomelo (toronja) y su jugo durante el tratamiento con Atorvastatina/Simvastatina/Lovastatina",
+      "Dieta cardioprotectora baja en grasas saturadas y azúcares simples, rica en fibra soluble, verduras, frutas y ácidos grasos omega-3",
+      "Mantener Atorvastatina (inhibidor de HMG-CoA reductasa) evaluando mialgias y enzimas musculares con el médico",
+      "Controlar factores de riesgo modificables: HTA, tabaquismo, diabetes, dislipidemia, obesidad abdominal y sedentarismo"
+    ],
+    "contraindicaciones": [
+      "Consumo de pomelo (toronja) junto con estatinas metabolizadas por CYP3A4 (Atorvastatina, Simvastatina, Lovastatina) — inhibe el CYP3A4 intestinal, eleva la concentración del fármaco y el riesgo de miopatía/rabdomiólisis",
+      "Dieta alta en grasas saturadas, grasas trans y azúcares refinados — favorece la infiltración y oxidación de LDL en la íntima arterial",
+      "Suspender antiagregante plaquetario (AAS) sin indicación médica en paciente con placa coronaria establecida"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Atorvastatina / Simvastatina / Lovastatina + Pomelo (toronja): los compuestos del pomelo inhiben el CYP3A4 intestinal → ↑ biodisponibilidad y concentración plasmática de la estatina → ↑ riesgo de efectos adversos musculares y hepáticos"
+    ],
+    "notasEducativas": "La aterosclerosis no es solo 'grasa en la arteria': es un proceso inflamatorio crónico que inicia con 1) Daño/disfunción endotelial (por HTA, tabaquismo, LDL alto, diabetes), 2) Entrada y oxidación de LDL (oxLDL) en la íntima, 3) Inflamación y reclutamiento de monocitos que pasan a macrófagos, 4) Formación de células espumosas, 5) Placa de ateroma (núcleo lipídico y capa fibrosa) que produce estenosis e isquemia al esfuerzo (angina), y si ocurre 6) Ruptura de placa vulnerable + 7) Trombo, desencadena un síndrome coronario agudo (infarto de miocardio). Las estatinas inhiben la HMG-CoA reductasa en el hígado → ↓ síntesis hepática de colesterol → ↑ receptores de LDL en hepatocitos → ↓ LDL plasmático.",
+    "sistemaCorporal": "Cardiovascular",
+    "resultadoAprendizaje": "RA3",
+    "dificultad": "alta",
+    "focoFisiopatologico": "aterosclerosis_isquemia",
+    "focoClinico": "Cardiovascular · Secuencia de la aterosclerosis, angina vs. infarto, mecanismo de estatinas e interacción con pomelo (CYP3A4)",
+    "conceptosClave": [
+      "7 pasos de la aterosclerosis: disfunción endotelial → oxLDL en íntima → monocitos/macrófagos → células espumosas → placa de ateroma → ruptura → trombo",
+      "Estenosis estable (angina de esfuerzo por isquemia) vs. Ruptura de placa + trombo (síndrome coronario agudo / infarto)",
+      "Mecanismo de las estatinas (Atorvastatina, Rosuvastatina): inhiben HMG-CoA reductasa hepática → ↓ síntesis de colesterol → ↑ receptores LDL → ↓ LDL plasmático",
+      "Interacción Estatinas + Pomelo: inhibición de CYP3A4 intestinal → ↑ concentración plasmática de estatina → ↑ riesgo de efectos adversos"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Disfunción endotelial → infiltración y oxidación de LDL (oxLDL) → macrófagos forman células espumosas y placa de ateroma (isquemia/angina) → las estatinas inhiben la HMG-CoA reductasa aumentando receptores LDL, pero el pomelo inhibe el CYP3A4 intestinal elevando su toxicidad",
+        "esCorrecta": true,
+        "explicacion": "Correcto: integra la patogenia inflamatoria del ateroma con el mecanismo hepático de las estatinas y la inhibición del metabolismo intestinal de primer paso (CYP3A4) por el pomelo."
+      },
+      {
+        "texto": "Depósito pasivo de triglicéridos en la adventicia sin inflamación → las estatinas bloquean la absorción biliar y el pomelo acelera su eliminación renal",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la aterosclerosis ocurre en la túnica íntima con participación inflamatoria clave de LDL oxidado y macrófagos, y el pomelo inhibe el CYP3A4 aumentando (no reduciendo) la concentración de la estatina."
+      },
+      {
+        "texto": "Espasmo venoso coronario sin placa de ateroma → las estatinas activan la HMG-CoA reductasa para destruir directamente los trombos de fibrina",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: las estatinas inhiben (no activan) la enzima HMG-CoA reductasa en el hígado para reducir el colesterol LDL y estabilizar la placa."
+      }
+    ]
+  },
+
+  {
+    "id": "erc_hiperpotasemia",
+    "nombre": "Enfermedad Renal Crónica con Hiperpotasemia y Sobrecarga de Volumen",
+    "grupoEtarioTipico": ["adulto", "adulto_mayor"],
+    "estandarAntropometrico": "IMC clásico adulto / IMC ampliado adulto mayor + control de peso seco vs. edema",
+    "sintomasValidos": [
+      "Alteración persistente de la función renal (≥ 3 meses) con disminución de la TFG",
+      "Edema en extremidades inferiores y aumento de peso por retención hídrica",
+      "Presión arterial elevada (155/95 mmHg)",
+      "Hiperpotasemia sérica (K+ 5,9 mEq/L) con riesgo de alteraciones del ritmo cardíaco",
+      "Consumo frecuente de plátano, palta, papas, sopas instantáneas y uso de Losartán + Espironolactona"
+    ],
+    "valoresLabEsperados": {
+      "creatinina": "alta",
+      "urea": "alta",
+      "tfg_estimada": "baja",
+      "potasio": "alto",
+      "fosforo": "alto",
+      "bicarbonato": "bajo",
+      "presion_arterial": "alta"
+    },
+    "tratamientoCorrecto": [
+      "Régimen nefroprotector individualizado: restricción de potasio dietario (limitar plátano, palta, papas, tomate concentrado y prohibir sales de KCl) por hiperpotasemia activa",
+      "Restricción de sodio (< 2000 mg/día: eliminar sopas instantáneas, jamón, snacks salados) y ajuste de líquidos según diuresis y edema",
+      "Ajuste individualizado de proteínas y control de fósforo (administrar quelante Sevelámero JUNTO con las comidas si está prescrito)",
+      "Coordinar con equipo médico la revisión de fármacos que elevan el K+ (Losartán, Espironolactona) y considerar el sodio aportado por el Bicarbonato de sodio oral"
+    ],
+    "contraindicaciones": [
+      "Sustitutos de sal con cloruro de potasio (KCl) o alto consumo de alimentos concentrados en K+ (plátano, palta, frutos secos) — riesgo vital de arritmias cardíacas graves por hiperpotasemia",
+      "Asumir la misma dieta restrictiva automática para todos los pacientes renales sin evaluar su K+ sérico, diuresis, estadio de ERC y medicamentos",
+      "Uso de AINEs (ibuprofeno) — acelera la pérdida de función renal residual y agrava la hiperpotasemia y retención hidrosalina"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Losartán (ARA II) + Espironolactona (ahorrador de K+) + alimentos ricos en potasio: sinergia que precipita hiperpotasemia severa",
+      "Sevelámero (quelante de fósforo): debe administrarse CON las comidas para ligar el fósforo dietario en el intestino",
+      "Bicarbonato de sodio oral (para acidosis metabólica): aporta carga adicional de sodio que debe contabilizarse en pacientes con HTA y edema"
+    ],
+    "notasEducativas": "El riñón cumple 5 funciones esenciales: 1) Excretora (elimina urea, creatinina), 2) Hidroelectrolítica (regula agua, Na+ y K+), 3) Ácido-base (elimina H+, produce amonio y regenera HCO3−), 4) Hemodinámica (control de PA vía SRAA) y 5) Endocrina (renina, eritropoyetina y activación de vitamina D). En la ERC (daño ≥ 3 meses), la caída de la filtración glomerular y de la secreción tubular distal de K+ provoca acumulación de urea/creatinina, sobrecarga de volumen (edema, HTA), acidosis metabólica (↓ HCO3−) e hiperpotasemia (riesgo de arritmias). Las recomendaciones nutricionales deben individualizarse según exámenes, estadio y fármacos (guías KDIGO 2024 / KDOQI 2020 / ESPEN 2021).",
+    "sistemaCorporal": "Renal",
+    "resultadoAprendizaje": "RA1",
+    "dificultad": "alta",
+    "focoFisiopatologico": "filtracion_lra_erc",
+    "focoClinico": "Renal · Funciones renales, nefrona, ERC con hiperpotasemia, sobrecarga de volumen, acidosis e interacciones farmacológicas",
+    "conceptosClave": [
+      "Cinco funciones renales: excretora, hidroelectrolítica, ácido-base, hemodinámica y endocrina",
+      "Formación de la orina en la nefrona: Excreción = Filtración − Reabsorción + Secreción",
+      "Hiperpotasemia (K+ > 5,0 mEq/L): causada por ↓ excreción renal + fármacos (IECA, ARA II, espironolactona) + acidosis; riesgo principal: arritmias cardíacas",
+      "Sobrecarga de volumen (retención de Na+ y agua → edema, HTA, congestión pulmonar) y Acidosis metabólica (↓ eliminación de H+ y ↓ regeneración de HCO3−)",
+      "Individualización nutricional en ERC: evaluar K+, P, Na+, agua y proteínas según laboratorio y medicamentos (Sevelámero con comidas)"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Pérdida crónica de nefronas funcionales (↓ TFG) → ↓ excreción de Na+/agua (sobrecarga de volumen, edema e HTA) + ↓ secreción tubular de K+ agravada por ARA II/Espironolactona (hiperpotasemia con riesgo de arritmias) + ↓ regeneración de HCO3− (acidosis metabólica)",
+        "esCorrecta": true,
+        "explicacion": "Correcto: integra la falla de las funciones excretora, hidroelectrolítica y ácido-base de la nefrona junto con el efecto ahorrador de potasio de los fármacos sobre el túbulo colector."
+      },
+      {
+        "texto": "Obstrucción aguda de la uretra de 12 horas de evolución → aumento exclusivo de la reabsorción de glucosa en el glomérulo sin alteración de electrolitos",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la ERC es un proceso crónico (≥ 3 meses) parenquimatoso, y la reabsorción de glucosa ocurre en el túbulo contorneado proximal, no en el glomérulo."
+      },
+      {
+        "texto": "Exceso de producción renal de eritropoyetina y vitamina D activa → hiperfiltración permanente de potasio con hipocalemia severa",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: en la ERC disminuye la síntesis de eritropoyetina y la activación de vitamina D, y existe riesgo de hiperpotasemia por menor excreción renal."
+      }
+    ]
+  },
+
+  {
+    "id": "lra_intrarrenal_nefrotoxicos",
+    "nombre": "Lesión Renal Aguda Intrarrenal (Lesión Tubular Aguda por Nefrotóxicos)",
+    "grupoEtarioTipico": ["adulto", "adulto_mayor"],
+    "estandarAntropometrico": "IMC clásico adulto / tamizaje nutricional hospitalario (ESPEN)",
+    "sintomasValidos": [
+      "Aumento brusco de creatinina sérica (≥ 0,3 mg/dL en 48 horas o ≥ 1,5 veces el basal en 7 días — criterios KDIGO)",
+      "Uso reciente y prolongado de Ibuprofeno (AINE) en dosis altas asociado a antibiótico nefrotóxico (Gentamicina / Vancomicina)",
+      "Disminución del volumen urinario (oliguria < 0,5 mL/kg/h) o mantención de diuresis con caída aguda de la TFG",
+      "Fatiga, anorexia y náuseas por retención aguda de productos nitrogenados (urea y creatinina)",
+      "Cilindros epiteliales y detritos celulares en el sedimento de orina completa"
+    ],
+    "valoresLabEsperados": {
+      "creatinina": "alta",
+      "urea": "alta",
+      "tfg_estimada": "baja",
+      "potasio": "alto",
+      "bicarbonato": "bajo"
+    },
+    "tratamientoCorrecto": [
+      "Suspender o sustituir de inmediato los agentes nefrotóxicos (AINEs, aminoglucósidos) y ajustar dosis de fármacos a la TFG actual",
+      "Soporte nutricional adaptado (ESPEN): asegurar aporte energético suficiente e individualizar proteínas evitando restricciones excesivas que provoquen pérdida de masa muscular",
+      "Monitorizar y corregir alteraciones de potasio, fósforo, sodio y balance hídrico según diuresis",
+      "Mantener una perfusión renal adecuada y seguimiento diario de creatinina, urea y electrolitos"
+    ],
+    "contraindicaciones": [
+      "Mantener AINEs (ibuprofeno) o antibióticos nefrotóxicos sin ajuste — agrava la vasoconstricción aferente y la necrosis de células tubulares",
+      "Restricción severa y rutinaria de proteínas en paciente hospitalizado con LRA — acelera el catabolismo proteico, la sarcopenia y empeora el pronóstico",
+      "Uso automático de diuréticos para 'forzar' al riñón a funcionar cuando no existe sobrecarga de volumen"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "AINEs (Ibuprofeno): inhiben prostaglandinas vasodilatadoras causando vasoconstricción de la arteriola aferente y caída de la presión de filtración glomerular",
+      "Aminoglucósidos (Gentamicina), Vancomicina y Anfotericina B: toxicidad tubular directa con estrés oxidativo y desprendimiento del epitelio tubular"
+    ],
+    "notasEducativas": "La Lesión Renal Aguda (LRA) se define según KDIGO por: 1) ↑ creatinina ≥ 0,3 mg/dL en 48h, 2) ↑ creatinina ≥ 1,5 veces el basal en 7 días, o 3) diuresis < 0,5 mL/kg/h por ≥ 6h (aunque puede presentarse incluso manteniendo producción de orina). Se clasifica en: Prerrenal (↓ perfusión: deshidratación, hemorragia, IC), Intrarrenal (daño directo del parénquima: glomérulos, túbulos, intersticio o vasos) y Postrenal (obstrucción urinaria: cálculos, hiperplasia prostática → hidronefrosis). En la Lesión Tubular Aguda por isquemia o nefrotóxicos (AINEs, gentamicina, anfotericina B), se dañan las células tubulares, se pierde el borde en cepillo, se desprenden células obstruyendo la luz tubular y cae la TFG. En nutrición, debe asegurarse energía suficiente y evitar la restricción proteica excesiva que favorece el catabolismo.",
+    "sistemaCorporal": "Renal",
+    "resultadoAprendizaje": "RA2",
+    "dificultad": "alta",
+    "focoFisiopatologico": "filtracion_lra_erc",
+    "focoClinico": "Renal · Clasificación de la LRA (prerrenal, intrarrenal, postrenal), criterios KDIGO, lesión tubular por nefrotóxicos y soporte nutricional",
+    "conceptosClave": [
+      "Criterios KDIGO de LRA: ↑ Cr ≥ 0,3 mg/dL en 48h, ≥ 1,5× basal en 7 días o diuresis < 0,5 mL/kg/h por 6h",
+      "Diferenciación Prerrenal (llegada de sangre) vs. Intrarrenal (parénquima: tubular, glomerular, intersticial, vascular) vs. Postrenal (obstrucción de salida / hidronefrosis)",
+      "Medicamentos nefrotóxicos: AINEs (vasoconstricción arteriola aferente) y Gentamicina/Vancomicina/Anfotericina B (toxicidad tubular directa)",
+      "Nutrición en LRA: prevenir desnutrición y catabolismo; la restricción excesiva de proteínas favorece la pérdida de masa muscular"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Exposición a nefrotóxicos/isquemia → daño directo de células tubulares con pérdida del borde en cepillo y desprendimiento celular → obstrucción de la luz tubular por cilindros y alteración del transporte → caída aguda de la TFG",
+        "esCorrecta": true,
+        "explicacion": "Correcto: describe la secuencia exacta de la Lesión Tubular Aguda (LRA intrarrenal), donde el daño epitelial tubular altera la reabsorción, obstruye el túbulo y reduce la filtración glomerular."
+      },
+      {
+        "texto": "Cálculo en el uréter distal → acumulación retrógrada de orina e hidronefrosis → única causa posible de elevación de creatinina por medicamentos",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la obstrucción ureteral con hidronefrosis corresponde a una LRA postrenal, no a una lesión intrarrenal nefrotóxica."
+      },
+      {
+        "texto": "Dilatación de la arteriola aferente por ibuprofeno → exceso de filtración glomerular → eliminación masiva de proteínas sin daño celular tubular",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: los AINEs como el ibuprofeno provocan vasoconstricción (no dilatación) de la arteriola aferente al inhibir las prostaglandinas renales."
+      }
+    ]
+  },
+
+  {
+    "id": "asma_bronquial",
+    "nombre": "Asma Bronquial Persistente con Error de Técnica Inhalatoria",
+    "grupoEtarioTipico": ["nino", "adolescente", "adulto_joven", "adulto"],
+    "estandarAntropometrico": "IMC/edad OMS (menores) / IMC clásico adulto",
+    "sintomasValidos": [
+      "Sibilancias espiratorias ('silbido al pecho'), disnea y opresión torácica variables en intensidad",
+      "Tos de predominio nocturno o desencadenada por ejercicio, aire frío o alérgenos",
+      "Placas blanquecinas en mucosa oral (candidiasis orofaríngea) y disfonía tras uso de corticoide inhalado",
+      "Temblor fino en manos y taquicardia tras uso repetido de Salbutamol de rescate",
+      "No utiliza cámara espaciadora ni se enjuaga la boca después de cada inhalación"
+    ],
+    "valoresLabEsperados": {
+      "espirometria_vef1_cvf": "bajo",
+      "saturacion_o2": "normal",
+      "potasio": "normal_bajo",
+      "pcr": "normal"
+    },
+    "tratamientoCorrecto": [
+      "Corticoide inhalado (Budesonida/Fluticasona) como controlador antiinflamatorio + educar en técnica inhalatoria (agitar pMDI, espirar, inspirar lento, apnea 5–10 s) y ENJUAGAR LA BOCA tras cada uso",
+      "Salbutamol (agonista β2 de acción corta) por vía inhalatoria con cámara espaciadora según necesidad para alivio del broncoespasmo",
+      "Alimentación equilibrada antioxidante, control de peso (la obesidad empeora el control del asma) y vigilar potasio si usa dosis altas de β2 agonistas",
+      "Identificar y evitar factores desencadenantes (alérgenos, humo, infecciones, estrés)"
+    ],
+    "contraindicaciones": [
+      "Omitir el enjuague bucal tras el uso de corticoides inhalados y mala coordinación del inhalador pMDI — causa depósito orofaríngeo, candidiasis oral, disfonía y falla del control bronquial",
+      "Betabloqueantes no selectivos (propranolol) o AINEs en asma sensible a aspirina — desencadenan broncoespasmo agudo",
+      "Uso de Salbutamol en exceso como monoterapia sin corticoide inhalado controlador — no trata la inflamación bronquial subyacente y aumenta riesgo de taquicardia e hipopotasemia"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Salbutamol (β2 agonista) en dosis altas: estimula la entrada de K+ a la célula pudiendo causar hipopotasemia, además de temblor (receptores β2 en músculo esquelético) y taquicardia (efecto β1)",
+      "Corticoides inhalados sin higiene bucal post-inhalación: favorecen candidiasis orofaríngea que causa odinofagia y reduce la ingesta alimentaria"
+    ],
+    "notasEducativas": "El asma es una enfermedad inflamatoria crónica y variable de las vías aéreas caracterizada por 4 mecanismos: 1) Inflamación bronquial, 2) Hiperreactividad exagerada a estímulos, 3) Broncoconstricción del músculo liso y 4) Aumento de moco, generando obstrucción del flujo aéreo (especialmente en espiración, FEV1/CVF < 0,70) de manera REVERSIBLE. Los agonistas β2 (salbutamol) activan receptores β2 → ↑ AMPc → relajación del músculo liso bronquial (Sus RAM a dosis altas: temblor, taquicardia e hipopotasemia). Los corticoides inhalados inhiben la transcripción de citocinas proinflamatorias (IL-1, IL-6, TNF-α); requieren buena técnica inhalatoria y enjuagar la boca después de cada inhalación para prevenir candidiasis orofaríngea y disfonía.",
+    "sistemaCorporal": "Respiratorio",
+    "resultadoAprendizaje": "RA3",
+    "dificultad": "baja",
+    "focoFisiopatologico": "ventilacion_intercambio_gaseoso",
+    "focoClinico": "Respiratorio · Fisiopatología del asma (obstrucción reversible), β2 agonistas, corticoides inhalados y técnica inhalatoria",
+    "conceptosClave": [
+      "Cuatro mecanismos del asma: inflamación, hiperreactividad bronquial, broncoconstricción y exceso de moco (obstrucción reversible)",
+      "Salbutamol (β2 agonista): ↑ AMPc → relaja músculo liso bronquial; RAM: temblor, taquicardia e hipopotasemia (↓ K+)",
+      "Corticoides inhalados (ICS): inhiben citocinas proinflamatorias; RAM locales: candidiasis orofaríngea y disfonía (prevenir con cámara espaciadora y enjuague bucal)",
+      "Pasos de técnica pMDI: 1. Agitar, 2. Espirar lento, 3. Inspirar lento y profundo al pulsar, 4. Apnea 5–10 s, 5. Espirar y enjuagar boca"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Exposición a desencadenante → inflamación e hiperreactividad bronquial → broncoconstricción y moco (obstrucción espiratoria reversible) → el salbutamol aumenta el AMPc relajando el músculo liso (pudiendo bajar el K+ a dosis altas) y el corticoide inhalado reduce la inflamación local",
+        "esCorrecta": true,
+        "explicacion": "Correcto: conecta los mecanismos reversibles del asma con la acción intracelular del agonista β2 (↑ AMPc, entrada celular de K+) y del corticoide inhalado."
+      },
+      {
+        "texto": "Destrucción irreversible de tabiques alveolares → pérdida de compliance → el salbutamol bloquea receptores muscarínicos M3 produciendo hiperpotasemia",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la destrucción alveolar corresponde al enfisema (EPOC), el bloqueo M3 es de los antimuscarínicos (ipratropio/tiotropio) y el salbutamol puede causar hipopotasemia (no hiperpotasemia)."
+      },
+      {
+        "texto": "Fibrosis del intersticio pulmonar con FEV1/CVF > 0,85 → el corticoide inhalado actúa solo en el centro tusígeno del tronco encefálico",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: el asma es un trastorno obstructivo de la vía aérea (no fibrosis intersticial), y quienes actúan en el centro tusígeno son los antitusígenos como el dextrometorfano."
+      }
+    ]
+  },
+
+  {
+    "id": "fibrosis_restriccion_respiratoria",
+    "nombre": "Alteración Respiratoria Restrictiva (Fibrosis Pulmonar y Sobrecarga por Obesidad)",
+    "grupoEtarioTipico": ["adulto", "adulto_mayor"],
+    "estandarAntropometrico": "IMC clásico adulto / evaluación de composición corporal y carga mecánica toracoabdominal",
+    "sintomasValidos": [
+      "Disnea de esfuerzo progresiva con respiración rápida y superficial",
+      "Disminución de la capacidad pulmonar total (CPT) y capacidad vital (CV) con relación FEV1/CVF normal o aumentada (≥ 0,70)",
+      "Engrosamiento de la membrana alveolocapilar con disminución de la difusión de O2 e hipoxemia",
+      "Aumento del trabajo inspiratorio por menor distensibilidad (↓ compliance pulmonar y torácica)",
+      "Somnolencia diurna y ronquidos nocturnos asociados a obesidad abdominal concomitante (apnea obstructiva del sueño)"
+    ],
+    "valoresLabEsperados": {
+      "espirometria_vef1_cvf": "normal",
+      "pao2": "bajo",
+      "saturacion_o2": "baja",
+      "paco2": "normal",
+      "hba1c": "normal_alta"
+    },
+    "tratamientoCorrecto": [
+      "Plan nutricional normoproteico con control calórico gradual para reducir la carga mecánica toracoabdominal sin inducir pérdida de masa muscular respiratoria",
+      "Fraccionamiento de las comidas en volúmenes pequeños para evitar distensión gástrica que limite el descenso del diafragma",
+      "Adecuado aporte de proteínas, vitamina D y antioxidantes para preservar la fuerza del diafragma y músculos intercostales",
+      "Tratamiento neumológico específico de la enfermedad intersticial y manejo de la apnea del sueño (CPAP si corresponde)"
+    ],
+    "contraindicaciones": [
+      "Comidas copiosas hipercalóricas altas en carbohidratos simples y grasas — elevan la presión intraabdominal contra el diafragma y aumentan la demanda ventilatoria de CO2",
+      "Ayuno o dietas hipoproteicas extremas — provocan catabolismo del diafragma y agravan la falla ventilatoria",
+      "Sedantes o depresores del centro respiratorio — agravan la hipoventilación nocturna y la hipoxemia"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Corticoides sistémicos (si se prescriben en enfermedad intersticial): producen hiperglucemia, aumento del apetito, miopatía (debilidad muscular) y osteopenia/osteoporosis → vigilar calcio, vitamina D, proteínas y glicemia"
+    ],
+    "notasEducativas": "A diferencia del patrón obstructivo (dificultad para SACAR el aire, FEV1/CVF < 0,70, ej. asma y EPOC), las alteraciones restrictivas se caracterizan por dificultad para EXPANDIR el pulmón: disminuye la Capacidad Pulmonar Total (CPT) y la Capacidad Vital (CV), mientras la relación FEV1/CVF se mantiene normal o aumentada (≥ 0,70). En la fibrosis pulmonar, el tejido cicatricial vuelve al pulmón rígido (↓ compliance = ΔV/ΔP, curva desplazada a la derecha y abajo), aumenta el trabajo inspiratorio y engrosa la membrana alveolocapilar, alterando la difusión de O2 y causando insuficiencia respiratoria hipoxémica (Tipo I: PaO2 < 60 mmHg). Además, la obesidad abdominal reduce el VRE y la CRF, limita la excursión diafragmática y predispone a hipoventilación y apnea obstructiva del sueño.",
+    "sistemaCorporal": "Respiratorio",
+    "resultadoAprendizaje": "RA1",
+    "dificultad": "alta",
+    "focoFisiopatologico": "ventilacion_intercambio_gaseoso",
+    "focoClinico": "Respiratorio · Patrón restrictivo vs. obstructivo, compliance pulmonar, difusión alveolocapilar y mecánica ventilatoria en obesidad",
+    "conceptosClave": [
+      "Obstructivo (problema de flujo espiratorio, FEV1/CVF < 0,70) vs. Restrictivo (problema de expansión/volumen, ↓ CPT y ↓ CV con FEV1/CVF ≥ 0,70)",
+      "Compliance pulmonar (ΔV/ΔP): disminuida en fibrosis pulmonar (pulmón rígido) y aumentada en enfisema (menor retroceso elástico)",
+      "Alteración de la difusión alveolocapilar por engrosamiento de membrana → hipoxemia (Insuficiencia respiratoria Tipo I)",
+      "Efecto mecánico de la obesidad: limita el descenso diafragmático, disminuye volúmenes (CPT, CV, VRE, CRF) y se asocia a apnea obstructiva del sueño (AOS)"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Tejido fibroso intersticial + carga mecánica toracoabdominal → ↓ compliance (pulmón rígido) y ↓ expansión (↓ CPT y ↓ CV con FEV1/CVF ≥ 0,70) + engrosamiento de membrana alveolocapilar → ↓ difusión de O2 → hipoxemia (Tipo I) y ↑ trabajo inspiratorio",
+        "esCorrecta": true,
+        "explicacion": "Correcto: explica cómo la rigidez parenquimatosa y la restricción mecánica reducen los volúmenes pulmonares sin obstruir el flujo bronquial, comprometiendo la difusión alveolocapilar de O2."
+      },
+      {
+        "texto": "Broncoconstricción selectiva de bronquiolos con aumento de la compliance pulmonar → atrapamiento aéreo espiratorio con FEV1/CVF < 0,50",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: el aumento de compliance con atrapamiento aéreo y FEV1/CVF bajo corresponde al enfisema pulmonar (patrón obstructivo), no a la fibrosis ni a la restricción."
+      },
+      {
+        "texto": "Aumento del grosor alveolar → aceleración del paso de O2 hacia el capilar pulmonar → hiperoxia arterial espontánea",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: el engrosamiento de la membrana alveolocapilar dificulta la difusión simple de O2 desde el alvéolo a la sangre, produciendo hipoxemia."
+      }
+    ]
+  },
+
+  {
+    "id": "enfermedad_celiaca_malabsorcion",
+    "nombre": "Enfermedad Celíaca con Síndrome de Malabsorción Intestinal",
+    "grupoEtarioTipico": ["nino", "adolescente", "adulto_joven", "adulto"],
+    "estandarAntropometrico": "IMC/edad OMS o IMC clásico adulto + evaluación de carencias específicas",
+    "sintomasValidos": [
+      "Diarrea crónica, distensión abdominal y dolor cólico tras ingerir pan, pastas o galletas de trigo",
+      "Pérdida de peso involuntaria y fatiga marcada",
+      "Anemia ferropénica refractaria a suplementación oral convencional",
+      "Disminución de la densidad mineral ósea (osteopenia) por malabsorción de calcio y vitamina D",
+      "Anticuerpos anti-transglutaminasa tisular IgA positivos y atrofia de vellosidades duodenales"
+    ],
+    "valoresLabEsperados": {
+      "anticuerpos_antitransglutaminasa": "positivo",
+      "hemoglobina": "baja",
+      "ferritina": "baja",
+      "vitamina_d": "baja",
+      "albumina": "normal_baja"
+    },
+    "tratamientoCorrecto": [
+      "Dieta estricta libre de gluten de por vida (excluir trigo, cebada, centeno y avena no certificada) previniendo rigurosamente la contaminación cruzada",
+      "Evaluar y suplementar deficiencias de hierro, ácido fólico, vitamina B12, calcio y vitamina D hasta la recuperación de la mucosa intestinal",
+      "Educación en lectura de etiquetado nutricional y uso de cereales naturalmente libres de gluten (arroz, maíz/choclo, quínoa, papa)",
+      "Asegurar aporte proteico y energético suficiente para recuperar el estado nutricional"
+    ],
+    "contraindicaciones": [
+      "Mantener pequeñas cantidades de gluten ('transgresiones ocasionales') o usar utensilios con contaminación cruzada — perpetúa la inflamación autoinmune y la atrofia vellositaria",
+      "Indicar antidiarreicos (loperamida) o antiespasmódicos como único tratamiento sin retirar el gluten — no existe ningún medicamento que sustituya la dieta sin gluten",
+      "Administrar suplementos de hierro y calcio juntos en la misma toma con té o café — reduce aún más su absorción en un intestino ya lesionado"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Atrofia de vellosidades intestinales en enfermedad celíaca no tratada: reduce la absorción de fármacos orales (como levotiroxina o suplementos minerales) y de micronutrientes (Fe, Ca, Vit D, folato, B12)"
+    ],
+    "notasEducativas": "El sistema digestivo cumple 4 funciones: motilidad, secreción, digestión y absorción. En la enfermedad celíaca, la respuesta inmunitaria frente al gluten lesiona la mucosa del intestino delgado provocando atrofia de las vellosidades intestinales. Al perderse la superficie de absorción, se produce malabsorción de macronutrientes y micronutrientes clave (hierro, folato, vitamina B12, calcio y vitamina D), causando diarrea, distensión, anemia ferropénica, pérdida de peso y alteraciones de la salud ósea. No existe un medicamento que reemplace el tratamiento nutricional: la base terapéutica es la dieta estricta sin gluten de por vida y la prevención de la contaminación cruzada.",
+    "sistemaCorporal": "Digestivo",
+    "resultadoAprendizaje": "RA1",
+    "dificultad": "media",
+    "focoFisiopatologico": "malabsorcion_digestiva",
+    "focoClinico": "Digestivo · Funciones digestivas, atrofia de vellosidades en Enfermedad Celíaca, malabsorción de micronutrientes y dieta sin gluten",
+    "conceptosClave": [
+      "Cuatro funciones digestivas: motilidad, secreción, digestión y absorción",
+      "Fisiopatología celíaca: respuesta inmune al gluten → lesión de mucosa y atrofia de vellosidades → ↓ superficie de absorción",
+      "Consecuencias nutricionales: anemia ferropénica, diarrea/distensión, déficit de Fe, folato, B12, Ca y Vit D (↓ densidad ósea)",
+      "Tratamiento único: dieta estricta sin gluten de por vida y prevención de contaminación cruzada"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Respuesta inmunitaria al gluten → inflamación mucosa y atrofia de vellosidades del intestino delgado → pérdida de superficie absortiva → malabsorción de nutrientes (Fe, Ca, Vit D, folato, B12), diarrea, anemia y osteopenia",
+        "esCorrecta": true,
+        "explicacion": "Correcto: el daño autoinmune aplana las vellosidades intestinales donde ocurre la absorción de nutrientes, explicando tanto los síntomas digestivos como las carencias sistémicas."
+      },
+      {
+        "texto": "Hipersensibilidad visceral del eje intestino-cerebro sin lesión estructural de las vellosidades → se resuelve solo con antiespasmódicos",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la ausencia de lesión estructural con alteración del eje intestino-cerebro corresponde al Síndrome de Intestino Irritable (SII), no a la enfermedad celíaca."
+      },
+      {
+        "texto": "Infección gástrica por Helicobacter pylori → exceso de ácido clorhídrico → hipertrofia de las vellosidades intestinales",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: H. pylori se asocia a gastritis y úlcera péptica en el estómago/duodeno, no a la atrofia vellositaria autoinmune por gluten."
+      }
+    ]
+  },
+
+  {
+    "id": "cirrosis_ascitis_masld",
+    "nombre": "Cirrosis Hepática Descompensada con Ascitis (Progresión desde MASLD)",
+    "grupoEtarioTipico": ["adulto", "adulto_mayor"],
+    "estandarAntropometrico": "IMC ajustado por ascitis + circunferencia muscular braquial / fuerza de prensión (tamizaje de sarcopenia)",
+    "sintomasValidos": [
+      "Distensión abdominal por acumulación de líquido peritoneal (ascitis) y edema maleolar",
+      "Pérdida progresiva de masa muscular (sarcopenia) en extremidades pese a aumento del perímetro abdominal",
+      "Antecedente de esteatosis hepática metabólica (MASLD) que progresó a esteatohepatitis, fibrosis y cirrosis",
+      "En tratamiento diurético combinado con Espironolactona 100 mg/día y Furosemida 40 mg/día",
+      "Ictericia leve y fatiga marcada con ayunos nocturnos prolongados"
+    ],
+    "valoresLabEsperados": {
+      "albumina": "baja",
+      "bilirrubina_total": "alta",
+      "inr": "alto",
+      "sodio": "normal_bajo",
+      "potasio": "normal_alto"
+    },
+    "tratamientoCorrecto": [
+      "Prevenir la desnutrición y pérdida muscular con aporte energético suficiente, proteína adecuada (1,2–1,5 g/kg/día) y colación nocturna para acortar el ayuno",
+      "Restricción moderada e individualizada de sodio (< 2000 mg/día) para controlar la ascitis y el edema",
+      "Vigilar estrechamente electrolitos (Na+ y K+) y función renal por el uso conjunto de Espironolactona y Furosemida",
+      "Individualizar la ingesta de líquidos (la restricción hídrica severa solo se indica si existe hiponatremia dilucional marcada)"
+    ],
+    "contraindicaciones": [
+      "Restricción proteica severa rutinaria — agrava drásticamente la sarcopenia, la hipoalbuminemia y la mortalidad en el paciente cirrótico",
+      "Consumo de alcohol, AINEs (riesgo de síndrome hepatorrenal y hemorragia digestiva) o dieta alta en sodio (embutidos, caldos en cubo)",
+      "Uso de sales de potasio (KCl) cuando el paciente recibe Espironolactona con K+ en el límite superior"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Espironolactona (ahorrador de K+) + Furosemida (diurético de asa): se combinan en cirrosis con ascitis para movilizar líquido equilibrando el potasio; requiere monitoreo de Na+, K+ y creatinina",
+      "Daño hepatocelular en cirrosis: disminuye la síntesis de albúmina y factores de coagulación y altera la biotransformación de numerosos medicamentos"
+    ],
+    "notasEducativas": "El hígado metaboliza carbohidratos, lípidos y proteínas, sintetiza proteínas plasmáticas (albúmina y factores de coagulación), produce bilis y biotransforma medicamentos. La enfermedad hepática esteatósica asociada a disfunción metabólica (MASLD) puede progresar desde: 1) Esteatosis → 2) Esteatohepatitis (inflamación) → 3) Fibrosis (tejido cicatricial) → 4) Cirrosis (pérdida de estructura y función hepática). En la cirrosis con ascitis se utilizan Espironolactona (antagonista de aldosterona) y Furosemida. El objetivo nutricional es doble: controlar el sodio para reducir la ascitis y asegurar un aporte energético-proteico óptimo (incluyendo colación nocturna) para evitar el hipercatabolismo y la pérdida muscular.",
+    "sistemaCorporal": "Digestivo",
+    "resultadoAprendizaje": "RA2",
+    "dificultad": "alta",
+    "focoFisiopatologico": "hepatobiliar_pancreatico",
+    "focoClinico": "Digestivo (Hepatobiliar) · Progresión MASLD a Cirrosis, funciones del hígado, manejo de ascitis (Espironolactona + Furosemida) y nutrición",
+    "conceptosClave": [
+      "Funciones del hígado: metabolismo de macronutrientes, síntesis de albúmina y factores de coagulación, producción de bilis y biotransformación de fármacos",
+      "Progresión del daño hepático: Esteatosis (MASLD) → Esteatohepatitis → Fibrosis → Cirrosis",
+      "Farmacología en cirrosis con ascitis: Espironolactona + Furosemida (vigilar Na+, K+ y función renal)",
+      "Nutrición en cirrosis: prevenir desnutrición y sarcopenia (evitar ayunos largos y no restringir proteínas innecesariamente) + individualizar sodio"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Progresión Esteatosis → Esteatohepatitis → Fibrosis → Cirrosis → hipertensión portal y ↓ síntesis de albúmina + activación de aldosterona → ascitis y estado hipercatabólico con pérdida muscular",
+        "esCorrecta": true,
+        "explicacion": "Correcto: el reemplazo del parénquima hepático por fibrosis genera hipertensión portal, hipoalbuminemia y activación secundaria del eje renina-angiotensina-aldosterona (por eso el pilar diurético incluye Espironolactona)."
+      },
+      {
+        "texto": "Cálculo único en la vesícula biliar → aumento de síntesis hepática de albúmina y glucógeno → exceso de masa muscular",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: en la cirrosis disminuye la síntesis de albúmina y la reserva de glucógeno hepático, lo que acelera la gluconeogénesis a partir de músculo (sarcopenia)."
+      },
+      {
+        "texto": "Acumulación reversible de grasa sin inflamación ni fibrosis → hipercoagulabilidad por exceso de factores hepáticos",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la cirrosis es la etapa avanzada con fibrosis y pérdida de función, donde disminuye la síntesis de factores de coagulación (↑ INR)."
+      }
+    ]
+  },
+
+  {
+    "id": "insuficiencia_pancreatica_exocrina",
+    "nombre": "Insuficiencia Pancreática Exocrina (Pancreatitis Crónica)",
+    "grupoEtarioTipico": ["adulto", "adulto_mayor"],
+    "estandarAntropometrico": "IMC clásico adulto + porcentaje de pérdida de peso y evaluación de vitaminas liposolubles",
+    "sintomasValidos": [
+      "Esteatorrea: deposiciones pálidas/amarillentas, de aspecto grasoso, malolientes y que flotan en el agua",
+      "Pérdida de peso progresiva y desnutrición pese a mantener apetito",
+      "Distensión abdominal y flatulencia postprandial",
+      "Antecedente de pancreatitis crónica con fibrosis del parénquima pancreático",
+      "Toma las cápsulas de Pancrelipasa en ayunas 1 hora antes de comer, sin mejoría de la diarrea grasa"
+    ],
+    "valoresLabEsperados": {
+      "elastasa_fecal": "baja",
+      "vitamina_d": "baja",
+      "albumina": "baja",
+      "hemoglobina": "normal_baja",
+      "glucosa_ayuno": "normal_alta"
+    },
+    "tratamientoCorrecto": [
+      "Administrar las cápsulas de Pancrelipasa (enzimas pancreáticas: lipasa, amilasa, proteasas) JUNTO CON las comidas principales y colaciones que contengan grasa",
+      "Dieta normo a hipercalórica e hiperproteica fraccionada en comidas pequeñas y frecuentes, sin restricción severa de grasas (adaptada a tolerancia con enzimas)",
+      "Evaluar y suplementar vitaminas liposolubles (A, D, E y K) y micronutrientes deficitarios",
+      "Abstinencia total de alcohol y tabaco, y monitoreo del control glucémico"
+    ],
+    "contraindicaciones": [
+      "Tomar la Pancrelipasa en ayunas o lejos de los alimentos — las enzimas pasan por el duodeno sin mezclarse con el quimo alimentario y pierden totalmente su eficacia digestiva",
+      "Dieta hipocalórica y libre de grasas sin reemplazo enzimático — agrava la pérdida de peso, la desnutrición energética y el déficit de vitaminas A, D, E y K",
+      "Consumo de alcohol — precipita crisis de pancreatitis aguda y acelera la destrucción y fibrosis pancreática"
+    ],
+    "interaccionesFarmacoNutriente": [
+      "Pancrelipasa + Alimentos: interacción terapéutica obligatoria; debe administrarse DURANTE las comidas y colaciones para hidrolizar triglicéridos, almidones y proteínas en el duodeno",
+      "Maldigestión de grasas no corregida: produce malabsorción de vitaminas liposolubles (A, D, E y K) y calcio"
+    ],
+    "notasEducativas": "En la pancreatitis crónica, la inflamación persistente genera fibrosis y pérdida de función exocrina del páncreas. Al disminuir la secreción de enzimas pancreáticas (especialmente lipasa, además de amilasa y proteasas) hacia el duodeno, las grasas de la dieta no pueden hidrolizarse ni absorberse, provocando esteatorrea (heces grasosas, amarillentas y flotantes), pérdida de peso y deficiencia de vitaminas liposolubles (A, D, E y K). La Pancrelipasa aporta las enzimas digestivas faltantes, pero el horario de administración es decisivo: debe tomarse JUNTO con las comidas y colaciones (nunca en ayunas) para que actúe directamente sobre los nutrientes en el lumen intestinal.",
+    "sistemaCorporal": "Digestivo",
+    "resultadoAprendizaje": "RA3",
+    "dificultad": "media",
+    "focoFisiopatologico": "hepatobiliar_pancreatico",
+    "focoClinico": "Digestivo (Páncreas) · Insuficiencia pancreática exocrina, esteatorrea, vitaminas liposolubles (A, D, E, K) y horario de Pancrelipasa",
+    "conceptosClave": [
+      "Fisiopatología pancreática exocrina: fibrosis pancreática → ↓ lipasa, amilasa y proteasas → maldigestión de grasas → esteatorrea",
+      "Consecuencias nutricionales: pérdida de peso, desnutrición y déficit de vitaminas liposolubles (A, D, E y K)",
+      "Farmacología de reemplazo: Pancrelipasa (enzimas digestivas)",
+      "Horario de administración crítico: Pancrelipasa SIEMPRE junto con las comidas y colaciones (a diferencia de la Levotiroxina que va en ayunas)"
+    ],
+    "opcionesMecanismo": [
+      {
+        "texto": "Fibrosis pancreática crónica → ↓ secreción de enzimas digestivas (lipasa, amilasa, proteasas) → maldigestión luminal de triglicéridos → esteatorrea, pérdida de peso y déficit de vitaminas A, D, E y K; requiere Pancrelipasa administrada junto con las comidas",
+        "esCorrecta": true,
+        "explicacion": "Correcto: sin lipasa pancreática en el duodeno al momento de la comida, los lípidos no se degradan a ácidos grasos y monoglicéridos, eliminándose en las heces junto con las vitaminas liposolubles."
+      },
+      {
+        "texto": "Exceso de secreción biliar y lipasa pancreática → absorción acelerada de grasas → la Pancrelipasa debe tomarse en ayunas 1 hora antes del desayuno",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: en la insuficiencia pancreática exocrina faltan enzimas digestivas, y tomar la Pancrelipasa en ayunas hace que sea inefectiva porque no encuentra alimento que digerir."
+      },
+      {
+        "texto": "Obstrucción mecánica del esfínter esofágico inferior → reflujo de ácido hacia el esófago → esteatorrea por exceso de gastrina",
+        "esCorrecta": false,
+        "explicacion": "Incorrecto: la alteración del esfínter esofágico inferior corresponde a la Enfermedad por Reflujo Gastroesofágico (ERGE), no a la insuficiencia pancreática exocrina."
+      }
+    ]
+  }
+]

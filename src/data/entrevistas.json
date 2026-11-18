@@ -1,0 +1,946 @@
+{
+  "genericas": [
+    {
+      "id": "gen_alergias",
+      "pregunta": "¿Tiene alguna alergia o intolerancia alimentaria diagnosticada?",
+      "respuesta": "No, ninguna alergia a alimentos. Como de todo lo que preparan en la casa.",
+      "esClave": false
+    },
+    {
+      "id": "gen_horarios",
+      "pregunta": "¿Cuántas comidas realiza habitualmente al día y en qué horarios?",
+      "respuesta": "Tomo desayuno temprano, almuerzo como a las dos de la tarde y en la noche tomo once. Casi nunca ceno.",
+      "esClave": false
+    },
+    {
+      "id": "gen_agua",
+      "pregunta": "¿Cuánta agua pura bebe durante el día (sin contar té, mate o bebidas)?",
+      "respuesta": "Agua sola tomo poquito, unos dos o tres vasos al día. Prefiero tomar té o infusiones.",
+      "esClave": false
+    },
+    {
+      "id": "gen_compras",
+      "pregunta": "¿Quién compra y prepara los alimentos en su hogar?",
+      "respuesta": "Cocinamos en familia con lo que compramos en la feria y el supermercado el fin de semana.",
+      "esClave": false
+    },
+    {
+      "id": "gen_sueno",
+      "pregunta": "¿Cómo ha estado durmiendo durante las últimas semanas?",
+      "respuesta": "Me cuesta un poco conciliar el sueño y a veces despierto cansado en la mañana.",
+      "esClave": false
+    }
+  ],
+  "porPatologia": {
+    "sindrome_metabolico": [
+      {
+        "id": "sm_sal_potasio",
+        "pregunta": "¿Usa algún sustituto de sal o suplemento mineral con el Losartán?",
+        "respuesta": "Sí, compré una 'biosal' rica en potasio en el supermercado y le pongo bastante a las comidas porque me dijeron que era más sana.",
+        "esClave": true,
+        "importancia": "Revela aporte oculto de potasio que junto a Losartán (ARA-II) aumenta el riesgo de hiperpotasemia."
+      },
+      {
+        "id": "sm_corticoides",
+        "pregunta": "¿Está tomando algún antiinflamatorio o corticoide por dolores articulares o alergias?",
+        "respuesta": "Me recetaron prednisona hace una semana por una lumbalgia fuerte y desde ahí noto que tengo mucha más sed.",
+        "esClave": true,
+        "importancia": "Identifica el uso de corticosteroides sistémicos, que agravan la resistencia a la insulina y la hipertensión."
+      },
+      {
+        "id": "sm_alcohol",
+        "pregunta": "¿Consume bebidas alcohólicas los fines de semana mientras toma Metformina?",
+        "respuesta": "Los viernes y sábados me tomo un par de vasos de vino o cerveza en los asados familiares.",
+        "esClave": true,
+        "importancia": "El consumo abundante de alcohol con Metformina incrementa el riesgo de acidosis láctica e hipoglicemia."
+      },
+      {
+        "id": "sm_bebidas_azucaradas",
+        "pregunta": "¿Qué suele beber para acompañar el almuerzo y la once?",
+        "respuesta": "Casi siempre bebida normal o jugos en caja, me cuesta mucho tomar agua sola.",
+        "esClave": false
+      },
+      {
+        "id": "sm_actividad",
+        "pregunta": "¿Realiza alguna caminata o ejercicio físico durante la semana?",
+        "respuesta": "Paso casi todo el día sentado en el trabajo y llego muy cansado en la tarde.",
+        "esClave": false
+      }
+    ],
+    "epoc": [
+      {
+        "id": "epoc_fatiga_comer",
+        "pregunta": "¿Siente que le falta el aire cuando mastica o termina un plato grande?",
+        "respuesta": "Sí, me ahogo al comer platos abundantes o cosas muy dulces y harinosas; prefiero dejar la mitad del plato.",
+        "esClave": true,
+        "importancia": "Las comidas voluminosas y ricas en carbohidratos simples aumentan la producción de CO₂ (cociente respiratorio alto) y la disnea."
+      },
+      {
+        "id": "epoc_betabloqueante",
+        "pregunta": "¿Notó si la tos o los silbidos al pecho empeoraron tras algún medicamento nuevo para la presión?",
+        "respuesta": "Me dieron propranolol para las palpitaciones y a los dos días empecé a ahogarme mucho más al caminar.",
+        "esClave": true,
+        "importancia": "El propranolol (betabloqueante no selectivo) bloquea receptores β2 bronquiales y desencadena broncoespasmo en EPOC."
+      },
+      {
+        "id": "epoc_proteinas",
+        "pregunta": "¿Con qué frecuencia consume carnes, pescado, huevos o legumbres en la semana?",
+        "respuesta": "Como poquita carne porque me cansa masticarla; casi puro pan con té y sopas de fideos.",
+        "esClave": true,
+        "importancia": "El déficit proteico acelera la pérdida de masa muscular diafragmática e intercostal en EPOC."
+      },
+      {
+        "id": "epoc_tabaco",
+        "pregunta": "¿Sigue fumando actualmente o está expuesto a humo de leña?",
+        "respuesta": "Dejé el cigarro hace dos años, pero en invierno todavía prendemos estufa a leña en el comedor.",
+        "esClave": false
+      },
+      {
+        "id": "epoc_sol",
+        "pregunta": "¿Sale a caminar al aire libre o recibe luz solar durante el día?",
+        "respuesta": "Casi no salgo de la casa por miedo a resfriarme.",
+        "esClave": false
+      }
+    ],
+    "hipotiroidismo": [
+      {
+        "id": "hipo_toma_levotiroxina",
+        "pregunta": "¿Exactamente cómo y con qué líquidos toma la pastilla de Levotiroxina en la mañana?",
+        "respuesta": "Me la tomo junto con el desayuno, con un tazón de café con leche y mi pastilla de calcio para los huesos.",
+        "esClave": true,
+        "importancia": "El calcio, el hierro y el café tomados simultáneamente con Levotiroxina reducen su absorción intestinal hasta en un 40%."
+      },
+      {
+        "id": "hipo_amiodarona",
+        "pregunta": "¿Le han recetado algún medicamento para arritmias cardíacas como Amiodarona?",
+        "respuesta": "Sí, el cardiólogo me dejó amiodarona hace unos meses y desde entonces mi TSH se disparó.",
+        "esClave": true,
+        "importancia": "La amiodarona contiene ~37% de yodo y descompensa severamente la función tiroidea."
+      },
+      {
+        "id": "hipo_fibra_soya",
+        "pregunta": "¿Consume salvado de avena en exceso o batidos de soya en la mañana?",
+        "respuesta": "Todas las mañanas me hago un batido con leche de soya y dos cucharadas grandes de salvado de trigo.",
+        "esClave": true,
+        "importancia": "La proteína de soya y el exceso de fibra en la misma ventana horaria secuestran la Levotiroxina en el intestino."
+      },
+      {
+        "id": "hipo_transito",
+        "pregunta": "¿Cada cuántos días va al baño a evacuar?",
+        "respuesta": "Paso tres o cuatro días sin poder ir al baño, tengo el tránsito muy lento.",
+        "esClave": false
+      },
+      {
+        "id": "hipo_frio",
+        "pregunta": "¿Siente frío incluso cuando el resto de su familia está desabrigada?",
+        "respuesta": "Todo el día ando con las manos heladas y con chaleco grueso.",
+        "esClave": false
+      }
+    ],
+    "insuficiencia_cardiaca": [
+      {
+        "id": "ic_aines",
+        "pregunta": "¿Ha tomado ibuprofeno, diclofenaco o naproxeno por dolores musculares estos días?",
+        "respuesta": "Sí, me he estado tomando un ibuprofeno de 600 mg cada 8 horas por dolor de rodilla y se me hincharon mucho los tobillos.",
+        "esClave": true,
+        "importancia": "Los AINEs retienen sodio y agua, bloquean el efecto de la Furosemida y descompensan la insuficiencia cardíaca."
+      },
+      {
+        "id": "ic_embutidos_caldos",
+        "pregunta": "¿Usa caldos en cubo, sopas en sobre o embutidos aunque cocine con poca sal?",
+        "respuesta": "Le echo poquito salero, pero a todas las sopas les pongo un cubito concentrado y en la once como jamón o queso amarillo.",
+        "esClave": true,
+        "importancia": "Los caldos concentrados y embutidos aportan sodio oculto (> 3 g/día) que antagoniza a los diuréticos."
+      },
+      {
+        "id": "ic_peso_reciente",
+        "pregunta": "¿Se ha pesado en los últimos 3 días? ¿Notó algún cambio rápido?",
+        "respuesta": "Subí casi 2,5 kilos desde el martes y anoche tuve que dormir con tres almohadas porque me ahogaba.",
+        "esClave": true,
+        "importancia": "Un aumento > 2 kg en 3 días junto a ortopnea indica retención hídrica aguda y riesgo de congestión pulmonar."
+      },
+      {
+        "id": "ic_liquidos",
+        "pregunta": "¿Cuántos litros de líquido suma al día entre agua, té, sopas y jugos?",
+        "respuesta": "Como me da sed, fácil me tomo más de dos litros y medio entre té, mate y sopas.",
+        "esClave": false
+      },
+      {
+        "id": "ic_calambres",
+        "pregunta": "¿Ha sentido calambres en las piernas desde que aumentaron la Furosemida?",
+        "respuesta": "En las noches me dan calambres fuertes en las pantorrillas.",
+        "esClave": false
+      }
+    ],
+    "desnutricion_infantil_aguda": [
+      {
+        "id": "dia_realimentacion",
+        "pregunta": "¿Alguien le indicó darle fórmulas hipercalóricas concentradas o grandes volúmenes de golpe?",
+        "respuesta": "Nos sugirieron darle mamaderas grandes de fórmula bien concentrada cada 3 horas para que suba rápido de peso.",
+        "esClave": true,
+        "importancia": "La realimentación masiva sin fase de estabilización (F-75) precipita Síndrome de Realimentación e hipofosfatemia letal."
+      },
+      {
+        "id": "dia_hierro_precoz",
+        "pregunta": "¿Le están dando gotas de hierro en esta primera semana de estabilización?",
+        "respuesta": "Sí, empezamos ayer con gotitas de sulfato ferroso porque le encontraron anemia.",
+        "esClave": true,
+        "importancia": "El hierro en la primera semana de desnutrición aguda severa está contraindicado porque aumenta el estrés oxidativo e infecciones."
+      },
+      {
+        "id": "dia_apetito_edema",
+        "pregunta": "¿El niño recibe el alimento con apetito y han notado hinchazón en sus piecitos?",
+        "respuesta": "Llora mucho, recibe de a sorbitos pequeños y tiene el dorso de los pies hinchado desde hace tres días.",
+        "esClave": true,
+        "importancia": "El edema bilateral clasifica el cuadro como desnutrición aguda severa edematosa (kwashiorkor), requiriendo restricción hídrica inicial."
+      },
+      {
+        "id": "dia_diarrea",
+        "pregunta": "¿Ha presentado episodios de diarrea o vómitos en la última semana?",
+        "respuesta": "Tuvo diarrea líquida varios días la semana pasada y ahí bajó mucho más de peso.",
+        "esClave": false
+      },
+      {
+        "id": "dia_agua_hervida",
+        "pregunta": "¿Con qué agua preparan las mamaderas en la casa?",
+        "respuesta": "La hervimos cuando alcanzamos, pero a veces usamos agua directa de la llave.",
+        "esClave": false
+      }
+    ],
+    "desnutricion_cronica_infantil": [
+      {
+        "id": "dci_zinc_hierro",
+        "pregunta": "¿A qué hora le da las gotas de zinc y las de hierro al niño?",
+        "respuesta": "Se las doy las dos juntas en la misma cucharita antes del almuerzo para no olvidarme.",
+        "esClave": true,
+        "importancia": "El zinc y el hierro en dosis altas compiten por el transportador intestinal DMT-1; deben administrarse en horarios separados."
+      },
+      {
+        "id": "dci_caldos_aguados",
+        "pregunta": "¿En qué consisten principalmente los almuerzos del niño?",
+        "respuesta": "Le damos principalmente el caldito claro de la cazuela con un poquito de fideos, porque la carne le cuesta tragarla.",
+        "esClave": true,
+        "importancia": "Los caldos diluidos tienen muy baja densidad energética y proteica, perpetuando el retraso de crecimiento (stunting)."
+      },
+      {
+        "id": "dci_lactancia_previa",
+        "pregunta": "¿Cómo fue su alimentación durante el primer año de vida?",
+        "respuesta": "A los 4 meses empezamos a darle agüitas de hierbas y sopitas ralas porque sentía que quedaba con hambre.",
+        "esClave": true,
+        "importancia": "La sustitución precoz de lactancia materna por líquidos hipocalóricos en los primeros 1000 días explica el compromiso de talla."
+      },
+      {
+        "id": "dci_resfrios",
+        "pregunta": "¿Se enferma con frecuencia en el jardín infantil?",
+        "respuesta": "Pasa resfriado casi todos los meses.",
+        "esClave": false
+      },
+      {
+        "id": "dci_talla_padres",
+        "pregunta": "¿Cuál es la estatura aproximada de la madre y del padre?",
+        "respuesta": "Ambos medimos estatura promedio, pero él es el más bajito de todo su curso.",
+        "esClave": false
+      }
+    ],
+    "obesidad_infantil": [
+      {
+        "id": "oi_dieta_extrema",
+        "pregunta": "¿Han intentado alguna dieta restrictiva o ayuno en el último mes?",
+        "respuesta": "Vimos una dieta en internet de 800 calorías sin carbohidratos y le quitamos el pan y el almuerzo escolar.",
+        "esClave": true,
+        "importancia": "Las dietas hipocalóricas extremas en menores comprometen la velocidad de crecimiento estatural y precipitan trastornos de conducta alimentaria."
+      },
+      {
+        "id": "oi_imagen_corporal",
+        "pregunta": "¿Cómo se siente respecto a su cuerpo y la comida en el colegio?",
+        "respuesta": "No quiere comer delante de sus compañeros por vergüenza y se pesa todos los días escondido en el baño.",
+        "esClave": true,
+        "importancia": "Señal de alerta crítica para Trastorno de la Conducta Alimentaria (TCA); contraindica metas de pérdida de peso agresivas."
+      },
+      {
+        "id": "oi_pantallas_colaciones",
+        "pregunta": "¿Qué colaciones lleva al colegio y cuántas horas pasa frente a pantallas?",
+        "respuesta": "Lleva galletas rellenas y jugo en caja, y en la tarde juega videojuegos unas 4 horas seguidas.",
+        "esClave": true,
+        "importancia": "El exceso de azúcares líquidos y sedentarismo agrava la hiperinsulinemia y acantosis nigricans."
+      },
+      {
+        "id": "oi_ronquidos",
+        "pregunta": "¿Ronca por las noches o hace pausas al respirar mientras duerme?",
+        "respuesta": "Ronca bastante fuerte y despierta con sueño en las mañanas.",
+        "esClave": false
+      },
+      {
+        "id": "oi_familia_comidas",
+        "pregunta": "¿Comen todos lo mismo en la mesa familiar?",
+        "respuesta": "En la casa compramos hartas bebidas y frituras para el resto de la familia.",
+        "esClave": false
+      }
+    ],
+    "diabetes_mellitus_t1": [
+      {
+        "id": "dm1_ayuno_insulina",
+        "pregunta": "¿Qué hace con su dosis de insulina cuando decide saltarse una comida o hacer deporte?",
+        "respuesta": "Me pongo exactamente la misma dosis de insulina aunque haga ayuno o salga a correr en la mañana.",
+        "esClave": true,
+        "importancia": "El ayuno o ejercicio intenso sin ajuste de insulina precipita hipoglicemia severa."
+      },
+      {
+        "id": "dm1_hipoglicemiantes_orales",
+        "pregunta": "¿Alguien le sugirió cambiar los pinchazos de insulina por pastillas como glibenclamida o metformina sola?",
+        "respuesta": "Un conocido me dijo que probara dejar la insulina y tomara glibenclamida para descansar de los pinchazos.",
+        "esClave": true,
+        "importancia": "En DM1 no hay reserva de células beta; suspender insulina o usar sulfonilureas desencadena cetoacidosis diabética mortal."
+      },
+      {
+        "id": "dm1_conteo_cho",
+        "pregunta": "¿Sabe contar los gramos de carbohidratos de su plato para ajustar la insulina rápida?",
+        "respuesta": "La verdad calculo al ojo nomás, me pongo siempre 4 unidades coma un plato chico o dos platos de tallarines.",
+        "esClave": true,
+        "importancia": "La falta de conteo de carbohidratos explica la variabilidad glucémica y las hiperglucemias postprandiales."
+      },
+      {
+        "id": "dm1_regla_15",
+        "pregunta": "¿Qué toma cuando siente temblor, sudor frío o glucemia menor a 70 mg/dL?",
+        "respuesta": "Me como un chocolate grande o pan con queso, y después me sube a 300.",
+        "esClave": false
+      },
+      {
+        "id": "dm1_sitios_puncion",
+        "pregunta": "¿Rota los sitios de inyección de insulina en el abdomen y muslos?",
+        "respuesta": "Casi siempre me pincho en el mismo lado alrededor del ombligo.",
+        "esClave": false
+      }
+    ],
+    "sarcopenia_disfagia": [
+      {
+        "id": "sd_tos_liquidos",
+        "pregunta": "¿Le da tos o siente que se atora cuando toma agua pura o caldos muy líquidos?",
+        "respuesta": "Cada vez que tomo agua pura me da un ataque de tos terrible y me queda la voz húmeda; por eso casi no tomo líquidos.",
+        "esClave": true,
+        "importancia": "La tos post-deglución y voz húmeda con líquidos finos confirman disfagia orofaríngea con alto riesgo de neumonía aspirativa; requiere espesante (IDDSI)."
+      },
+      {
+        "id": "sd_textura_solidos",
+        "pregunta": "¿Qué pasa cuando intenta comer carne en trozos, arroz suelto o pan tostado?",
+        "respuesta": "Me canso mucho de masticar y siento que los granos de arroz se me quedan pegados en la garganta.",
+        "esClave": true,
+        "importancia": "Los sólidos duros o granulares dispersos están contraindicados en disfagia sin modificar a textura tipo papilla/puré homogéneo."
+      },
+      {
+        "id": "sd_reposo_cama",
+        "pregunta": "¿Cuánto tiempo del día pasa en cama o sentado sin levantarse?",
+        "respuesta": "Como me da miedo caerme, paso casi todo el día acostado o sentado en el sillón.",
+        "esClave": true,
+        "importancia": "El reposo prolongado acelera drásticamente la atrofia muscular por desuso en sarcopenia."
+      },
+      {
+        "id": "sd_dentadura",
+        "pregunta": "¿Usa prótesis dental y siente que le queda bien ajustada?",
+        "respuesta": "Mi placa de abajo me queda suelta desde que bajé de peso, así que me la saco para comer.",
+        "esClave": false
+      },
+      {
+        "id": "sd_apetito_tarde",
+        "pregunta": "¿En qué momento del día tiene mejor ánimo y apetito para comer?",
+        "respuesta": "En la mañana y al mediodía como mejor; en la tarde ya estoy muy fatigado.",
+        "esClave": false
+      }
+    ],
+    "lesion_por_presion_sacra": [
+      {
+        "id": "lpp_ingesta_proteica",
+        "pregunta": "¿Cuánto está logrando comer de las bandejas del hospital y qué alimentos deja?",
+        "respuesta": "Apenas como unas cucharadas de sopa y gelatina; el pollo y el huevo los dejo enteros porque no tengo apetito.",
+        "esClave": true,
+        "importancia": "Una ingesta proteica < 50% impide la síntesis de colágeno tipo I y III necesaria para cerrar la úlcera sacra."
+      },
+      {
+        "id": "lpp_diureticos_agua",
+        "pregunta": "¿Está tomando Furosemida mientras bebe tan pocos líquidos en el día?",
+        "respuesta": "Sí, sigo tomando la furosemida en la mañana aunque apenas tomo medio vaso de agua en toda la tarde.",
+        "esClave": true,
+        "importancia": "El diurético de asa con baja ingesta hídrica reduce la perfusión capilar cutánea y agrava la isquemia en la zona sacra."
+      },
+      {
+        "id": "lpp_cambios_postura",
+        "pregunta": "¿Con qué frecuencia cambia de posición en la cama?",
+        "respuesta": "Como no siento dolor en la espalda baja por la diabetes, me quedo boca arriba toda la noche.",
+        "esClave": true,
+        "importancia": "La neuropatía diabética suprime el dolor isquémico protector, manteniendo la compresión capilar y necrosis tisular."
+      },
+      {
+        "id": "lpp_frutas_citricos",
+        "pregunta": "¿Consume frutas cítricas o verduras frescas regularmente?",
+        "respuesta": "Hace meses que no como naranja ni kiwi.",
+        "esClave": false
+      },
+      {
+        "id": "lpp_colchon",
+        "pregunta": "¿Cuenta con colchón antiescaras o cojines de descarga?",
+        "respuesta": "Recién hoy pidieron un colchón especial.",
+        "esClave": false
+      }
+    ],
+    "neumonia_bacteriana_aguda": [
+      {
+        "id": "nba_aines_fiebre",
+        "pregunta": "¿Ha estado tomando ibuprofeno o algún jarabe con codeína para calmar la tos y la fiebre?",
+        "respuesta": "Me tomé ibuprofeno cada 6 horas y un jarabe fuerte para cortar la tos de raíz porque me dolía el costado al toser.",
+        "esClave": true,
+        "importancia": "Los AINEs en neumonía aguda pueden enmascarar signos de alarma y los antitusígenos opioides impiden drenar el exudado purulento."
+      },
+      {
+        "id": "nba_hidratacion_fiebre",
+        "pregunta": "¿Cuánto líquido ha tomado desde que comenzó con fiebre de 38,7 °C?",
+        "respuesta": "Transpiro muchísimo por la fiebre, pero casi no he tomado agua porque me da náuseas.",
+        "esClave": true,
+        "importancia": "La fiebre aumenta las pérdidas insensibles; la deshidratación espesa las secreciones bronquiales y dificulta la expectoración."
+      },
+      {
+        "id": "nba_ayuno_infeccion",
+        "pregunta": "¿Ha podido alimentarse durante estos dos días de fiebre?",
+        "respuesta": "Una vecina me dijo que hiciera ayuno de pura agua de hierbas para 'matar de hambre a la infección'.",
+        "esClave": true,
+        "importancia": "El estado hipermetabólico febril eleva el gasto energético un 20–30%; el ayuno acelera el catabolismo muscular respiratorio."
+      },
+      {
+        "id": "nba_antibiotico_estomago",
+        "pregunta": "¿Cómo ha tolerado el antibiótico a nivel digestivo?",
+        "respuesta": "Me cae un poco pesado al estómago y me dio algo de diarrea leve.",
+        "esClave": false
+      },
+      {
+        "id": "nba_tabaco_previo",
+        "pregunta": "¿Tiene antecedente de tabaquismo o asma?",
+        "respuesta": "No fumo, nunca me había dado una infección pulmonar así.",
+        "esClave": false
+      }
+    ],
+    "dehiscencia_herida_quirurgica": [
+      {
+        "id": "dhq_corticoides_dieta",
+        "pregunta": "¿Por qué estaba comiendo tan poco antes y después de la cirugía?",
+        "respuesta": "Hice una dieta muy estricta sin carnes para bajar rápido de peso antes de operarme, y ahora sigo comiendo solo caldos claros.",
+        "esClave": true,
+        "importancia": "El déficit proteico-calórico perioperatorio priva a los fibroblastos de aminoácidos, vitamina C y zinc, causando dehiscencia."
+      },
+      {
+        "id": "dhq_glicemias_dulces",
+        "pregunta": "¿Cómo han estado sus controles de azúcar y qué le traen de visita para comer?",
+        "respuesta": "Mis familiares me traen jugos azucarados y galletas para darme ánimo, y el azúcar en sangre me ha marcado sobre 210 mg/dL.",
+        "esClave": true,
+        "importancia": "La hiperglicemia persistente (> 180 mg/dL) altera la quimiotaxis de neutrófilos y glucosila el colágeno, favoreciendo la infección de la herida."
+      },
+      {
+        "id": "dhq_medicamentos_previos",
+        "pregunta": "¿Tomaba algún corticoide como prednisona antes de la operación?",
+        "respuesta": "Sí, tomaba prednisona por una alergia crónica.",
+        "esClave": true,
+        "importancia": "Los corticosteroides inhiben la fase proliferativa de la cicatrización y la síntesis de colágeno."
+      },
+      {
+        "id": "dhq_dolor_herida",
+        "pregunta": "¿Desde cuándo notó que la herida empezó a abrirse y supurar?",
+        "respuesta": "Al quinto día después de la operación sentí un tirón al toser y empezó a salir líquido turbio.",
+        "esClave": false
+      },
+      {
+        "id": "dhq_suplementos",
+        "pregunta": "¿Toma actualmente algún batido nutricional o suplemento vitamínico?",
+        "respuesta": "Todavía ninguno, esperaba que usted me indicara.",
+        "esClave": false
+      }
+    ],
+    "deshidratacion_homeostenosis": [
+      {
+        "id": "dh_furosemida_diarrea",
+        "pregunta": "¿Siguió tomando sus pastillas para la presión o diuréticos durante los días de gastroenteritis?",
+        "respuesta": "Sí, como soy muy ordenada me tomé igual la furosemida todos estos días aunque no comía ni tomaba agua, y además tomé ibuprofeno por el malestar.",
+        "esClave": true,
+        "importancia": "Mantener Furosemida y agregar AINEs durante pérdidas gastrointestinales agudas precipita depleción severa de volumen e injuria renal prerrenal."
+      },
+      {
+        "id": "dh_estado_basal",
+        "pregunta": "Antes de esta gastroenteritis de hace 3 días, ¿cómo era su vida diaria y su memoria?",
+        "respuesta": "Ella vivía sola, hacía sus compras, cocinaba y llevaba sus cuentas perfecto; recién hace 3 días empezó a confundirse.",
+        "esClave": true,
+        "importancia": "Confirma que la confusión es un delirium agudo por deshidratación/homeostenosis y NO una demencia ni envejecimiento normal."
+      },
+      {
+        "id": "dh_laxantes",
+        "pregunta": "¿Tomó algún laxante o infusión purgante antes de que empezara el cuadro?",
+        "respuesta": "Tomó unas hojas de sen porque se sentía hinchada y eso le provocó muchas deposiciones líquidas.",
+        "esClave": true,
+        "importancia": "Los laxantes agravan la pérdida de agua y potasio en un riñón envejecido con menor capacidad de concentración urinaria."
+      },
+      {
+        "id": "dh_sed",
+        "pregunta": "¿Sentía mucha sed durante los días que estuvo con pérdidas digestivas?",
+        "respuesta": "Curiosamente casi no sentía sed, había que insistirle para que diera un sorbo.",
+        "esClave": false
+      },
+      {
+        "id": "dh_orina",
+        "pregunta": "¿Cómo ha estado la cantidad y el color de la orina desde ayer?",
+        "respuesta": "Ha orinado muy poquito y de color muy oscuro.",
+        "esClave": false
+      }
+    ],
+    "sarcopenia_fragilidad_inflammaging": [
+      {
+        "id": "sfi_proteina_comidas",
+        "pregunta": "¿Cómo distribuye los alimentos con proteína (huevo, lácteos, carne, legumbres) en el día?",
+        "respuesta": "En el desayuno y la once tomo solo té con pan pelado; recién al almuerzo como un trocito chico de pollo día por medio.",
+        "esClave": true,
+        "importancia": "En el adulto mayor existe resistencia anabólica; concentrar poca proteína en una sola comida no alcanza el umbral de leucina para síntesis muscular."
+      },
+      {
+        "id": "sfi_benzodiacepinas",
+        "pregunta": "¿Está tomando alguna pastilla para dormir o para los nervios?",
+        "respuesta": "Tomo clonazepam todas las noches y en la mañana despierto mareado, con las piernas pesadas y sin ganas de moverme.",
+        "esClave": true,
+        "importancia": "Las benzodiacepinas de vida media larga duplican el riesgo de caídas y reducen la actividad física espontánea."
+      },
+      {
+        "id": "sfi_duelo_inactividad",
+        "pregunta": "¿Qué cambió en su rutina diaria durante los últimos 6 meses?",
+        "respuesta": "Desde que falleció mi amigo con el que salía a caminar a la plaza, dejé de salir y perdí las ganas de cocinar.",
+        "esClave": true,
+        "importancia": "El aislamiento social y la inactividad física desencadenaron el círculo vicioso de anorexia del envejecimiento y pérdida muscular."
+      },
+      {
+        "id": "sfi_silla",
+        "pregunta": "¿Puede levantarse de una silla baja sin empujarse con los brazos?",
+        "respuesta": "No puedo, tengo que afirmarme fuerte de la mesa para poder pararme.",
+        "esClave": false
+      },
+      {
+        "id": "sfi_lacteos_sol",
+        "pregunta": "¿Toma leche o yogur fortificado con vitamina D?",
+        "respuesta": "Casi no tomo lácteos desde hace años.",
+        "esClave": false
+      }
+    ],
+    "sindrome_geriatrico_complejo": [
+      {
+        "id": "sgc_velocidad_cambios",
+        "pregunta": "¿Hace cuánto tiempo exacto comenzaron la baja de peso, las caídas y la desorientación?",
+        "respuesta": "Fue todo en las últimas 3 semanas. Mi familia pensaba que era normal por los años, pero antes de este mes ella cocinaba sola y salía a comprar.",
+        "esClave": true,
+        "importancia": "Un deterioro abrupto en 3 semanas NUNCA es envejecimiento normal; exige buscar causas agudas tratables mediante Valoración Integral Geriátrica."
+      },
+      {
+        "id": "sgc_polifarmacia_sedantes",
+        "pregunta": "¿Cuántos medicamentos distintos está tomando actualmente y agregaron alguno hace poco?",
+        "respuesta": "Toma 8 remedios distintos y hace tres semanas empezó a tomar clorfenamina y diazepam en la noche para dormir.",
+        "esClave": true,
+        "importancia": "La polifarmacia con anticolinérgicos y benzodiacepinas explica la desorientación nocturna (delirium), las caídas y la hiporexia."
+      },
+      {
+        "id": "sgc_masticacion_disfagia",
+        "pregunta": "¿Tiene dolor en la boca o se atora al tomar líquidos o comer alimentos duros?",
+        "respuesta": "Tiene una muela quebrada que le duele al masticar carne y además tose cuando toma agua rápido.",
+        "esClave": true,
+        "importancia": "Identifica la causa mecánica de la caída abrupta de ingesta y el riesgo de aspiración si no se adapta la textura."
+      },
+      {
+        "id": "sgc_red_apoyo",
+        "pregunta": "¿Con quién vive y quién supervisa sus comidas actualmente?",
+        "respuesta": "Pasa sola toda la mañana y la tarde; recién en la noche pasa una sobrina a verla.",
+        "esClave": false
+      },
+      {
+        "id": "sgc_animo",
+        "pregunta": "¿Cómo ha estado su estado de ánimo estas semanas?",
+        "respuesta": "Se ve muy apática y dice que no quiere ser una carga para nadie.",
+        "esClave": false
+      }
+    ],
+    "anemia_ferropenica": [
+      {
+        "id": "af_cafe_leche",
+        "pregunta": "¿Con qué bebida toma su comprimido de sulfato ferroso en las mañanas?",
+        "respuesta": "Me lo tomo todos los días junto con mi tazón de café con leche en el desayuno para que no me duela el estómago.",
+        "esClave": true,
+        "importancia": "El calcio de la leche y los polifenoles/taninos del café quelan el hierro (Fe2+) y reducen drásticamente su absorción intestinal."
+      },
+      {
+        "id": "af_vitamina_c",
+        "pregunta": "¿Acompaña el hierro o sus almuerzos con algún cítrico o fuente de vitamina C?",
+        "respuesta": "No, nunca tomo jugo de naranja ni como kiwi o ensaladas con limón.",
+        "esClave": true,
+        "importancia": "La vitamina C reduce el hierro férrico a ferroso (Fe2+) soluble y favorece significativamente su absorción."
+      },
+      {
+        "id": "af_ram_gi",
+        "pregunta": "¿Ha sentido náuseas, dolor abdominal o estreñimiento desde que inició el sulfato ferroso?",
+        "respuesta": "Sí, me dio bastante estreñimiento y un poco de náuseas la primera semana.",
+        "esClave": true,
+        "importancia": "Las molestias GI son las RAM más frecuentes del sulfato ferroso y suelen llevar a tomarlo con lácteos o a abandonar el tratamiento."
+      },
+      {
+        "id": "af_carnes",
+        "pregunta": "¿Con qué frecuencia consume carnes rojas, pescado o legumbres?",
+        "respuesta": "Casi no como carnes rojas, prefiero fideos o arroz con huevo ocasional.",
+        "esClave": false
+      },
+      {
+        "id": "af_te_comidas",
+        "pregunta": "¿Toma té inmediatamente después de almorzar?",
+        "respuesta": "Sí, siempre me tomo una taza de té negro cargado apenas termino el plato.",
+        "esClave": false
+      }
+    ],
+    "trombosis_warfarina": [
+      {
+        "id": "tw_hojas_verdes",
+        "pregunta": "¿Ha cambiado bruscamente su consumo de espinaca, acelga, brócoli o lechuga esta semana?",
+        "respuesta": "Como quería comer más sano, esta semana me comí grandes platos de espinaca y brócoli todos los días, después de meses sin probar verduras.",
+        "esClave": true,
+        "importancia": "Un aumento brusco en la ingesta de vitamina K antagoniza el efecto de la Warfarina y baja el INR, aumentando el riesgo de trombosis; se debe mantener una ingesta constante."
+      },
+      {
+        "id": "tw_suplementos_herbales",
+        "pregunta": "¿Está tomando cápsulas de ajo, jengibre, cúrcuma, omega-3 o vitamina E?",
+        "respuesta": "Sí, empecé a tomar cápsulas concentradas de ajo con jengibre y cúrcuma para mejorar la circulación.",
+        "esClave": true,
+        "importancia": "El ajo, jengibre, cúrcuma, omega-3 y vitamina E tienen efecto antiagregante/anticoagulante y pueden potenciar el riesgo de sangrado con warfarina."
+      },
+      {
+        "id": "tw_confusion_aspirina",
+        "pregunta": "¿Sabe si la warfarina actúa igual que la aspirina o si tomó aspirina por su cuenta?",
+        "respuesta": "Pensé que eran lo mismo y ayer me tomé dos aspirinas por un dolor de cabeza.",
+        "esClave": true,
+        "importancia": "La aspirina (AAS) es un antiagregante plaquetario y la warfarina es un anticoagulante (cascada de fibrina); combinarlos sin indicación multiplica el riesgo hemorrágico."
+      },
+      {
+        "id": "tw_horario_warfarina",
+        "pregunta": "¿Toma la warfarina siempre a la misma hora de la tarde?",
+        "respuesta": "Sí, trato de tomarla a las seis de la tarde.",
+        "esClave": false
+      },
+      {
+        "id": "tw_sangrado_encias",
+        "pregunta": "¿Ha notado sangrado de encías al cepillarse los dientes?",
+        "respuesta": "Solo un poquito cuando uso un cepillo duro.",
+        "esClave": false
+      }
+    ],
+    "hipertension_eje_raas": [
+      {
+        "id": "hta_biosal_kcl",
+        "pregunta": "¿Cambió la sal común por alguna 'sal dietética' o sustituto con cloruro de potasio?",
+        "respuesta": "Sí, compré una sal de potasio en la farmacia y le echo bastante a todo porque pensé que no subía la presión.",
+        "esClave": true,
+        "importancia": "Los ARA II (Losartán) e IECA (Enalapril) disminuyen la aldosterona y retienen K+; sumar sales de potasio precipita hiperpotasemia."
+      },
+      {
+        "id": "hta_sodio_oculto",
+        "pregunta": "¿Qué productos envasados consume a diario (sopas instantáneas, jamón, papas fritas, caldos)?",
+        "respuesta": "En la noche siempre me tomo una sopa instantánea en sobre y como pan con jamón y queso amarillo.",
+        "esClave": true,
+        "importancia": "El exceso de sodio expande el volumen extracelular, eleva el gasto cardíaco y antagoniza el efecto antihipertensivo del bloqueo RAAS."
+      },
+      {
+        "id": "hta_tos_aines",
+        "pregunta": "¿Ha tomado ibuprofeno por dolores o ha tenido tos seca con sus medicamentos?",
+        "respuesta": "Tomo ibuprofeno varios días a la semana cuando me duele la espalda.",
+        "esClave": true,
+        "importancia": "Los AINEs provocan vasoconstricción aferente renal, retienen sodio, elevan la presión arterial y aumentan el riesgo de hiperpotasemia con ARA II/IECA."
+      },
+      {
+        "id": "hta_etiquetas",
+        "pregunta": "¿Revisa el sodio por porción y por 100 g en las etiquetas nutricionales?",
+        "respuesta": "La verdad nunca miro la tabla nutricional, solo me fijo en el precio.",
+        "esClave": false
+      },
+      {
+        "id": "hta_caminata",
+        "pregunta": "¿Cuántos minutos camina a paso rápido en la semana?",
+        "respuesta": "Camino muy poco, voy en auto o locomoción a todas partes.",
+        "esClave": false
+      }
+    ],
+    "aterosclerosis_cardiopatia_isquemica": [
+      {
+        "id": "aci_pomelo",
+        "pregunta": "¿Toma jugo de pomelo (toronja) en el desayuno o junto con la Atorvastatina?",
+        "respuesta": "Sí, todas las mañanas exprimo dos pomelos grandes porque leí que quemaban la grasa de las arterias.",
+        "esClave": true,
+        "importancia": "El pomelo inhibe la enzima CYP3A4 intestinal, aumentando drásticamente la concentración sanguínea de Atorvastatina y el riesgo de miopatía."
+      },
+      {
+        "id": "aci_dolor_muscular",
+        "pregunta": "¿Ha sentido dolores o debilidad muscular en las piernas desde que toma pomelo con la estatina?",
+        "respuesta": "Sí, desde hace una semana me duelen mucho los muslos y las pantorrillas sin haber hecho ejercicio.",
+        "esClave": true,
+        "importancia": "Las mialgias son el signo clínico de alerta de toxicidad muscular por sobreexposición a la estatina."
+      },
+      {
+        "id": "aci_grasas_frituras",
+        "pregunta": "¿Cómo es su consumo habitual de frituras, carnes grasas, embutidos y pastelería?",
+        "respuesta": "Almuerzo seguido frituras o empanadas fritas y casi no como pescado ni verduras.",
+        "esClave": true,
+        "importancia": "La dieta alta en grasas saturadas y trans eleva el LDL plasmático que penetra y se oxida en la íntima arterial."
+      },
+      {
+        "id": "aci_tabaco",
+        "pregunta": "¿Fuma cigarrillos actualmente?",
+        "respuesta": "Fumo unos 5 cigarros al día después de almuerzo.",
+        "esClave": false
+      },
+      {
+        "id": "aci_dolor_pecho",
+        "pregunta": "¿Cuándo aparece la molestia en el pecho y cuánto dura?",
+        "respuesta": "Aparece cuando camino rápido cuesta arriba y se me pasa al detenerme unos minutos.",
+        "esClave": false
+      }
+    ],
+    "erc_hiperpotasemia": [
+      {
+        "id": "erc_alimentos_potasio",
+        "pregunta": "¿Qué frutas, verduras o sustitutos de sal consume a diario?",
+        "respuesta": "Me como dos plátanos y media palta todos los días, papas cocidas en el almuerzo y uso sustituto de sal con potasio.",
+        "esClave": true,
+        "importancia": "En ERC con hiperpotasemia (K+ 5,9 mEq/L) y uso de Losartán + Espironolactona, esta carga de potasio puede desencadenar arritmias graves."
+      },
+      {
+        "id": "erc_sevelamero_horario",
+        "pregunta": "¿En qué momento toma el quelante de fósforo (Sevelámero) y el bicarbonato de sodio?",
+        "respuesta": "El sevelámero me lo tomo a media mañana con el estómago vacío, lejos del almuerzo.",
+        "esClave": true,
+        "importancia": "El Sevelámero debe administrarse JUNTO CON las comidas para atrapar el fósforo de los alimentos en el tubo digestivo."
+      },
+      {
+        "id": "erc_sopas_jamon",
+        "pregunta": "¿Consume sopas instantáneas, jamón o papas fritas envasadas?",
+        "respuesta": "Sí, como sopas en sobre y pan con jamón casi todos los días, y tengo los tobillos muy hinchados.",
+        "esClave": true,
+        "importancia": "El alto aporte de sodio en ERC con disminución de la excreción renal provoca sobrecarga de volumen, edema e hipertensión."
+      },
+      {
+        "id": "erc_remojado",
+        "pregunta": "¿Conoce las técnicas de remojo y doble cocción para reducir el potasio de papas y verduras?",
+        "respuesta": "No las conocía, las cocino directo con cáscara y uso el mismo caldo.",
+        "esClave": false
+      },
+      {
+        "id": "erc_diuresis",
+        "pregunta": "¿Ha notado disminución en la cantidad de orina durante el día?",
+        "respuesta": "Orino un poco menos que antes y se me hinchan más las piernas en la tarde.",
+        "esClave": false
+      }
+    ],
+    "lra_intrarrenal_nefrotoxicos": [
+      {
+        "id": "lra_aines_antibiotico",
+        "pregunta": "¿Qué medicamentos estuvo tomando en la última semana antes de que subiera la creatinina?",
+        "respuesta": "Estuve tomando ibuprofeno de 600 mg cada 8 horas toda la semana junto con el antibiótico inyectable (gentamicina) que me indicaron.",
+        "esClave": true,
+        "importancia": "La combinación de AINEs (vasoconstricción aferente) y aminoglucósidos (toxicidad tubular directa) es causa clásica de Lesión Tubular Aguda."
+      },
+      {
+        "id": "lra_restriccion_proteica_mito",
+        "pregunta": "¿Qué ha estado comiendo estos días desde que le dijeron que tenía el riñón inflamado?",
+        "respuesta": "Dejé de comer todo tipo de carnes, huevo y lácteos por miedo a dañar el riñón; estoy a pura agua con azúcar.",
+        "esClave": true,
+        "importancia": "En LRA intrarrenal hospitalizada, la restricción excesiva de proteínas y energía acelera el catabolismo muscular y empeora la recuperación."
+      },
+      {
+        "id": "lra_diuretico_automedicado",
+        "pregunta": "¿Tomó algún diurético por su cuenta para intentar orinar más?",
+        "respuesta": "Una vecina me convidó furosemida para 'limpiar el riñón', aunque no estaba hinchado.",
+        "esClave": true,
+        "importancia": "Los diuréticos no tratan directamente la LRA salvo cuando hay sobrecarga de volumen; sin sobrecarga pueden agravar la hipoperfusión."
+      },
+      {
+        "id": "lra_nauseas",
+        "pregunta": "¿Ha tenido náuseas o rechazo a los alimentos calientes?",
+        "respuesta": "Siento algo de asco en las mañanas desde hace dos días.",
+        "esClave": false
+      },
+      {
+        "id": "lra_dolor_lumbar",
+        "pregunta": "¿Presenta cólico renal o dificultad mecánica para orinar?",
+        "respuesta": "No, no tengo dolor al orinar ni cálculos.",
+        "esClave": false
+      }
+    ],
+    "asma_bronquial": [
+      {
+        "id": "ab_enjuague_boca",
+        "pregunta": "¿Cómo utiliza su inhalador de corticoide (Budesonida) y qué hace después de inhalar?",
+        "respuesta": "Disparo el puff directo en la boca respirando rápido y después me acuesto enseguida sin enjuagarme con agua.",
+        "esClave": true,
+        "importancia": "No usar cámara espaciadora y no enjuagar la boca tras el corticoide inhalado causa candidiasis orofaríngea y disfonía."
+      },
+      {
+        "id": "ab_abuso_salbutamol",
+        "pregunta": "¿Cuántos puffs de Salbutamol se ha aplicado hoy y qué síntomas ha sentido?",
+        "respuesta": "Me he puesto más de 12 puffs en el día y ando con las manos tiritonas, palpitaciones y calambres musculares.",
+        "esClave": true,
+        "importancia": "Las dosis altas de agonistas β2 (salbutamol) producen temblor, taquicardia e hipopotasemia por entrada intracelular de K+."
+      },
+      {
+        "id": "ab_dolor_boca_comer",
+        "pregunta": "¿Las placas blancas en la boca le han dificultado alimentarse?",
+        "respuesta": "Sí, me arde la lengua y la garganta con las comidas ácidas o secas.",
+        "esClave": true,
+        "importancia": "La candidiasis orofaríngea por corticoide inhalado mal administrado reduce la ingesta alimentaria."
+      },
+      {
+        "id": "ab_alergenos",
+        "pregunta": "¿En qué momentos empeoran los silbidos al pecho?",
+        "respuesta": "En la noche y cuando corro en días fríos.",
+        "esClave": false
+      },
+      {
+        "id": "ab_aspirina",
+        "pregunta": "¿Ha presentado crisis al tomar aspirina o ibuprofeno?",
+        "respuesta": "Sí, una vez tomé aspirina y me dio una crisis de ahogo fuerte.",
+        "esClave": false
+      }
+    ],
+    "fibrosis_restriccion_respiratoria": [
+      {
+        "id": "frr_comidas_copiosas",
+        "pregunta": "¿Qué ocurre con su respiración cuando consume almuerzos muy abundantes o bebidas con gas?",
+        "respuesta": "Cuando como un plato lleno o tomo bebida con gas, siento que el estómago me empuja hacia arriba y no puedo expandir los pulmones.",
+        "esClave": true,
+        "importancia": "En el patrón restrictivo con obesidad, la distensión gástrica eleva el diafragma y reduce aún más la capacidad vital y el VRE."
+      },
+      {
+        "id": "frr_corticoides_sistemicos",
+        "pregunta": "¿Está tomando prednisona oral por su fibrosis pulmonar?",
+        "respuesta": "Sí, llevo dos meses con prednisona oral y me ha subido el azúcar, el apetito y siento las piernas más débiles.",
+        "esClave": true,
+        "importancia": "Los corticoides sistémicos causan hiperglucemia, ganancia de peso, miopatía proximal y pérdida ósea (osteoporosis)."
+      },
+      {
+        "id": "frr_apnea_sueno",
+        "pregunta": "¿Cómo duerme en posición horizontal y cómo amanece?",
+        "respuesta": "En posición boca arriba me ahogo, ronco fuerte con pausas y despierto con dolor de cabeza y mucho sueño.",
+        "esClave": true,
+        "importancia": "Refleja hipoventilación nocturna y apnea obstructiva del sueño (AOS) asociadas a la sobrecarga mecánica toracoabdominal."
+      },
+      {
+        "id": "frr_fatiga_comer",
+        "pregunta": "¿Necesita hacer pausas para respirar mientras come?",
+        "respuesta": "Sí, me canso a mitad de la comida.",
+        "esClave": false
+      },
+      {
+        "id": "frr_oxigeno",
+        "pregunta": "¿Utiliza oxígeno suplementario durante las caminatas?",
+        "respuesta": "Lo uso cuando camino más de una cuadra porque me baja la saturación.",
+        "esClave": false
+      }
+    ],
+    "enfermedad_celiaca_malabsorcion": [
+      {
+        "id": "ecm_contaminacion_cruzada",
+        "pregunta": "¿Cómo prepara sus alimentos sin gluten en la cocina familiar?",
+        "respuesta": "Compro pan sin gluten, pero lo tuesto en el mismo tostador del pan normal y usamos el mismo colador y aceite donde cocinan tallarines de trigo.",
+        "esClave": true,
+        "importancia": "La contaminación cruzada con trazas de gluten mantiene activa la respuesta inmune y la atrofia de vellosidades intestinales."
+      },
+      {
+        "id": "ecm_hierro_calcio_juntos",
+        "pregunta": "¿Cómo está tomando los suplementos de hierro y calcio que le indicaron?",
+        "respuesta": "Me tomo la pastilla de hierro y la de calcio juntas con una taza de té en el desayuno.",
+        "esClave": true,
+        "importancia": "El calcio y el té bloquean la absorción del hierro, agravando la anemia ferropénica por malabsorción duodenal."
+      },
+      {
+        "id": "ecm_lactosa_secundaria",
+        "pregunta": "¿Notó si la leche entera le produce más distensión y diarrea últimamente?",
+        "respuesta": "Sí, cada vez que tomo leche normal me hincho mucho y me da diarrea.",
+        "esClave": true,
+        "importancia": "La atrofia de vellosidades reduce transitoriamente la enzima lactasa del borde en cepillo (intolerancia secundaria a la lactosa)."
+      },
+      {
+        "id": "ecm_sellos_sin_gluten",
+        "pregunta": "¿Busca el símbolo de la espiga tachada certificada en los alimentos envasados?",
+        "respuesta": "A veces compro avena a granel en la feria pensando que no tiene gluten.",
+        "esClave": false
+      },
+      {
+        "id": "ecm_peso_previo",
+        "pregunta": "¿Cuántos kilos ha perdido en los últimos 3 meses?",
+        "respuesta": "He bajado unos 5 kilos aunque trato de comer bien.",
+        "esClave": false
+      }
+    ],
+    "cirrosis_ascitis_masld": [
+      {
+        "id": "cam_restriccion_proteica_error",
+        "pregunta": "¿Alguien le dijo que eliminara todas las carnes, huevos y lácteos por el problema al hígado?",
+        "respuesta": "Sí, un familiar me prohibió comer proteínas para 'no intoxicar el hígado' y además paso desde las 6 de la tarde hasta las 9 de la mañana sin comer nada.",
+        "esClave": true,
+        "importancia": "La restricción proteica y el ayuno nocturno prolongado en cirrosis aceleran la proteólisis muscular (sarcopenia); requiere 1,2–1,5 g/kg y colación nocturna."
+      },
+      {
+        "id": "cam_diureticos_caldos",
+        "pregunta": "¿Qué sopas o condimentos usa mientras toma Espironolactona y Furosemida?",
+        "respuesta": "Tomo caldos en cubito y uso sal de potasio porque pensé que deshinchaba el abdomen.",
+        "esClave": true,
+        "importancia": "El sodio de los cubitos agrava la ascitis y la sal de potasio con Espironolactona eleva el riesgo de hiperpotasemia."
+      },
+      {
+        "id": "cam_aines_alcohol",
+        "pregunta": "¿Ha tomado ibuprofeno o bebidas alcohólicas recientemente?",
+        "respuesta": "Tomé ibuprofeno ayer por un dolor articular.",
+        "esClave": true,
+        "importancia": "En cirrosis con ascitis, los AINEs pueden precipitar insuficiencia renal aguda (síndrome hepatorrenal) y hemorragia digestiva."
+      },
+      {
+        "id": "cam_saciedad_ascitis",
+        "pregunta": "¿Siente que se llena muy rápido al comer por el líquido en el abdomen?",
+        "respuesta": "Con medio plato ya siento el abdomen muy tenso.",
+        "esClave": false
+      },
+      {
+        "id": "cam_peso_control",
+        "pregunta": "¿Se pesa en las mañanas para vigilar la respuesta a los diuréticos?",
+        "respuesta": "Trato de pesarme dos veces por semana.",
+        "esClave": false
+      }
+    ],
+    "insuficiencia_pancreatica_exocrina": [
+      {
+        "id": "ipe_horario_pancrelipasa",
+        "pregunta": "¿En qué momento exacto se toma las cápsulas de Pancrelipasa respecto a las comidas?",
+        "respuesta": "Me las tomo en ayunas una hora antes de desayunar y una hora antes de almorzar, igual que mi remedio de la tiroides.",
+        "esClave": true,
+        "importancia": "Error crítico: la Pancrelipasa debe administrarse DURANTE las comidas y colaciones; tomada en ayunas se vacía antes que el alimento y no digiere las grasas."
+      },
+      {
+        "id": "ipe_dieta_cero_grasa",
+        "pregunta": "¿Qué hizo con los aceites y alimentos con grasa por miedo a la diarrea?",
+        "respuesta": "Eliminé hasta la última gota de aceite, pescado y huevo, y estoy bajando muchísimo de peso.",
+        "esClave": true,
+        "importancia": "Eliminar por completo las grasas agrava la desnutrición calórica y el déficit de vitaminas liposolubles (A, D, E, K); lo correcto es ajustar la Pancrelipasa con las comidas."
+      },
+      {
+        "id": "ipe_caracteristicas_heces",
+        "pregunta": "¿Cómo son sus deposiciones después de comer?",
+        "respuesta": "Son amarillentas, con gotas de grasa que flotan en el inodoro y cuesta mucho que bajen.",
+        "esClave": true,
+        "importancia": "Descripción clásica de esteatorrea por maldigestión de triglicéridos ante falta de acción de lipasa en el duodeno."
+      },
+      {
+        "id": "ipe_vitaminas_liposolubles",
+        "pregunta": "¿Le han controlado los niveles de vitamina D o tiempos de coagulación?",
+        "respuesta": "Tenía la vitamina D muy baja en el último examen.",
+        "esClave": false
+      },
+      {
+        "id": "ipe_alcohol",
+        "pregunta": "¿Consume bebidas alcohólicas actualmente?",
+        "respuesta": "Dejé el alcohol por completo desde que me diagnosticaron la pancreatitis.",
+        "esClave": false
+      }
+    ]
+  }
+}
