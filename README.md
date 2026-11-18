@@ -1,4 +1,4 @@
-# FisioPato: Auditor Clínico 🩺🍎
+# FisioPato: Consulta Nutricional 🩺🍎
 
 > **Juego serio de rol y simulación clínica para estudiantes de Nutrición y Dietética.**  
 > 🔗 **Jugar online:** [https://fisiopatoxd.netlify.app](https://fisiopatoxd.netlify.app)
@@ -7,78 +7,80 @@
 
 ## 📌 ¿De qué trata el juego?
 
-En **FisioPato: Auditor Clínico**, tomas el rol de un profesional de la salud en un hospital. Tu misión es revisar fichas clínicas, detectar posibles errores médicos o nutricionales (contraindicaciones, interacciones fármaco-alimento, diagnósticos mal enfocados) y tomar decisiones: **Aprobar**, **Rechazar** con justificativo o **Solicitar Interconsulta**.
+En **FisioPato**, tomas el rol de un **nutricionista profesional** en consulta clínica. 
 
-Inspirado en la dinámica de revisión documental tipo *Papers, Please*, pero enfocado 100% en casos clínicos reales de **Fisiopatología** y **Dietoterapia**.
+A tu consulta llegan distintos pacientes con diferentes cuadros de salud. Tu trabajo consiste en evaluarlos de manera integral: revisar su anamnesis (signos vitales, exámenes de laboratorio, antecedentes y medicamentos que consumen), entrevistarlos directamente para conocer sus síntomas y hábitos, y diseñar una intervención nutricional adecuada mediante una minuta personalizada y su posterior control a las 4 semanas.
+
+El juego conecta de forma práctica la **Fisiopatología**, la **Farmacología básica** y la **Dietoterapia**, simulando una atención nutricional real.
 
 ---
 
 ## 🎯 Objetivo Educativo y Público Objetivo
 
-* **Público objetivo:** Estudiantes de Nutrición y Dietética y carreras de la salud que cursan asignaturas de Fisiopatología, Farmacología Básica y Evaluación del Estado Nutricional.
-* **Propósito:** Entrenar el razonamiento clínico rápido para que el estudiante no memorice conceptos aislados, sino que aprenda a relacionar:
-  1. La alteración fisiopatológica de base (metabólica, respiratoria, cardiovascular, renal o digestiva).
-  2. Los medicamentos prescritos y sus posibles contraindicaciones o interacciones con alimentos.
-  3. La prescripción dietoterapéutica y la selección correcta de alimentos para ese paciente.
+* **Público objetivo:** Estudiantes de Nutrición y Dietética y carreras de la salud que cursan ramos de Fisiopatología, Evaluación del Estado Nutricional y Dietoterapia.
+* **Propósito educativo:** Ayudar a que el estudiante aprenda a razonar clínicamente en consulta. El objetivo es que logre integrar tres cosas fundamentales frente a cada paciente:
+  1. Comprender la alteración fisiopatológica de base (metabólica, respiratoria, renal, digestiva o cardiovascular).
+  2. Tomar en cuenta los medicamentos que toma el paciente para evitar interacciones fármaco-alimento perjudiciales.
+  3. Indicar el plan de alimentación y los alimentos correctos según las necesidades reales del paciente.
 
 ---
 
-## 🎮 Mecánica de Juego y Fases
+## 🎮 Mecánica de Juego y Fases de la Consulta
 
-El juego cuenta con varias etapas que simulan la atención completa de un paciente:
+El juego recrea el flujo de atención que realiza un nutricionista con cada paciente:
 
-1. **Auditoría de Ficha Médica (Mecánica Principal):**
-   - Lees la anamnesis, signos vitales, exámenes de laboratorio, diagnóstico y receta médica.
-   - Contrastas si los fármacos indicados están contraindicados para esa patología o si hay riesgo de interacción fármaco-nutriente.
-   - Puedes sellar la ficha con: **Aprobar**, **Rechazar** (indicando el motivo) o **Pedir Interconsulta**.
+1. **Evaluación Clínica y Anamnesis (Mecánica Principal):**
+   - El paciente entra a la consulta con su motivo de atención.
+   - Revisas sus datos clínicos completos: signos vitales, parámetros antropométricos (IMC, circunferencia de cintura o pantorrilla), exámenes de laboratorio y los fármacos que tiene recetados.
+   - Evalúas su condición fisiopatológica general para definir el diagnóstico nutricional y la conducta adecuada.
 
-2. **Entrevista Clínica (Anamnesis Interactiva):**
-   - Conversas directamente con el paciente haciéndole preguntas clave (síntomas actuales, adherencia al tratamiento, hábitos de consumo).
-   - El paciente responde según su personalidad y cuadro clínico, revelando datos que a veces no estaban en la ficha.
+2. **Entrevista al Paciente (Anamnesis Interactiva):**
+   - Conversas con el paciente eligiendo preguntas estratégicas sobre su día a día (apetito, síntomas digestivos o respiratorios, cómo toma sus remedios y qué suele comer).
+   - El paciente responde según su caso, entregando detalles clave que ayudan a afinar el tratamiento.
 
-3. **Minuta Dietoterapéutica:**
-   - Seleccionas alimentos adecuados para el plan nutricional del paciente y evitas los que puedan perjudicarlo o interactuar con su tratamiento.
+3. **Prescripción Dietoterapéutica (Minuta de Alimentos):**
+   - Como nutricionista, armas la pauta alimentaria seleccionando alimentos beneficiosos para su patología y descartando aquellos que estén contraindicados o que interfieran con sus medicamentos.
 
 4. **Control y Seguimiento a 4 Semanas:**
-   - Ves la evolución del paciente: si tomaste la decisión correcta, el paciente mejora sus parámetros; si hubo un error, muestra complicaciones que te explican en qué falló la prescripción.
+   - El paciente vuelve a control un mes después. Aquí ves el impacto real de tu plan: si la indicación fue correcta, el paciente muestra mejoras objetivas en sus síntomas y exámenes; si hubo fallas, se muestran las complicaciones para aprender de ellas.
 
-5. **Progresión de Carrera y Repaso:**
-   - Comienzas como **Interno** y vas ascendiendo a **Auditor Junior**, **Auditor Senior** y **Jefe de Servicio**.
-   - Posee un panel de **Repaso de Errores** para revisar los casos donde te equivocaste con su explicación fisiopatológica detallada.
+5. **Progresión Profesional y Repaso de Casos:**
+   - Comienzas como **Interno en Práctica** y vas avanzando a **Nutricionista Clínico**, **Especialista** y **Jefe de Servicio**.
+   - Incluye una sección de **Repaso** para volver a mirar casos anteriores y leer las explicaciones fisiopatológicas con calma.
 
 ---
 
 ## 💻 Tecnologías Utilizadas
 
 * **Framework:** Vue 3 (Composition API con `<script setup>`)
-* **Lenguaje:** TypeScript (tipado estricto para casos, fármacos y decisiones)
-* **Empaquetador:** Vite
-* **Estilos:** Tailwind CSS (diseño limpio tipo expediente hospitalario, responsivo en móviles y PC)
-* **Despliegue:** Netlify (CI/CD continuo)
+* **Lenguaje:** TypeScript
+* **Herramienta de desarrollo:** Vite
+* **Estilos:** Tailwind CSS (interfaz limpia, simulando ficha clínica y consulta, adaptable a celular y PC)
+* **Despliegue:** Netlify (despliegue continuo en la nube)
 
 ---
 
 ## 🚀 Cómo correr el proyecto en local
 
-Si quieres probar el código o correrlo en tu máquina:
+Para probar el proyecto en tu computador:
 
 ```bash
 # 1. Clonar el repositorio
 git clone https://github.com/IgnacioCG07/FisioPatoGamexd.git
 
-# 2. Entrar a la carpeta del proyecto
+# 2. Entrar a la carpeta
 cd FisioPatoGamexd
 
 # 3. Instalar dependencias
 npm install
 
-# 4. Iniciar servidor de desarrollo
+# 4. Iniciar el servidor
 npm run dev
 ```
 
-Abre tu navegador en `http://localhost:5173` y listo.
+Luego abres tu navegador en `http://localhost:5173`.
 
-Para generar la versión de producción:
+Para compilar la versión final de producción:
 ```bash
 npm run build
 ```
@@ -87,39 +89,39 @@ npm run build
 
 ## 🧪 Pruebas con Usuarios y Validación
 
-Durante el desarrollo pusimos a prueba el prototipo con 3 compañeros de carrera para evaluar qué tan intuitivo y útil resultaba:
+Probamos el juego con 3 compañeros de la carrera para ver cómo funcionaba la experiencia:
 
-* **Prueba 1 (Facilidad de uso):** Los compañeros entendieron rápido la mecánica de sellar y contrastar la ficha médica. Les gustó que tuviera tono de expediente real.
-* **Prueba 2 (Tiempo por caso):** El tiempo promedio por caso fue de 2 a 3 minutos. Al principio se les pasaban por alto algunas interacciones fármaco-alimento por leer muy rápido.
-* **Prueba 3 (Valor educativo):** Coincidieron en que el feedback inmediato al equivocarse fue la parte más útil para fijar el contenido antes de un certamen.
+* **Prueba 1 (Comprensión del rol):** Los compañeros entendieron de inmediato la dinámica de estar en consulta atendiendo al paciente y revisando sus antecedentes.
+* **Prueba 2 (Tiempos de consulta):** En promedio tardaban entre 2 y 4 minutos por paciente, dedicando buen tiempo a leer los exámenes de laboratorio y las respuestas de la entrevista.
+* **Prueba 3 (Utilidad para estudiar):** Destacaron que tener que armar la minuta considerando los medicamentos del paciente les sirvió mucho para repasar interacciones fármaco-nutriente que suelen olvidarse en los certámenes.
 
 ---
 
 ## 🛠️ Problemas Detectados y Mejoras Implementadas
 
-A partir de las pruebas funcionales y el feedback de compañeros, corregimos varios puntos:
+Durante las pruebas se detectaron detalles que corregimos para que la experiencia fuera más clara:
 
-1. **Problema 1: Fichas con demasiado texto hacían perder de vista las contraindicaciones.**
-   * *Solución:* Agregamos la herramienta de inspección interactiva y estructuramos la ficha en bloques visuales claros (Diagnóstico, Signos, Laboratorio y Tratamiento) para facilitar la lectura diagnóstica.
-2. **Problema 2: Confusión en criterios antropométricos entre adultos y adultos mayores.**
-   * *Solución:* Hicimos explícito en la ficha si se evalúa con estándar adulto (IMC clásico) o adulto mayor (rango ampliado + circunferencia de pantorrilla), reforzando la justificación en el feedback.
-3. **Problema 3: Falta de claridad cuando una decisión era rechazada.**
-   * *Solución:* Se integró un panel de retroalimentación académica que explica exactamente qué mecanismo fisiopatológico se violó (por ejemplo, indicar prednisona en síndrome metabólico o suspender bruscamente un fármaco sin justificación).
+1. **Problema 1: Se pasaban por alto los fármacos al momento de armar la comida.**
+   * *Solución:* Reorganizamos la anamnesis para que los medicamentos y sus advertencias queden visibles mientras seleccionas los alimentos de la minuta.
+2. **Problema 2: Dudas con el criterio de evaluación en pacientes adultos mayores.**
+   * *Solución:* Aclaramos en la anamnesis qué estándar se aplica (IMC clásico en adultos vs. rango ampliado y circunferencia de pantorrilla en adultos mayores), agregando la explicación en el feedback.
+3. **Problema 3: Necesidad de entender claramente por qué un alimento no era adecuado.**
+   * *Solución:* Añadimos una ventana de feedback clínico que explica en palabras sencillas el mecanismo biológico detrás de cada error (ej. por qué moderar carbohidratos en pacientes con dificultad respiratoria o regular ciertos vegetales con anticoagulantes).
 
 ---
 
-## 🗣️ Guía para la Defensa Oral (Preguntas Clave)
+## 🗣️ Guía para la Defensa Oral (Preguntas de la Pauta)
 
 1. **¿Cómo se relaciona la mecánica principal con el objetivo educativo?**  
-   Revisar y sellar fichas médicas obliga al estudiante a contrastar activamente datos (laboratorios, síntomas y recetas) en vez de solo memorizar. Si una receta tiene un fármaco contraindicado o que compite con un nutriente, el estudiante debe identificarlo antes de aprobar.
+   Poner al estudiante en el rol del nutricionista frente a la anamnesis lo obliga a analizar activamente los datos del paciente (laboratorio, síntomas y fármacos) antes de tomar decisiones alimentarias, reforzando la aplicación práctica de la fisiopatología.
 2. **¿Cómo se implementó la progresión entre desafíos?**  
-   El jugador empieza como Interno viendo casos con errores evidentes y, a medida que acierta, sube de rango hacia casos más complejos con múltiples comorbilidades (ej. respiratorio con falla renal o interacciones fármaco-alimento sutiles).
+   El jugador parte atendiendo casos clínicos más directos y con patologías aisladas. A medida que avanza y sube de rango, llegan pacientes más complejos, con múltiples enfermedades o adultos mayores con mayor riesgo nutricional.
 3. **¿Qué información entrega el feedback cuando el jugador se equivoca?**  
-   No solo avisa que falló: explica la razón fisiopatológica específica, el mecanismo del fármaco involucrado y la consecuencia clínica que tendría en el paciente real.
+   Entrega una explicación fisiopatológica concreta: qué alteración tiene el paciente, por qué la decisión tomada no era la indicada y qué consecuencia clínica tendría en la vida real.
 4. **¿Qué error detectaron en las pruebas y cómo lo corrigieron?**  
-   Los usuarios pasaban por alto interacciones entre fármacos y comida en las recetas largas. Se solucionó agregando avisos de alerta en la inspección y un sistema de seguimiento a 4 semanas para ver el impacto de las decisiones.
-5. **¿Qué cambios técnicos quedan pendientes hacia la versión final?**  
-   Añadir sonido ambiente de hospital, ampliar el banco de casos con pacientes pediátricos adicionales y guardar el avance en LocalStorage o base de datos ligera para no perder el progreso entre sesiones.
+   Notamos que los usuarios no relacionaban la receta médica con la dieta. Se corrigió haciendo más evidente la sección de fármacos en la anamnesis y sumando el control a 4 semanas para ver el resultado de la pauta.
+5. **¿Qué cambios técnicos realizarían antes de la entrega final?**  
+   Sumar más variedad de casos clínicos (por ejemplo pacientes pediátricos), guardar el historial de consultas en el almacenamiento local del navegador y agregar detalles sonoros para ambientar la consulta.
 
 ---
 
