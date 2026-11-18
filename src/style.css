@@ -1,0 +1,8 @@
+/* src/style.css — Reset mínimo; el diseño principal está en App.vue <style> */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
