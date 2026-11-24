@@ -1,95 +1,203 @@
 <template>
   <div id="app-root">
 
-    <!-- ══ PANTALLA DE INICIO ══════════════════════════════════════════ -->
+    <!-- ══ PANTALLA DE INICIO (ESTILO NUTRITEST PIXEL-ART) ═════════════ -->
     <Transition name="screen-fade">
-      <div v-if="!juegoIniciado" class="screen-intro wood-surface">
-        <div class="intro-scanlines" />
-        <div class="intro-content">
+      <div v-if="!juegoIniciado" class="screen-intro-nutritest">
+        <div class="nutritest-stage">
+          <!-- Escena de consultorio limpia de fondo -->
+          <img
+            src="/menu-bg-clean.png"
+            alt="Consultorio Nutricional NutriTest"
+            class="nutritest-bg-img"
+            draggable="false"
+          />
 
-          <div class="intro-logo">
-            <span class="logo-badge">SIMULADOR CLÍNICO · NUTRICIÓN</span>
-            <h1 class="intro-title">PRÁCTICA<br /><span class="title-accent">CLÍNICA</span></h1>
-            <p class="intro-subtitle">Nutrición Clínica · Rotación Hospitalaria</p>
+          <!-- Cartel superior derecho: + Bienvenido, Nutricionista. -->
+          <button
+            type="button"
+            class="nutritest-welcome-badge"
+            title="Ver tu rango y carrera profesional"
+            @click="showConfigModal = true"
+          >
+            <span class="welcome-cross" aria-hidden="true">✚</span>
+            <span class="welcome-text">Bienvenido, Nutricionista.</span>
+          </button>
+
+          <!-- Zona interactiva del personaje (Nutricionista en su escritorio) -->
+          <div
+            class="nutritest-char-hotspot"
+            title="Haz clic para recibir un consejo clínico"
+            @click="siguienteConsejoMenu"
+          >
+            <Transition name="patient-fade" mode="out-in">
+              <div :key="indiceConsejoMenu" class="nutritest-speech-bubble">
+                <span class="speech-tag">🩺 {{ carrera.rangoActual.titulo }}</span>
+                <p>{{ consejoMenuActual }}</p>
+              </div>
+            </Transition>
           </div>
 
-          <div class="intro-lore">
-            <p>
-              Eres el <strong>nutricionista de turno</strong>. Recibirás pacientes con sus
-              antecedentes, laboratorio y receta médica. Tu trabajo es evaluarlos como
-              profesional clínico.
-            </p>
-            <p>
-              Revisa los documentos, <strong>diagnostica la patología</strong>,
-              indica el <strong>plan nutricional correcto</strong> y detecta cualquier
-              <strong>riesgo farmacológico</strong>. Cuando estés seguro, timbra la ficha.
-            </p>
-            <p class="intro-ra-info">
-              Los casos evalúan:<br />
-              <strong>RA1</strong> Manifestaciones clínicas ·
-              <strong>RA2</strong> Factores de riesgo ·
-              <strong>RA3</strong> Interacciones fármaco-nutriente
-            </p>
-          </div>
-
-          <div class="intro-controles">
-            <div class="control-item">
-              <span class="control-key">🩺 Evaluación</span>
-              <span class="control-desc">Diagnóstico, plan nutricional y riesgo farmacológico</span>
-            </div>
-            <div class="control-item">
-              <span class="control-key">🔴 Timbre</span>
-              <span class="control-desc">Timbra la ficha cuando hayas completado la evaluación</span>
-            </div>
-            <div class="control-item">
-              <span class="control-key">⭐ / 🔥 Dificultad</span>
-              <span class="control-desc">Fácil (opciones) o Difícil (diagnóstico libre)</span>
-            </div>
-          </div>
-
-          <!-- Panel Carrera (Rangos, requisitos con ✓ y herramientas) -->
-          <PanelCarrera />
-
-          <!-- Selector de Bloque Temático de Estudio (Los 5 documentos de clases) -->
-          <div class="selector-estudio-panel">
-            <span class="selector-estudio-label">📚 BLOQUE DE ESTUDIO PARA ESTE TURNO:</span>
-            <div class="selector-estudio-chips">
-              <button
-                v-for="b in BLOQUES_ESTUDIO"
-                :key="b.id"
-                type="button"
-                class="chip-bloque"
-                :class="{ activo: bloqueEstudioSeleccionado === b.id }"
-                @click="bloqueEstudioSeleccionado = b.id"
-              >
-                {{ b.label }}
-              </button>
-            </div>
-          </div>
-
-          <div class="intro-botones-row">
-            <button class="btn-start" @click="startGame">
-              INICIAR TURNO
+          <!-- Columna de botones estilo Pixel-Art (debajo del logo NutriTest) -->
+          <nav class="nutritest-menu-nav" aria-label="Menú principal">
+            <!-- Botón 1: Jugar -->
+            <button type="button" class="nt-btn nt-btn-play" @click="startGame">
+              <span class="nt-btn-inner">
+                <span class="nt-icon nt-icon-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" shape-rendering="crispEdges">
+                    <path d="M5 3h3v2h3v2h3v2h3v2h2v2h-2v2h-3v2h-3v2H8v2H5V3z" fill="#1d1810" />
+                    <path d="M7 5h2v2h3v2h3v2h2v2h-2v2h-3v2H9v2H7V5z" fill="#529e49" />
+                    <path d="M7 5h2v2h3v2h2v2H7V5z" fill="#77c46b" />
+                  </svg>
+                </span>
+                <span class="nt-label">Jugar</span>
+              </span>
             </button>
+
+            <!-- Botón 2: Tutorial -->
+            <button type="button" class="nt-btn nt-btn-secondary" @click="showTutorial = true">
+              <span class="nt-btn-inner">
+                <span class="nt-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" shape-rendering="crispEdges">
+                    <path d="M2 5h9v2h2V5h9v14h-9v2h-2v-2H2V5z" fill="#1a1d17" />
+                    <path d="M4 7h7v10H4V7zm9 0h7v10h-7V7z" fill="#e8d6b8" />
+                    <path d="M11 8h2v10h-2V8z" fill="#bfa682" />
+                    <path d="M5 9h5v1H5V9zm0 2h5v1H5v-1zm0 2h4v1H5v-1zm9-4h5v1h-5V9zm0 2h5v1h-5v-1zm0 2h4v1h-4v-1z" fill="#786852" />
+                  </svg>
+                </span>
+                <span class="nt-label">Tutorial</span>
+              </span>
+            </button>
+
+            <!-- Botón 3: Configuración (Bloques de estudio y Carrera) -->
+            <button type="button" class="nt-btn nt-btn-secondary" @click="showConfigModal = true">
+              <span class="nt-btn-inner">
+                <span class="nt-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" shape-rendering="crispEdges">
+                    <path d="M9 2h6v3h3v3h3v6h-3v3h-3v3H9v-3H6v-3H3V8h3V5h3V2z" fill="#1a1d17" />
+                    <path d="M10 4h4v2h3v3h2v4h-2v3h-3v2h-4v-2H7v-3H5V9h2V6h3V4z" fill="#e6cfa8" />
+                    <path d="M9 9h6v6H9V9z" fill="#333a2f" />
+                  </svg>
+                </span>
+                <span class="nt-label">Configuración</span>
+                <span v-if="bloqueEstudioSeleccionado !== 'todos'" class="nt-badge-mini">1 bloque</span>
+              </span>
+            </button>
+
+            <!-- Botón 4: Salir / Créditos y Progreso -->
+            <button type="button" class="nt-btn nt-btn-secondary" @click="showExitModal = true">
+              <span class="nt-btn-inner">
+                <span class="nt-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" shape-rendering="crispEdges">
+                    <path d="M3 3h11v4h-2V5H5v14h7v-2h2v4H3V3zm12 5h3v2h3v4h-3v2h-3v-2h-5v-4h5V8z" fill="#e8d6b8" />
+                  </svg>
+                </span>
+                <span class="nt-label">Salir</span>
+              </span>
+            </button>
+          </nav>
+
+          <!-- Barra inferior izquierda: versión + acceso rápido a Repaso si hay errores -->
+          <div class="nutritest-footer-bar">
+            <span class="nutritest-version">v1.0.0</span>
 
             <button
               v-if="tracker.cantidadErroresPendientes > 0"
-              class="btn-repasar-intro"
+              type="button"
+              class="nt-repaso-pill"
               @click="startGameRepaso"
             >
-              🔁 REPASAR ERRORES ({{ tracker.cantidadErroresPendientes }})
+              🔁 Repasar errores ({{ tracker.cantidadErroresPendientes }})
             </button>
-          </div>
 
-          <div class="intro-progreso-previo" v-if="tracker.progreso.casosCompletadosTotal > 0">
-            <span class="progreso-icon">📊</span>
-            <span>
-              {{ tracker.progreso.casosCompletadosTotal }} casos completados ·
-              Dominio reciente: <strong>{{ tracker.dominioRecienteGlobal }}%</strong>
+            <span v-if="tracker.progreso.casosCompletadosTotal > 0" class="nt-stats-pill">
+              📊 {{ tracker.progreso.casosCompletadosTotal }} casos · {{ tracker.dominioRecienteGlobal }}% dominio
             </span>
           </div>
-
         </div>
+
+        <!-- ── Modal: Configuración (Bloques de estudio + Carrera) ──────── -->
+        <Transition name="screen-fade">
+          <div v-if="showConfigModal" class="nt-modal-overlay" @click.self="showConfigModal = false">
+            <div class="nt-modal-card">
+              <header class="nt-modal-header">
+                <img src="/nutricionista-char.png" alt="Nutricionista" class="nt-modal-avatar" />
+                <div class="nt-modal-title-wrap">
+                  <span class="nt-modal-kicker">CONSULTORIO NUTRITEST</span>
+                  <h3>Configuración del Turno y Carrera</h3>
+                  <p>Selecciona el bloque fisiopatológico a evaluar y revisa tu rango clínico.</p>
+                </div>
+                <button type="button" class="nt-modal-close" @click="showConfigModal = false">✕</button>
+              </header>
+
+              <div class="nt-modal-body">
+                <div class="selector-estudio-panel">
+                  <span class="selector-estudio-label">📚 BLOQUE DE ESTUDIO PARA ESTE TURNO:</span>
+                  <div class="selector-estudio-chips">
+                    <button
+                      v-for="b in BLOQUES_ESTUDIO"
+                      :key="b.id"
+                      type="button"
+                      class="chip-bloque"
+                      :class="{ activo: bloqueEstudioSeleccionado === b.id }"
+                      @click="bloqueEstudioSeleccionado = b.id"
+                    >
+                      {{ b.label }}
+                    </button>
+                  </div>
+                </div>
+
+                <PanelCarrera />
+              </div>
+
+              <footer class="nt-modal-footer">
+                <button
+                  v-if="tracker.cantidadErroresPendientes > 0"
+                  type="button"
+                  class="btn-repasar-intro"
+                  @click="showConfigModal = false; startGameRepaso()"
+                >
+                  🔁 Repasar Errores ({{ tracker.cantidadErroresPendientes }})
+                </button>
+                <button type="button" class="btn-tutorial-ok" @click="showConfigModal = false">
+                  Guardar y Volver
+                </button>
+              </footer>
+            </div>
+          </div>
+        </Transition>
+
+        <!-- ── Modal: Salir / Resumen de Sesión ─────────────────────────── -->
+        <Transition name="screen-fade">
+          <div v-if="showExitModal" class="nt-modal-overlay" @click.self="showExitModal = false">
+            <div class="nt-modal-card nt-modal-sm">
+              <header class="nt-modal-header">
+                <img src="/nutricionista-char.png" alt="Nutricionista" class="nt-modal-avatar" />
+                <div class="nt-modal-title-wrap">
+                  <span class="nt-modal-kicker">NUTRITEST · v1.0.0</span>
+                  <h3>Estado de tu Consulta</h3>
+                  <p>Simulador Clínico de Fisiopatología y Dietoterapia.</p>
+                </div>
+                <button type="button" class="nt-modal-close" @click="showExitModal = false">✕</button>
+              </header>
+
+              <div class="nt-modal-body">
+                <div class="nt-summary-box">
+                  <div><strong>Rango actual:</strong> {{ carrera.rangoActual.icono }} {{ carrera.rangoActual.titulo }}</div>
+                  <div><strong>Casos evaluados:</strong> {{ tracker.progreso.casosCompletadosTotal }}</div>
+                  <div><strong>Dominio reciente:</strong> {{ tracker.dominioRecienteGlobal }}%</div>
+                  <div><strong>Errores por repasar:</strong> {{ tracker.cantidadErroresPendientes }}</div>
+                </div>
+              </div>
+
+              <footer class="nt-modal-footer">
+                <button type="button" class="btn-tutorial-ok" @click="showExitModal = false">
+                  Volver al Menú
+                </button>
+              </footer>
+            </div>
+          </div>
+        </Transition>
       </div>
     </Transition>
 
@@ -483,6 +591,9 @@
 
         <!-- ── Barra inferior ───────────────────────────────────────── -->
         <footer class="game-footer">
+          <button class="help-btn" @click="juegoIniciado = false" title="Volver al menú principal">
+            🏠 MENÚ
+          </button>
           <span class="footer-hint">
             <span class="kbd">CLIC</span> PESTAÑAS PARA CAMBIAR DE DOCUMENTO
           </span>
@@ -502,38 +613,41 @@
     <!-- ══ TUTORIAL ─────────────────────────────────────────────────── -->
     <Transition name="screen-fade">
       <div v-if="showTutorial" class="tutorial-overlay" @click.self="dismissTutorial">
-        <div class="tutorial-card">
+        <div class="tutorial-card tutorial-card-nutri">
           <div class="tutorial-header">
-            <span class="tutorial-icon">🩺</span>
-            <h3>Guía rápida — Tu primer turno como nutricionista</h3>
+            <img src="/nutricionista-char.png" alt="Nutricionista" class="tutorial-char-avatar" />
+            <div>
+              <span class="nt-modal-kicker">GUÍA DE CONSULTA · NUTRITEST</span>
+              <h3>Tu turno como Nutricionista Clínico</h3>
+            </div>
           </div>
           <ol class="tutorial-steps">
             <li>
               <span class="step-num">1</span>
               <div>
                 <strong>Revisa el expediente del paciente</strong><br />
-                Usa las pestañas: Anamnesis, Laboratorio, Receta y Carnet.
+                Usa las pestañas: Anamnesis, Laboratorio, Receta, Carnet y Entrevista.
               </div>
             </li>
             <li>
               <span class="step-num">2</span>
               <div>
-                <strong>Completa la evaluación clínica</strong><br />
-                Diagnóstico, Plan Nutricional y Riesgo Farmacológico. Puedes hacerlo en cualquier orden.
+                <strong>Completa la evaluación nutricional</strong><br />
+                Diagnóstico, Plan / Minuta Diaria y Riesgo Farmacológico.
               </div>
             </li>
             <li>
               <span class="step-num">3</span>
               <div>
                 <strong>Timbra la ficha cuando estés seguro</strong><br />
-                El botón <span class="tutorial-accent">🔴 TIMBRAR FICHA</span> se activa cuando completas las 3 secciones.
+                El botón <span class="tutorial-accent">🔴 TIMBRAR FICHA</span> se activa al completar las secciones.
               </div>
             </li>
             <li>
               <span class="step-num">4</span>
               <div>
-                <strong>Lee el feedback con calma</strong><br />
-                Verás qué acertaste y el razonamiento clínico correcto para aprender.
+                <strong>Lee el feedback y haz el seguimiento</strong><br />
+                Revisa el razonamiento fisiopatológico y evalúa al paciente en su control a 4 semanas.
               </div>
             </li>
           </ol>
@@ -611,10 +725,25 @@ const LABELS_ESTADO: Partial<Record<EstadoNutricional, string>> = {
   obesidad_sarcopenica: 'Obesidad Sarcopénica',
 }
 
-// ─── Tutorial ─────────────────────────────────────────────────────────────────
+// ─── Tutorial y Modales del Menú NutriTest ──────────────────────────────────
 
 const TUTORIAL_KEY = 'practica-clinica-v2-tutorial-shown'
 const showTutorial = ref(false)
+const showConfigModal = ref(false)
+const showExitModal = ref(false)
+
+const CONSEJOS_MENU = [
+  '¡Hola! Revisa la anamnesis, exámenes y fármacos antes de armar la minuta.',
+  'Haz clic en "Configuración" para elegir un bloque específico o ver tu carrera.',
+  'Recuerda vigilar las interacciones fármaco-nutriente en la receta médica.',
+  'En adultos mayores, presta especial atención al riesgo de sarcopenia y deshidratación.',
+]
+const indiceConsejoMenu = ref(0)
+const consejoMenuActual = computed(() => CONSEJOS_MENU[indiceConsejoMenu.value % CONSEJOS_MENU.length])
+
+function siguienteConsejoMenu(): void {
+  indiceConsejoMenu.value = (indiceConsejoMenu.value + 1) % CONSEJOS_MENU.length
+}
 
 function dismissTutorial(): void {
   showTutorial.value = false
@@ -881,185 +1010,455 @@ html, body {
 .patient-fade-enter-from { opacity: 0; transform: translateY(6px); }
 .patient-fade-leave-to { opacity: 0; transform: translateY(-6px); }
 
-/* ══ PANTALLA DE INICIO ══════════════════════════════════════════════════════ */
+/* ══ PANTALLA DE INICIO (ESTILO NUTRITEST PIXEL-ART) ═══════════════════════ */
 
-.screen-intro {
+.screen-intro-nutritest {
   position: absolute;
   inset: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
-  padding: 16px;
+  background: radial-gradient(circle at center, #2d2118 0%, #120d0a 100%);
+  overflow: hidden;
+  user-select: none;
 }
 
-.screen-intro::before {
+.nutritest-stage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  max-width: calc(100vh * (1024 / 571));
+  max-height: calc(100vw * (571 / 1024));
+  aspect-ratio: 1024 / 571;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.85);
+  overflow: hidden;
+}
+
+.nutritest-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  image-rendering: pixelated;
+}
+
+/* ── Cartel superior derecho: + Bienvenido, Nutricionista. ──────────────── */
+
+.nutritest-welcome-badge {
+  position: absolute;
+  top: 2.2%;
+  right: 1.6%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.65% 1.8%;
+  background: linear-gradient(180deg, #2d322a 0%, #232721 100%);
+  color: #f3e4c8;
+  border: 3px solid #121410;
+  box-shadow:
+    inset 0 2px 0 #5b6354,
+    inset 0 -2px 0 #181b16,
+    0 4px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 6px;
+  font-family: var(--font-pixel);
+  font-size: clamp(0.75rem, 1.35vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 0.12s ease, filter 0.12s ease;
+  z-index: 5;
+}
+
+.nutritest-welcome-badge:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+.welcome-cross {
+  color: #e79b52;
+  font-size: 1.1em;
+  line-height: 1;
+  text-shadow: 1px 1px 0 #14100b;
+}
+
+.welcome-text {
+  text-shadow: 2px 2px 0 #121410;
+}
+
+/* ── Zona interactiva del personaje (Nutricionista en el escritorio) ────── */
+
+.nutritest-char-hotspot {
+  position: absolute;
+  left: 59%;
+  top: 30%;
+  width: 26%;
+  height: 50%;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.nutritest-speech-bubble {
+  position: absolute;
+  bottom: 102%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(200px, 23vw, 270px);
+  background: #f6ebd4;
+  color: #2c2117;
+  border: 3px solid #1b150e;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow:
+    inset 0 2px 0 #fff9ec,
+    0 5px 0 rgba(0, 0, 0, 0.4);
+  font-size: clamp(0.68rem, 1.02vw, 0.84rem);
+  line-height: 1.35;
+  text-align: left;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nutritest-char-hotspot:hover .nutritest-speech-bubble {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+.nutritest-speech-bubble::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.78) 85%);
-  pointer-events: none;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 7px 7px 0;
+  border-style: solid;
+  border-color: #1b150e transparent transparent;
 }
 
-.intro-scanlines {
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    to bottom, transparent 0, transparent 3px,
-    rgba(0,0,0,0.12) 3px, rgba(0,0,0,0.12) 4px
-  );
-  pointer-events: none;
-}
-
-.intro-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 22px;
-  max-width: 720px;
-  max-height: 96vh;
-  overflow-y: auto;
-  padding: 32px 40px;
-  text-align: center;
-  background: linear-gradient(#171d20, #101417);
-  border: 3px solid var(--hud-line);
-  border-radius: 8px;
-  box-shadow:
-    inset 0 0 0 3px #0a0d0f,
-    inset 0 0 40px rgba(0, 0, 0, 0.6),
-    0 10px 0 rgba(0, 0, 0, 0.45),
-    0 30px 60px rgba(0, 0, 0, 0.6);
-}
-
-.logo-badge {
+.speech-tag {
   display: inline-block;
-  font-size: 0.7rem;
-  letter-spacing: 0.25em;
-  color: var(--px-gold);
-  border: 2px solid var(--hud-line);
-  background: var(--hud-bg);
-  padding: 3px 12px;
-  border-radius: 3px;
-  margin-bottom: 14px;
-  font-family: var(--font-pixel);
-}
-
-.intro-title {
-  font-family: var(--font-pixel);
-  font-size: 4.2rem;
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: 0.02em;
-  color: #f3ead2;
-  text-shadow: 4px 4px 0 #000;
-}
-
-.title-accent {
-  color: var(--px-green);
-  text-shadow: 4px 4px 0 #0a2a12, 0 0 30px rgba(111, 212, 122, 0.45);
-}
-
-.intro-subtitle {
-  font-size: 0.85rem;
-  letter-spacing: 0.16em;
-  color: #8fa3ab;
-  margin-top: 10px;
-  font-family: var(--font-pixel);
+  font-size: 0.72em;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #3a6b37;
+  margin-bottom: 2px;
 }
 
-.intro-lore {
+/* ── Columna de 4 Botones Pixel-Art (debajo del logo NutriTest) ────────── */
+
+.nutritest-menu-nav {
+  position: absolute;
+  left: 12.9%;
+  top: 45.6%;
+  width: 30.2%;
+  height: 45.8%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  color: #c3ccd0;
-  font-family: var(--font-pixel);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  text-align: left;
-  background: var(--paper);
-  color: var(--ink);
-  border: 2px solid #b9a77f;
-  border-radius: 4px;
-  padding: 18px 24px;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4);
-  background-image: repeating-linear-gradient(180deg, transparent 0 25px, var(--paper-line) 25px 26px);
+  justify-content: space-between;
+  gap: 2.2%;
+  z-index: 6;
 }
 
-.intro-lore strong { color: #1d3b66; }
-
-.intro-ra-info {
-  border-top: 2px dashed rgba(60, 45, 20, 0.3);
-  padding-top: 10px;
-  color: var(--ink-blue);
-  font-size: 0.85rem;
-  line-height: 1.6;
-}
-
-.intro-controles {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.nt-btn {
+  position: relative;
   width: 100%;
-}
-
-.control-item {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  font-size: 0.85rem;
-  font-family: var(--font-pixel);
-}
-
-.control-key {
-  background: var(--hud-bg);
-  color: #e8eef0;
-  padding: 3px 10px;
-  border-radius: 3px;
-  font-family: var(--font-pixel);
-  font-size: 0.78rem;
-  white-space: nowrap;
-  border: 2px solid var(--hud-line);
-}
-
-.control-desc { color: #8fa3ab; text-align: left; }
-
-.btn-start {
-  background: #3fa34d;
-  color: #fff;
-  border: 3px solid #0a0d0f;
-  border-bottom-width: 6px;
-  padding: 12px 44px;
-  border-radius: 6px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  border: 3px solid #14120e;
+  border-radius: 7px;
+  padding: 0;
   cursor: pointer;
   font-family: var(--font-pixel);
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.45);
-  box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.28), inset 0 -4px 0 rgba(0, 0, 0, 0.22);
+  transition: transform 0.1s ease, filter 0.12s ease, box-shadow 0.1s ease;
+  outline: none;
+}
+
+.nt-btn-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 14%;
+}
+
+/* Botón Principal: Jugar (Dorado / Crema cálido) */
+.nt-btn-play {
+  flex: 1.22;
+  background: linear-gradient(180deg, #efd39e 0%, #e1bc7d 58%, #cfa461 100%);
+  color: #221a11;
+  box-shadow:
+    inset 0 3px 0 #fbf0d9,
+    inset 3px 0 0 #f4dfa8,
+    inset -3px 0 0 #b3894b,
+    inset 0 -4px 0 #a3793d,
+    0 5px 0 #0f0d0a,
+    0 8px 14px rgba(0, 0, 0, 0.45);
+}
+
+.nt-btn-play .nt-label {
+  font-size: clamp(1.1rem, 2.25vw, 1.75rem);
+  font-weight: 800;
+  color: #21180f;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+/* Botones Secundarios: Tutorial, Configuración, Salir (Verde oliva oscuro) */
+.nt-btn-secondary {
+  flex: 1;
+  background: linear-gradient(180deg, #3c4337 0%, #32382e 58%, #282d24 100%);
+  color: #f3e5ce;
+  box-shadow:
+    inset 0 2px 0 #616b59,
+    inset 2px 0 0 #51594a,
+    inset -2px 0 0 #1f241c,
+    inset 0 -3px 0 #1c2019,
+    0 4px 0 #0f110d,
+    0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.nt-btn-secondary .nt-label {
+  font-size: clamp(0.9rem, 1.65vw, 1.28rem);
+  font-weight: 600;
+  color: #f4e6cf;
+  letter-spacing: 0.02em;
+  text-shadow: 2px 2px 0 #141712;
+}
+
+.nt-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.07);
+}
+
+.nt-btn:active {
+  transform: translateY(2px);
+}
+
+.nt-icon {
+  position: absolute;
+  left: 11%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(18px, 2.4vw, 28px);
+  height: clamp(18px, 2.4vw, 28px);
+}
+
+.nt-icon-play {
+  width: clamp(20px, 2.7vw, 32px);
+  height: clamp(20px, 2.7vw, 32px);
+}
+
+.nt-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(1px 2px 0 rgba(0, 0, 0, 0.35));
+}
+
+.nt-badge-mini {
+  position: absolute;
+  right: 8px;
+  background: #529e49;
+  color: #fff;
+  border: 2px solid #141812;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+/* ── Barra inferior izquierda (v1.0.0 + píldoras de estado) ────────────── */
+
+.nutritest-footer-bar {
+  position: absolute;
+  left: 1.2%;
+  bottom: 1.2%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 6;
+}
+
+.nutritest-version {
+  font-family: var(--font-mono);
+  font-size: clamp(0.72rem, 1.15vw, 0.92rem);
+  font-weight: 700;
+  color: #d7c5b2;
+  text-shadow: 2px 2px 0 #1a120d;
+  letter-spacing: 0.04em;
+}
+
+.nt-repaso-pill {
+  background: linear-gradient(180deg, #d97706, #b45309);
+  color: #fff;
+  border: 2px solid #1a120b;
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-family: var(--font-pixel);
+  font-size: clamp(0.68rem, 1vw, 0.82rem);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.45);
   transition: transform 0.12s ease, filter 0.12s ease;
 }
 
-.btn-start:hover { transform: translateY(-2px); filter: brightness(1.12); }
-.btn-start:active { transform: translateY(3px); border-bottom-width: 3px; }
-
-.intro-progreso-previo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  font-family: var(--font-pixel);
-  color: #8fa3ab;
-  background: var(--hud-bg);
-  border: 2px solid var(--hud-line);
-  border-radius: 4px;
-  padding: 8px 16px;
+.nt-repaso-pill:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
 }
 
-.progreso-icon { font-size: 1rem; }
-.intro-progreso-previo strong { color: var(--px-gold); }
+.nt-stats-pill {
+  background: rgba(26, 30, 24, 0.88);
+  color: #e8d8be;
+  border: 2px solid #141712;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-size: clamp(0.66rem, 0.95vw, 0.78rem);
+  font-weight: 600;
+}
+
+/* ── Modales Pixel-Art del Menú (Configuración / Salir) ────────────────── */
+
+.nt-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 8, 6, 0.72);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 250;
+}
+
+.nt-modal-card {
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #f2e5c9;
+  color: #2b2118;
+  border: 4px solid #1a140e;
+  border-radius: 10px;
+  box-shadow:
+    inset 0 3px 0 #fbf3e2,
+    0 12px 0 rgba(0, 0, 0, 0.5),
+    0 28px 60px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+}
+
+.nt-modal-sm {
+  max-width: 480px;
+}
+
+.nt-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: linear-gradient(180deg, #3a4235 0%, #2b3127 100%);
+  color: #f5e8d0;
+  border-bottom: 3px solid #1a140e;
+}
+
+.nt-modal-avatar {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  background: #c5bfb3;
+  border: 3px solid #15120d;
+  border-radius: 8px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.4);
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+.tutorial-char-avatar {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background: #c5bfb3;
+  border: 3px solid #15120d;
+  border-radius: 8px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.35);
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+.nt-modal-title-wrap {
+  flex: 1;
+  text-align: left;
+}
+
+.nt-modal-kicker {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #e4bc7a;
+  margin-bottom: 2px;
+}
+
+.nt-modal-title-wrap h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff6e5;
+  margin: 0 0 3px;
+}
+
+.nt-modal-title-wrap p {
+  font-size: 0.8rem;
+  color: #cbd5c0;
+  margin: 0;
+}
+
+.nt-modal-close {
+  background: #232820;
+  color: #f3e5ce;
+  border: 2px solid #121410;
+  border-radius: 6px;
+  width: 34px;
+  height: 34px;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.nt-modal-close:hover {
+  background: #b8322c;
+  color: #fff;
+}
+
+.nt-modal-body {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nt-summary-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #e6d6b5;
+  border: 2px solid #b8a379;
+  border-radius: 6px;
+  padding: 14px 16px;
+  font-size: 0.92rem;
+}
+
+.nt-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 12px 20px 16px;
+  border-top: 2px dashed rgba(60, 45, 20, 0.25);
+}
 
 /* ══ LAYOUT DE JUEGO ════════════════════════════════════════════════════════ */
 
