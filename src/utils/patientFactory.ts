@@ -526,32 +526,46 @@ function generarOpcionesPlanNutricional(patologia: PatologiaClinica): OpcionPlan
 }
 
 /**
- * Genera 3 opciones de riesgo farmacológico.
- * 1 correcta (sí hay riesgo, con el fármaco real) y 2 incorrectas
- * (fármacos que no son problemáticos en este contexto).
+ * Genera 3 opciones de riesgo farmacológico / interacción con formato homogéneo.
+ * 1 correcta (del cuadro clínico actual) y 2 distractores plausibles de otras patologías.
  */
-function generarOpcionesRiesgoFarmacologico(patologia: PatologiaClinica): OpcionRiesgo[] {
-  const contraindicacionReal = patologia.contraindicaciones[0]
-  const partes = contraindicacionReal.split('—')
-  const farmaco = partes[0].trim().split('(')[0].trim()
-  const razon = partes[1]?.trim() ?? 'Contraindicado en esta patología'
+function generarOpcionesRiesgoFarmacologico(
+  patologia: PatologiaClinica,
+  todasLasPatologias: PatologiaClinica[],
+): OpcionRiesgo[] {
+  const extraerResumenRiesgo = (p: PatologiaClinica): { titulo: string; razon: string } => {
+    const raw = p.contraindicaciones[0] ?? 'Automedicación sin control — riesgo de descompensación'
+    const partes = raw.split('—')
+    const farmaco = partes[0].trim().split('(')[0].trim()
+    const razon = partes[1]?.trim() ?? 'Contraindicado en esta patología'
+    return { titulo: farmaco, razon }
+  }
+
+  const real = extraerResumenRiesgo(patologia)
+  const otras = shuffle(
+    todasLasPatologias.filter(p => p.id !== patologia.id && p.contraindicaciones.length > 0),
+  )
+
+  const distractores: OpcionRiesgo[] = []
+  for (const cand of otras) {
+    const d = extraerResumenRiesgo(cand)
+    if (d.titulo.toLowerCase() !== real.titulo.toLowerCase() && !distractores.some(x => x.texto === d.titulo)) {
+      distractores.push({
+        texto: d.titulo,
+        esCorrecta: false,
+        justificacion: `No corresponde al riesgo principal de este cuadro: el riesgo crítico aquí es ${real.titulo} (${real.razon}).`,
+      })
+    }
+    if (distractores.length >= 2) break
+  }
 
   return shuffle<OpcionRiesgo>([
     {
-      texto: `⚠️ Riesgo: ${farmaco}`,
+      texto: real.titulo,
       esCorrecta: true,
-      justificacion: razon,
+      justificacion: real.razon,
     },
-    {
-      texto: 'Sin riesgos detectados — indicación segura',
-      esCorrecta: false,
-      justificacion: `Incorrecto: ${farmaco} está contraindicado`,
-    },
-    {
-      texto: 'Requiere monitoreo de laboratorio, pero no hay contraindicación',
-      esCorrecta: false,
-      justificacion: `Incorrecto: hay una contraindicación real`,
-    },
+    ...distractores,
   ])
 }
 
@@ -618,6 +632,114 @@ export function generarConfigMinuta(
 // ─── Función principal exportada ──────────────────────────────────────────────
 
 
+/** Antecedentes clínicos realistas por patología (sin revelar el diagnóstico ni la respuesta). */
+const ANTECEDENTES_CLINICOS: Record<string, string[]> = {
+  sindrome_metabolico: [
+    'Sedentarismo prolongado (trabajo de oficina > 8 h/día) y dieta habitual alta en ultraprocesados.',
+    'Antecedente familiar de primer grado con patología cardiovascular y alteraciones de la glicemia.',
+  ],
+  epoc: [
+    'Historial de tabaquismo crónico (> 25 paquetes-año) y exposición prolongada a humo ambiental.',
+    'Dos consultas en urgencia durante el último invierno por descompensación respiratoria.',
+  ],
+  hipotiroidismo: [
+    'Refiere aumento ponderal progresivo, intolerancia al frío y fatiga matutina de 8 meses de evolución.',
+    'Acostumbra tomar su medicación matutina junto con el desayuno y suplementos minerales.',
+  ],
+  insuficiencia_cardiaca: [
+    'Antecedente de hipertensión arterial de larga data con disnea al subir un piso de escaleras.',
+    'Refiere que el calzado le aprieta al final de la tarde y necesita dormir con dos o tres almohadas.',
+  ],
+  desnutricion_infantil_aguda: [
+    'Cuadro de diarrea recurrente e ingesta alimentaria muy reducida durante las últimas 3 semanas.',
+    'Madre refiere decaimiento marcado, irritabilidad y pérdida visible de tejido subcutáneo.',
+  ],
+  desnutricion_cronica_infantil: [
+    'Alimentación complementaria con bajo aporte de proteínas de alto valor biológico y micronutrientes.',
+    'Curva ponderoestatural con desaceleración sostenida en los últimos controles pediátricos.',
+  ],
+  obesidad_infantil: [
+    'Tiempo frente a pantallas > 4 horas diarias y consumo frecuente de bebidas azucaradas en colaciones.',
+    'Ambos padres con exceso ponderal; derivado desde control pediátrico para manejo integral.',
+  ],
+  diabetes_mellitus_t1: [
+    'Cuadro de 3 semanas de sed intensa, micción frecuente nocturna y pérdida de peso involuntaria.',
+    'Sin enfermedades crónicas previas diagnosticadas; derivado tras exámenes de urgencia.',
+  ],
+  sarcopenia_disfagia: [
+    'Adulto mayor con pérdida involuntaria de peso y prolongación del tiempo de cada comida (> 45 min).',
+    'Familiares notan carraspeo frecuente y cambio en la voz después de beber agua o caldos líquidos.',
+  ],
+  lesion_por_presion_sacra: [
+    'Hospitalización prolongada con movilidad reducida en cama durante las últimas 3 semanas.',
+    'Ingesta oral inferior al 60% de la bandeja hospitalaria por inapetencia persistente.',
+  ],
+  neumonia_bacteriana_aguda: [
+    'Cuadro agudo de 5 días de evolución con fiebre alta, escalofríos y dolor torácico al inspirar.',
+    'Ingesta oral disminuida por fatiga y sensación de falta de aire al alimentarse.',
+  ],
+  dehiscencia_herida_quirurgica: [
+    'Postoperatorio abdominal día 10 con evolución tórpida en los bordes de la herida operatoria.',
+    'Control glicémico irregular previo a la cirugía y bajo consumo proteico en domicilio.',
+  ],
+  deshidratacion_homeostenosis: [
+    'Adulto mayor que vive solo; baja ingesta de agua durante episodio de calor ambiental reciente.',
+    'Uso crónico de fármacos para la presión y analgésicos de venta libre por dolor articular.',
+  ],
+  sarcopenia_fragilidad_inflammaging: [
+    'Dos caídas a nivel en los últimos 6 meses y dificultad progresiva para levantarse de la silla.',
+    'Baja exposición solar y dieta monótona basada principalmente en té, pan blanco y sopas claras.',
+  ],
+  sindrome_geriatrico_complejo: [
+    'Polifarmacia de larga data (≥ 5 fármacos diarios) y pérdida de piezas dentales posteriores.',
+    'Cuidador reporta somnolencia diurna, lentitud en la marcha y menor interés por las comidas.',
+  ],
+  anemia_ferropenica: [
+    'Fatiga progresiva de 4 meses, cefalea vespertina y menor tolerancia a las actividades diarias.',
+    'Alto consumo de té negro, café y lácteos inmediatamente junto con las comidas principales.',
+  ],
+  trombosis_warfarina: [
+    'En tratamiento médico oral de mantenimiento tras evento vascular venoso reciente.',
+    'Modificó drásticamente su alimentación hace 2 semanas incorporando grandes porciones de hojas verdes.',
+  ],
+  hipertension_eje_raas: [
+    'Cifras tensionales persistentemente elevadas en controles seriados de atención primaria.',
+    'Uso habitual de salero en la mesa y consumo frecuente de embutidos, quesos maduros y conservas.',
+  ],
+  aterosclerosis_cardiopatia_isquemica: [
+    'Antecedente de molestia opresiva en el pecho desencadenada por esfuerzos físicos moderados.',
+    'En tratamiento farmacológico nocturno para el colesterol; desayuna jugo de pomelo diariamente.',
+  ],
+  erc_hiperpotasemia: [
+    'Deterioro crónico y progresivo de la función excretora con controles médicos irregulares.',
+    'Consumo frecuente de sustitutos de sal, frutos secos y legumbres en su pauta habitual.',
+  ],
+  lra_intrarrenal_nefrotoxicos: [
+    'Disminución brusca del volumen urinario en las últimas 48 horas tras automedicación analgésica alta.',
+    'Ingresado para estabilización clínica y ajuste de soporte hidroelectrolítico y nutricional.',
+  ],
+  asma_bronquial: [
+    'Episodios recurrentes de opresión torácica nocturna y sibilancias desencadenados por frío o polvo.',
+    'Utiliza terapia inhalatoria diaria pero refiere molestias faríngeas por no enjuagar la boca.',
+  ],
+  fibrosis_restriccion_respiratoria: [
+    'Falta de aire progresiva al esfuerzo de más de 1 año de evolución con expansión torácica limitada.',
+    'Refiere saciedad precoz marcada cuando intenta consumir platos de volumen normal.',
+  ],
+  enfermedad_celiaca_malabsorcion: [
+    'Distensión abdominal postprandial crónica, diarrea intermitente y pérdida de peso no intencional.',
+    'Las molestias digestivas se acentúan tras consumir pastas, pan tradicional y productos de trigo.',
+  ],
+  cirrosis_ascitis_masld: [
+    'Antecedente hepático metabólico de larga data con aumento progresivo del volumen abdominal.',
+    'Presenta saciedad precoz por tensión abdominal y pérdida de masa muscular en brazos y piernas.',
+  ],
+  insuficiencia_pancreatica_exocrina: [
+    'Deposiciones voluminosas, brillantes y difíciles de evacuar acompañadas de molestia epigástrica.',
+    'Baja de peso progresiva pese a conservar el apetito; toma sus cápsulas lejos del horario de comida.',
+  ],
+}
+
 export interface OpcionesGenerarPaciente {
   patologiaForzada?: PatologiaClinica
   esRepaso?: boolean
@@ -664,21 +786,22 @@ export function generarPaciente(
   // 4. Documentos
   const carnet = generarCarnet(nombre, `${apellido} ${apellido2}`, rut, fechaNacimiento, fechaActual)
 
+  const antecedentesCaso = ANTECEDENTES_CLINICOS[patologia.id] ?? [
+    'Sin antecedentes quirúrgicos recientes; derivado desde medicina general para evaluación nutricional.',
+    'Hábitos alimentarios irregulares en horarios y selección de alimentos durante el último trimestre.',
+  ]
+
   const anamnesis: DocumentoAnamnesis = {
     diagnostico: '—',  // Oculto: el estudiante debe diagnosticar
     sintomas: patologia.sintomasValidos.slice(0, randInt(3, Math.min(5, patologia.sintomasValidos.length))),
-    antecedentes: [
-      patologia.focoClinico
-        ? `📚 ${patologia.focoClinico}`
-        : patologia.notasEducativas.substring(0, 100) + '…',
-    ],
+    antecedentes: antecedentesCaso,
     pesoKg: antro.pesoKg,
     tallaCm: antro.tallaCm,
     edadAnos: typeof edadAnos === 'number' ? edadAnos : parseFloat(edadAnos as unknown as string),
     estadoNutricional: antro.estadoNutricional,
     estandarUsado: antro.estandarUsado,
     valorIndice: antro.valorIndice,
-    observaciones: `Paciente de ${Math.floor(typeof edadAnos === 'number' ? edadAnos : parseFloat(edadAnos as unknown as string))} años, sexo ${sexo === 'M' ? 'masculino' : 'femenino'}. Consulta derivada por médico tratante.`,
+    observaciones: `Paciente de ${Math.floor(typeof edadAnos === 'number' ? edadAnos : parseFloat(edadAnos as unknown as string))} años, sexo ${sexo === 'M' ? 'masculino' : 'femenino'}. Consulta derivada por médico tratante para evaluación nutricional.`,
   }
 
   const laboratorio = generarLaboratorio(patologia, fechaActual)
@@ -698,14 +821,17 @@ export function generarPaciente(
   const receta = generarReceta(
     nombreCompleto, rut, '(Diagnóstico pendiente de evaluación)',
     medicamentos.slice(0, 3),
-    indicacionesNutricionales.slice(0, 2),
+    [
+      'Derivación a Nutricionista Clínico para definir plan dietoterapéutico según cuadro actual.',
+      'Evaluar posibles interacciones fármaco-nutriente con el esquema farmacológico prescrito.',
+    ],
     fechaActual,
   )
 
   // 5. Opciones para la evaluación clínica
   const opcionesDiagnostico = generarOpcionesDiagnostico(patologia, todasLasPatologias)
   const opcionesPlanNutricional = generarOpcionesPlanNutricional(patologia)
-  const opcionesRiesgoFarmacologico = generarOpcionesRiesgoFarmacologico(patologia)
+  const opcionesRiesgoFarmacologico = generarOpcionesRiesgoFarmacologico(patologia, todasLasPatologias)
   const opcionesMecanismo = generarOpcionesMecanismo(patologia)
   const preguntasEntrevista = generarPreguntasEntrevista(patologia.id)
   const configMinuta = generarConfigMinuta(patologia.id, antro.pesoKg)
