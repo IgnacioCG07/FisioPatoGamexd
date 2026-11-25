@@ -97,9 +97,18 @@
             </button>
           </nav>
 
-          <!-- Barra inferior izquierda: versión + acceso rápido a Repaso si hay errores -->
+          <!-- Barra inferior izquierda: versión + créditos + acceso rápido a Repaso -->
           <div class="nutritest-footer-bar">
             <span class="nutritest-version">v1.0.0</span>
+
+            <button
+              type="button"
+              class="nt-credits-pill"
+              title="Ver créditos y autoría del proyecto"
+              @click="showExitModal = true"
+            >
+              🎓 Creado por Ignacio Acuña · Juegos Serios (UNACH)
+            </button>
 
             <button
               v-if="tracker.cantidadErroresPendientes > 0"
@@ -167,21 +176,36 @@
           </div>
         </Transition>
 
-        <!-- ── Modal: Salir / Resumen de Sesión ─────────────────────────── -->
+        <!-- ── Modal: Créditos, Autoría y Estado de Sesión ───────────────── -->
         <Transition name="screen-fade">
           <div v-if="showExitModal" class="nt-modal-overlay" @click.self="showExitModal = false">
             <div class="nt-modal-card nt-modal-sm">
               <header class="nt-modal-header">
                 <img src="/nutricionista-char.png" alt="Nutricionista" class="nt-modal-avatar" />
                 <div class="nt-modal-title-wrap">
-                  <span class="nt-modal-kicker">NUTRITEST · v1.0.0</span>
-                  <h3>Estado de tu Consulta</h3>
-                  <p>Simulador Clínico de Fisiopatología y Dietoterapia.</p>
+                  <span class="nt-modal-kicker">AUTORÍA Y CRÉDITOS · NUTRITEST v1.0.0</span>
+                  <h3>Créditos del Proyecto</h3>
+                  <p>Universidad Adventista de Chile (UNACH)</p>
                 </div>
                 <button type="button" class="nt-modal-close" @click="showExitModal = false">✕</button>
               </header>
 
               <div class="nt-modal-body">
+                <div class="nt-credits-box">
+                  <div class="nt-credits-title">🎓 AUTORÍA Y PROPIEDAD INTELECTUAL</div>
+                  <p class="nt-credits-paragraph">
+                    Este juego serio fue creado, diseñado y desarrollado por
+                    <strong>Ignacio Cristóbal Acuña Gálvez</strong>, a quien pertenece la autoría
+                    y el desarrollo integral de este proyecto.
+                  </p>
+                  <div class="nt-credits-meta">
+                    <div><strong>Autor:</strong> Ignacio Cristóbal Acuña Gálvez</div>
+                    <div><strong>Asignatura:</strong> Juegos Serios</div>
+                    <div><strong>Universidad:</strong> Universidad Adventista de Chile (UNACH)</div>
+                    <div><strong>Año académico:</strong> 2026</div>
+                  </div>
+                </div>
+
                 <div class="nt-summary-box">
                   <div><strong>Rango actual:</strong> {{ carrera.rangoActual.icono }} {{ carrera.rangoActual.titulo }}</div>
                   <div><strong>Casos evaluados:</strong> {{ tracker.progreso.casosCompletadosTotal }}</div>
@@ -595,7 +619,7 @@
             🏠 MENÚ
           </button>
           <span class="footer-hint">
-            <span class="kbd">CLIC</span> PESTAÑAS PARA CAMBIAR DE DOCUMENTO
+            <span class="kbd">CLIC</span> PESTAÑAS · 🎓 Creado por <strong>Ignacio Acuña</strong> (Juegos Serios — UNACH)
           </span>
           <button class="help-btn" @click="showTutorial = true" title="Ver guía rápida">
             <span class="help-q">?</span> AYUDA
@@ -1318,6 +1342,59 @@ html, body {
   padding: 3px 10px;
   font-size: clamp(0.66rem, 0.95vw, 0.78rem);
   font-weight: 600;
+}
+
+.nt-credits-pill {
+  background: rgba(34, 40, 31, 0.92);
+  color: #f3e4c8;
+  border: 2px solid #141712;
+  box-shadow: inset 0 1px 0 #5b6354, 0 2px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-family: var(--font-pixel);
+  font-size: clamp(0.66rem, 0.95vw, 0.8rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.nt-credits-pill:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.12);
+}
+
+.nt-credits-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #fdf6e7;
+  border: 2px solid #9e8456;
+  border-radius: 6px;
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.nt-credits-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #3a6b37;
+}
+
+.nt-credits-paragraph {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #2b2118;
+  margin: 0;
+}
+
+.nt-credits-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.84rem;
+  padding-top: 6px;
+  border-top: 1px dashed rgba(120, 95, 50, 0.35);
 }
 
 /* ── Modales Pixel-Art del Menú (Configuración / Salir) ────────────────── */

@@ -125,7 +125,9 @@ Durante las pruebas se detectaron detalles que corregimos para que la experienci
 
 ---
 
-## 👥 Equipo
+## 🎓 Autoría y Créditos
 
-* Proyecto Integrador de Juego Serio — Fisiopatología y Nutrición.
-* Noviembre 2026.
+* **Autor y Desarrollador:** Ignacio Cristóbal Acuña Gálvez
+* **Asignatura:** Juegos Serios
+* **Institución:** Universidad Adventista de Chile (UNACH)
+* **Propiedad y Autoría:** Este proyecto fue creado, diseñado y programado por **Ignacio Cristóbal Acuña Gálvez**, a quien pertenece la autoría e implementación del juego, desarrollado como trabajo universitario para el ramo **Juegos Serios** de la **Universidad Adventista de Chile** (Noviembre 2026).
